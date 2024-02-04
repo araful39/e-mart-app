@@ -1,7 +1,8 @@
+import 'package:e_mart/features/authentication/screens/signup/singup.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TLoginForm extends StatelessWidget {
   const TLoginForm({
@@ -25,11 +26,11 @@ class TLoginForm extends StatelessWidget {
               TextFormField(
 
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.key),
+                  prefixIcon: const Icon(Icons.key),
                   labelText: TTexts.password,
                   suffixIcon: IconButton(
                     onPressed: (){},
-                    icon: Icon(Icons.visibility_off),
+                    icon: const Icon(Icons.visibility_off),
 
                   ),
                 ),
@@ -64,7 +65,9 @@ class TLoginForm extends StatelessWidget {
               SizedBox(
                   width: double.infinity,
                   child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(()=>const SingUpScreen());
+                      },
                       child: const Text(TTexts.createAccount))),
 
             ],

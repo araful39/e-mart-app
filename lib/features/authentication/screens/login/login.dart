@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               TLoginHeader(dark: dark),
               const TLoginForm(),
-              TFormDivider(dark: dark, dividerText: TTexts.orSignInWith.capitalize!,),
+              TFormDivider( dividerText: TTexts.orSignInWith.capitalize!,),
               const SizedBox(
                 height: TSizes.defaultBtwSections,
               ),

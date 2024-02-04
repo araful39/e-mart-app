@@ -40,10 +40,12 @@ static const String verificationCode="verificationCode";
 static const String resentEmail="Resend Email";
 static const String resentEmailIn="Resend email in";
 
+
 //Authentication Heading Text
   static const String loginTitle="Welcome back.";
   static const String loginSubTitle="Discover Limitless Choices and Unmatched Convenience";
   static const String signupTitle="Let`s create your account";
   static const String forgetPasswordTitle="Forget password";
+  static const String and="and";
 
 }
