@@ -1,7 +1,6 @@
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TSocialButton extends StatelessWidget {
@@ -22,8 +21,8 @@ class TSocialButton extends StatelessWidget {
             IconButton(
                 onPressed: (){},
                 icon:
-                Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.google)))),
-        SizedBox(width: TSizes.defaultBtwItems,),
+                const Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.google)))),
+        const SizedBox(width: TSizes.defaultBtwItems,),
         Container(
             decoration: BoxDecoration(
                 color: TColores.grey,borderRadius: BorderRadius.circular(100)
@@ -32,7 +31,7 @@ class TSocialButton extends StatelessWidget {
             IconButton(
                 onPressed: (){},
                 icon:
-                Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.facebook)))),
+                const Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.facebook)))),
       ],
     );
   }

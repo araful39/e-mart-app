@@ -24,7 +24,7 @@ class TSingUpForm extends StatelessWidget {
               Flexible(
                 child: TextFormField(
 
-                  // expands: false,
+                  expands: false,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person),
                       hintText: TTexts.firstName
@@ -37,7 +37,7 @@ class TSingUpForm extends StatelessWidget {
 
               Flexible(
                 child: TextFormField(
-                  // expands: false,
+                  expands: false,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person),
                       hintText: TTexts.lastName

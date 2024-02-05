@@ -2,7 +2,9 @@ import 'package:e_mart/features/shop/screens/home/home.dart';
 import 'package:e_mart/features/shop/screens/profile/profile.dart';
 import 'package:e_mart/features/shop/screens/shop/shop.dart';
 import 'package:e_mart/features/shop/screens/wishlist/wishlist.dart';
+import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,15 +14,22 @@ class NavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
-    print("print1");
+    if (kDebugMode) {
+      print("print1");
+    }
     return Scaffold(
         bottomNavigationBar: Obx(
           () => NavigationBar(
-            height: 70,
+            animationDuration: Duration(seconds: 5,),
+            height: 60,
             elevation: 0,
             selectedIndex: controller.selectedIndex.value,
-            onDestinationSelected: (index) =>
-                controller.selectedIndex.value = index,
+            // backgroundColor: TColores.success,
+            onDestinationSelected: (i) =>
+                controller.selectedIndex.value = i,
+            indicatorColor: Colors.orange,
+            surfaceTintColor: Colors.pinkAccent,
+labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
             destinations: const [
               NavigationDestination(icon: Icon(Icons.home), label: "Home"),
               NavigationDestination(icon: Icon(Icons.shop), label: "Shop"),
