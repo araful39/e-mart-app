@@ -12,18 +12,19 @@ class SingUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
-          child:
-          Padding(
+          child: Padding(
             padding: const EdgeInsets.all(TSizes.defaultSpace),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-             Text(TTexts.signupTitle,style: Theme.of(context).textTheme.headlineMedium,),
+                Text(
+                  TTexts.signupTitle,
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
@@ -31,14 +32,11 @@ class SingUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
-
-TFormDivider(dividerText: TTexts.onSignUpWith.capitalize!),
+                TFormDivider(dividerText: TTexts.onSignUpWith.capitalize!),
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
                 const TSocialButton(),
-
-
               ],
             ),
           ),
@@ -47,4 +45,3 @@ TFormDivider(dividerText: TTexts.onSignUpWith.capitalize!),
     );
   }
 }
-

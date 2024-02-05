@@ -2,7 +2,7 @@ class TTexts{
   //--GLOBAL Texts
 static const String submit="Submit";
 static const String appName="R-Store";
-static const String iContinue="Continue";
+static const String tContinue="Continue";
 
   // --OnBoarding Texts
   static const String onBoardingTitle1="Choose your product";
@@ -18,7 +18,7 @@ static const String iContinue="Continue";
   static const String homeAppbarTitle="Good day for shopping";
   static const String homeAppbarSubTitle="Md. Araful islam";
 
-  // TextFormfeild Form Text
+  // TextFormalised Form Text
 
 static const String firstName="First Name";
 static const String lastName="Last Name";
@@ -48,6 +48,7 @@ static const String resentEmailIn="Resend email in";
   static const String forgetPasswordTitle="Forget password";
   static const String forgetPasswordSubTitle="Don`t worry sometimes people can forget too, enter your email and we will send you";
   static const String and="and";
+  static const String done="Done";
   static const String changeYourPasswordTitle="Password Reset Email Sent";
   static const String changeYourPasswordSubTitle="Your Account Security is Our Priority! We`ve Sent You a Secure Ling To Safely";
   static const String confirmEmail="Verify your email address";
@@ -55,5 +56,5 @@ static const String resentEmailIn="Resend email in";
   static const String emailNotReceivedMassage="Did n`t get the email? Check your junk/spam or resent it";
   static const String yourAccountCreatedTitle="Your account successfully created";
   static const String yourAccountCreatedSubTitle="Welcome to Your Ultimate Shopping Destination: Your Account is Created,Unleash";
-static const String tContinue="Continue";
+
 }

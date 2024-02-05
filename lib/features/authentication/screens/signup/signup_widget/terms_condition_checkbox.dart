@@ -7,45 +7,60 @@ import 'package:flutter/material.dart';
 class TTermsAndConditionCheckBox extends StatelessWidget {
   const TTermsAndConditionCheckBox({
     super.key,
-
   });
-
-
 
   @override
   Widget build(BuildContext context) {
-    final dark=THelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
 
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Checkbox(value: true, onChanged: (value){}),
-        const SizedBox(
-          width: TSizes.defaultBtwItems,
-        ),
+
+
         Row(
           children: [
-            Text.rich(TextSpan(children: [
-              TextSpan(
-                  text:'${ TTexts.iAgreeTo} ',style: Theme.of(context).textTheme.bodySmall
-              ),
-              TextSpan(
+            SizedBox(width:20,height: 5,child: Checkbox(value: true, onChanged: (value) {})),
+            SizedBox(
+              width: TSizes.defaultBtwItems,
+            ),
+            Text.rich(
 
-                  text:'${ TTexts.privacyPolicy} ',style: Theme.of(context).textTheme.bodyMedium!.apply(
-                color: dark ? TColores.white : TColores.primary,
-                decoration: TextDecoration.underline,
-                decorationColor:  dark ? TColores.white : TColores.primary,
-              )
-              ),
-              TextSpan(text: '${TTexts.and} ',style: Theme.of(context).textTheme.bodySmall),
-              TextSpan(text: TTexts.termsOfUse,style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? TColores.white : TColores.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? TColores.white : TColores.primary
-              )),
-            ]),),
+                TextSpan(children: [
+              TextSpan(
+                  text: '${TTexts.iAgreeTo} ',
+                  style: Theme.of(context).textTheme.bodySmall),
+
+            ])),
 
           ],
-        )
+        ),
+        SizedBox(
+          height: TSizes.defaultBtwItems,
+        ),
+        Text.rich(
+
+            TextSpan(children: [
+
+              TextSpan(
+                  text: '${TTexts.privacyPolicy} ',
+                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                    color: dark ? TColores.white : TColores.primary,
+                    decoration: TextDecoration.underline,
+                    decorationColor:
+                    dark ? TColores.white : TColores.primary,
+                  )),
+              TextSpan(
+                  text: '${TTexts.and} ',
+                  style: Theme.of(context).textTheme.bodySmall),
+              TextSpan(
+                  text: TTexts.termsOfUse,
+                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                      color: dark ? TColores.white : TColores.primary,
+                      decoration: TextDecoration.underline,
+                      decorationColor:
+                      dark ? TColores.white : TColores.primary)),
+            ])),
       ],
     );
   }
