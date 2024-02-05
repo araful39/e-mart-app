@@ -1,8 +1,10 @@
 
 import 'package:e_mart/features/authentication/screens/signup/signup_widget/terms_condition_checkbox.dart';
+import 'package:e_mart/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TSingUpForm extends StatelessWidget {
   const TSingUpForm({
@@ -94,7 +96,7 @@ class TSingUpForm extends StatelessWidget {
             height: TSizes.defaultBtwSections,
           ),
           SizedBox(
-              width:double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text(TTexts.createAccount)))
+              width:double.infinity,child: ElevatedButton(onPressed: ()=>Get.to(()=>const VerifyEmailScreen()), child: const Text(TTexts.createAccount)))
 
 
         ],
