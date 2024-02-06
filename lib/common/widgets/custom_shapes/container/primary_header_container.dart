@@ -1,5 +1,6 @@
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 
 import 'circular_container.dart';
 
@@ -15,34 +16,36 @@ final Widget child;
       color: RColores.primary,
       padding: const EdgeInsets.all(0),
       child: SizedBox(
-        height: 400,
+        height: Get.height*0.42,
         child: Stack(
           children: [
             Positioned(
-              top: -150,
+              top: -50,
               right: -200,
-              child: TCircularContainer(
-                radius: 400,
-                backgroundColor: RColores.textWhite.withOpacity(0.2),
+              child: RCircularContainer(
+                height: 200,
+                radius: 200,
+                backgroundColor: RColores.white.withOpacity(0.2),
                 padding: 0,
               ),
             ),
             Positioned(
-              bottom: 100,
+              bottom: 0,
               right: -200,
-              child: TCircularContainer(
-                radius: 400,
-                backgroundColor: RColores.textWhite.withOpacity(0.2),
+              child: RCircularContainer(
+                height: 200,
+                radius: 200,
+                backgroundColor: RColores.white.withOpacity(0.3),
                 padding: 0,
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 225
               ),
               child: Container(
                 height: double.infinity,width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: RColores.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50),topRight: Radius.circular(50),

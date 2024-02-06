@@ -1,102 +1,44 @@
 List productList = [
   {
     "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiyrWgF8eCNMTJO1D02mEggu4dU2ywwhTOw&usqp=CAU",
+    "name": "T-Shirt"
   },
   {
     "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8hbf7_5dCnSkqiDER1A7uOEv2RVBqpWyUNg&usqp=CAU",
+    "name": "Pant"
+  },
+
+  {
+    "image":
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE0VYnz9DcJNMEBcD_dFM99PpJfXm7I5c9JQ&usqp=CAU",
+    "name": "Shirt"
   },
   {
     "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiyrWgF8eCNMTJO1D02mEggu4dU2ywwhTOw&usqp=CAU",
+    "name": "T-Shirt"
   },
   {
     "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8hbf7_5dCnSkqiDER1A7uOEv2RVBqpWyUNg&usqp=CAU",
+    "name": "Pant"
+  },
+
+  {
+    "image":
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE0VYnz9DcJNMEBcD_dFM99PpJfXm7I5c9JQ&usqp=CAU",
+    "name": "Shirt"
   },
   {
     "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiyrWgF8eCNMTJO1D02mEggu4dU2ywwhTOw&usqp=CAU",
+    "name": "T-Shirt"
+  },{
     "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju islam raju"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtTVQUUkfXPTWmG3aMBGgo_bf549NcSz3WMQ&usqp=CAU",
+    "name": "Shirt"
   },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "RajuRajuRajuRajuRajuRaju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
-  {
-    "image":
-        "https://upload.wikimedia.org/wikipedia/commons/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-    "name": "Raju"
-  },
+
 ];
