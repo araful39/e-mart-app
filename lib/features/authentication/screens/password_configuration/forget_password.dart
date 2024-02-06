@@ -14,27 +14,27 @@ class ForgetPassword extends StatelessWidget {
       appBar: AppBar(),
       body:  SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(RSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(TTexts.forgetPasswordTitle,style: Theme.of(context).textTheme.headlineMedium,),
+              Text(RTexts.forgetPasswordTitle,style: Theme.of(context).textTheme.headlineMedium,),
               const SizedBox(
-                height: TSizes.defaultBtwItems,
+                height: RSizes.defaultBtwItems,
               ),
-              Text(TTexts.forgetPasswordSubTitle,style: Theme.of(context).textTheme.headlineSmall,),
+              Text(RTexts.forgetPasswordSubTitle,style: Theme.of(context).textTheme.headlineSmall,),
               const SizedBox(
-                height: TSizes.defaultBtwSections*2,
+                height: RSizes.defaultBtwSections*2,
               ),
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: TTexts.email,prefixIcon: Icon(Icons.email)
+                  labelText: RTexts.email,prefixIcon: Icon(Icons.email)
                 ),
               ),
               const SizedBox(
-                height: TSizes.defaultBtwSections,
+                height: RSizes.defaultBtwSections,
               ),
-              SizedBox(width: double.infinity,child: ElevatedButton(onPressed: ()=>Get.off(()=>const ResetPassword()),child: const Text(TTexts.submit),),)
+              SizedBox(width: double.infinity,child: ElevatedButton(onPressed: ()=>Get.off(()=>const ResetPassword()),child: const Text(RTexts.submit),),)
             ],
           ),
         ),

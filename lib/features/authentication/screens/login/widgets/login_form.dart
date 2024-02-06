@@ -7,8 +7,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TLoginForm extends StatelessWidget {
-  const TLoginForm({
+class RLoginForm extends StatelessWidget {
+  const RLoginForm({
     super.key,
   });
 
@@ -17,15 +17,15 @@ class TLoginForm extends StatelessWidget {
     final controller=Get.put(LoginController());
     return Form(
         child: Padding(
-          padding:  EdgeInsets.symmetric(vertical: TSizes.defaultBtwSections),
+          padding:  const EdgeInsets.symmetric(vertical: RSizes.defaultBtwSections),
           child: Column(
             children: [
               TextFormField(
                 decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.email), labelText: TTexts.email),
+                    prefixIcon: Icon(Icons.email), labelText: RTexts.email),
               ),
               const SizedBox(
-                height: TSizes.spaceBtwInputFields,
+                height: RSizes.spaceBtwInputFields,
               ),
               Obx(
     ()=> TextFormField(
@@ -33,7 +33,7 @@ class TLoginForm extends StatelessWidget {
                   obscureText: controller.isClick.value,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.key),
-                    labelText: TTexts.password,
+                    labelText: RTexts.password,
                     suffixIcon: IconButton(
                         onPressed: (){
                           controller.visible();
@@ -49,7 +49,7 @@ class TLoginForm extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: TSizes.spaceBtwInputFields / 2,
+                height: RSizes.spaceBtwInputFields / 2,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,23 +57,23 @@ class TLoginForm extends StatelessWidget {
                   Row(
                     children: [
                       Checkbox(value: true, onChanged: (value) {}),
-                      const Text(TTexts.remember)
+                      const Text(RTexts.remember)
                     ],
                   ),
                   TextButton(
                       onPressed: () =>Get.to(()=>const ForgetPassword()),
-                      child: const Text(TTexts.forgetPassword))
+                      child: const Text(RTexts.forgetPassword))
                 ],
               ),
               const SizedBox(
-                height: TSizes.defaultBtwSections,
+                height: RSizes.defaultBtwSections,
               ),
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () =>Get.to(()=>const NavigationMenu()), child: const Text(TTexts.signIn))),
+                      onPressed: () =>Get.to(()=>const NavigationMenu()), child: const Text(RTexts.signIn))),
               const SizedBox(
-                height: TSizes.defaultBtwSections,
+                height: RSizes.defaultBtwSections,
               ),
               SizedBox(
                   width: double.infinity,
@@ -81,7 +81,7 @@ class TLoginForm extends StatelessWidget {
                       onPressed: () {
                         Get.to(()=>const SingUpScreen());
                       },
-                      child: const Text(TTexts.createAccount))),
+                      child: const Text(RTexts.createAccount))),
 
             ],
           ),

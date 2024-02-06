@@ -20,23 +20,23 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               Image(
-                  width: THelperFunctions.screenWidth()*0.6,
+                  width: RHelperFunctions.screenWidth()*0.6,
                   image:  AssetImage(images)),
               const SizedBox(
-                height: TSizes.defaultBtwSections,
+                height: RSizes.defaultBtwSections,
               ),
               Text(title,style: Theme.of(context).textTheme.headlineMedium,textAlign: TextAlign.center,),
               const SizedBox(
-                height: TSizes.defaultBtwItems,
+                height: RSizes.defaultBtwItems,
               ),
               const SizedBox(
-                height: TSizes.defaultBtwItems,
+                height: RSizes.defaultBtwItems,
               ),
               Text(subTile,style: Theme.of(context).textTheme.labelMedium,textAlign: TextAlign.center,),
               const SizedBox(
-                height: TSizes.defaultBtwSections,
+                height: RSizes.defaultBtwSections,
               ),
-SizedBox(              width: double.infinity,child: ElevatedButton(onPressed:onPress,child: const Text(TTexts.tContinue),),
+SizedBox(              width: double.infinity,child: ElevatedButton(onPressed:onPress,child: const Text(RTexts.rContinue),),
 )
             ],
           ),

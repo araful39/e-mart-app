@@ -1,14 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class THelperFunctions{
+class RHelperFunctions{
 
 
 // static void navigateToScreen(BuildContext context){
 //   Navigator.push(context, MaterialPageRoute(builder: (_)=>screen));
-// }
-//
+
   static String truncateText(String text,int maxLength){
     if(text.length <= maxLength){
       return text;

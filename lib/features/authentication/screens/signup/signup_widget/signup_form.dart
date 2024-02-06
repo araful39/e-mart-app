@@ -1,4 +1,3 @@
-
 import 'package:e_mart/features/authentication/screens/signup/signup_widget/terms_condition_checkbox.dart';
 import 'package:e_mart/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
@@ -6,13 +5,10 @@ import 'package:e_mart/utills/constants/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TSingUpForm extends StatelessWidget {
-  const TSingUpForm({
+class RSingUpForm extends StatelessWidget {
+  const RSingUpForm({
     super.key,
-
   });
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -23,85 +19,65 @@ class TSingUpForm extends StatelessWidget {
             children: [
               Flexible(
                 child: TextFormField(
-
                   expands: false,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person),
-                      hintText: TTexts.firstName
-                  ),
+                      hintText: RTexts.firstName),
                 ),
               ),
               const SizedBox(
-                width: TSizes.spaceBtwInputFields,
+                width: RSizes.spaceBtwInputFields,
               ),
-
               Flexible(
                 child: TextFormField(
                   expands: false,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person),
-                      hintText: TTexts.lastName
-                  ),
+                      hintText: RTexts.lastName),
                 ),
               ),
-
             ],
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: RSizes.spaceBtwInputFields,
           ),
-
           TextFormField(
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.person),
-                hintText: TTexts.userName
-            ),
+                prefixIcon: Icon(Icons.person), hintText: RTexts.userName),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: RSizes.spaceBtwInputFields,
           ),
-
           TextFormField(
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.email),
-                hintText: TTexts.email
-            ),
+                prefixIcon: Icon(Icons.email), hintText: RTexts.email),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: RSizes.spaceBtwInputFields,
           ),
-
           TextFormField(
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.phone),
-                hintText: TTexts.phoneNo
-            ),
+                prefixIcon: Icon(Icons.phone), hintText: RTexts.phoneNo),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: RSizes.spaceBtwInputFields,
           ),
-
           TextFormField(
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.key),
-                hintText: TTexts.password
-            ),
+                prefixIcon: Icon(Icons.key), hintText: RTexts.password),
           ),
+          const SizedBox(height: RSizes.defaultBtwSections),
+          const RTermsAndConditionCheckBox(),
           const SizedBox(
-              height: TSizes.defaultBtwSections
-          ),
-
-          const TTermsAndConditionCheckBox(),
-          const SizedBox(
-            height: TSizes.defaultBtwSections,
+            height: RSizes.defaultBtwSections,
           ),
           SizedBox(
-              width:double.infinity,child: ElevatedButton(onPressed: ()=>Get.to(()=>const VerifyEmailScreen()), child: const Text(TTexts.createAccount)))
-
-
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                  child: const Text(RTexts.createAccount)))
         ],
       ),
     );
   }
 }
-

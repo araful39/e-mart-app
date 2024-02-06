@@ -2,7 +2,6 @@ import 'package:e_mart/features/shop/screens/home/home.dart';
 import 'package:e_mart/features/shop/screens/profile/profile.dart';
 import 'package:e_mart/features/shop/screens/shop/shop.dart';
 import 'package:e_mart/features/shop/screens/wishlist/wishlist.dart';
-import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class NavigationMenu extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: Obx(
           () => NavigationBar(
-            animationDuration: Duration(seconds: 1,),
+            animationDuration: const Duration(seconds: 1,),
             height: 60,
             elevation: 0,
             selectedIndex: controller.selectedIndex.value,

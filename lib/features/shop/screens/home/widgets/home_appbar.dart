@@ -6,8 +6,8 @@ import 'package:e_mart/utills/constants/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class THomeAppBar extends StatelessWidget {
-  const THomeAppBar({
+class RHomeAppBar extends StatelessWidget {
+  const RHomeAppBar({
     super.key,
   });
 
@@ -17,23 +17,23 @@ class THomeAppBar extends StatelessWidget {
       title: Column(
         children: [
           Text(
-            TTexts.homeAppbarTitle,
+            RTexts.homeAppbarTitle,
             style: Theme.of(context)
                 .textTheme
                 .labelMedium
-                ?.apply(color: TColores.grey),
+                ?.apply(color: RColores.grey),
           ),
           Text(
-            TTexts.homeAppbarSubTitle,
+            RTexts.homeAppbarSubTitle,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall
-                ?.apply(color: TColores.grey),
+                ?.apply(color: RColores.grey),
           ),
         ],
       ),
       actions: [
-        TCardCounterIcon(iconColor: TColores.white, onpress: ()=>Get.to(()=>const LoginScreen()))
+        TCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const LoginScreen()))
       ],
     );
   }

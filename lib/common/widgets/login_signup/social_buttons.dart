@@ -3,8 +3,8 @@ import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class TSocialButton extends StatelessWidget {
-  const TSocialButton({
+class RSocialButton extends StatelessWidget {
+  const RSocialButton({
     super.key,
   });
 
@@ -15,23 +15,23 @@ class TSocialButton extends StatelessWidget {
       children: [
         Container(
             decoration: BoxDecoration(
-                color: TColores.grey,borderRadius: BorderRadius.circular(100)
+                color: RColores.grey,borderRadius: BorderRadius.circular(100)
             ),
             child:
             IconButton(
                 onPressed: (){},
                 icon:
-                const Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.google)))),
-        const SizedBox(width: TSizes.defaultBtwItems,),
+                const Image(height: RSizes.iconMd,width: RSizes.iconMd,image: AssetImage(RImages.google)))),
+        const SizedBox(width: RSizes.defaultBtwItems,),
         Container(
             decoration: BoxDecoration(
-                color: TColores.grey,borderRadius: BorderRadius.circular(100)
+                color: RColores.grey,borderRadius: BorderRadius.circular(100)
             ),
             child:
             IconButton(
                 onPressed: (){},
                 icon:
-                const Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.facebook)))),
+                const Image(height: RSizes.iconMd,width: RSizes.iconMd,image: AssetImage(RImages.facebook)))),
       ],
     );
   }

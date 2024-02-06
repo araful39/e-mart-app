@@ -12,39 +12,58 @@ class ResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
+    return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(onPressed: ()=>Get.back(), icon: const Icon(CupertinoIcons.clear))
+          IconButton(
+              onPressed: () => Get.back(),
+              icon: const Icon(CupertinoIcons.clear))
         ],
       ),
-      body:   SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
-          padding:   EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(RSizes.defaultSpace),
           child: Column(
             children: [
               Image(
-                  width: THelperFunctions.screenWidth()*0.6,
-                  image:  const AssetImage(TImages.deliveryEmail)),
+                  width: RHelperFunctions.screenWidth() * 0.6,
+                  image: const AssetImage(RImages.deliveryEmail)),
               const SizedBox(
-                height: TSizes.defaultBtwSections,
+                height: RSizes.defaultBtwSections,
               ),
-              Text(TTexts.changeYourPasswordTitle,style: Theme.of(context).textTheme.headlineMedium,textAlign: TextAlign.center,),
-
-              const SizedBox(
-                height: TSizes.defaultBtwItems,
-              ),
-              Text(TTexts.changeYourPasswordSubTitle,style: Theme.of(context).textTheme.labelMedium,textAlign: TextAlign.center,),
-              const SizedBox(
-                height: TSizes.defaultBtwSections,
-              ),
-              SizedBox(              width: double.infinity,child: ElevatedButton(onPressed:()=>Get.to(()=>LoginScreen()),child: const Text(TTexts.done),),
+              Text(
+                RTexts.changeYourPasswordTitle,
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: TSizes.defaultBtwItems,
+                height: RSizes.defaultBtwItems,
               ),
-              SizedBox(              width: double.infinity,child: OutlinedButton(onPressed:(){},child: const Text(TTexts.resentEmail),),
+              Text(
+                RTexts.changeYourPasswordSubTitle,
+                style: Theme.of(context).textTheme.labelMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: RSizes.defaultBtwSections,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () => Get.to(() => const LoginScreen()),
+                  child: const Text(RTexts.done),
+                ),
+              ),
+              const SizedBox(
+                height: RSizes.defaultBtwItems,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: const Text(RTexts.resentEmail),
+                ),
               ),
             ],
           ),

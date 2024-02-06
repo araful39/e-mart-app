@@ -3,8 +3,8 @@ import 'package:e_mart/utills/helpers/helpers.dart';
 
 import 'package:flutter/material.dart';
 
-class TFormDivider extends StatelessWidget {
-  const TFormDivider({
+class RFormDivider extends StatelessWidget {
+  const RFormDivider({
     super.key,
    required this.dividerText,
   });
@@ -14,13 +14,13 @@ class TFormDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark=THelperFunctions.isDarkMode(context);
+    final dark=RHelperFunctions.isDarkMode(context);
 
     return Row(
       children: [
-        Flexible(child: Divider(color: dark ? TColores.darkGery : TColores.grey,thickness: 0.5,indent: 60,endIndent: 5,)),
+        Flexible(child: Divider(color: dark ? RColores.darkGery : RColores.grey,thickness: 0.5,indent: 60,endIndent: 5,)),
         Text(dividerText,style: Theme.of(context).textTheme.labelMedium,),
-        Flexible(child: Divider(color: dark ? TColores.darkGery : TColores.grey,thickness: 0.5,indent:5,endIndent: 60,))
+        Flexible(child: Divider(color: dark ? RColores.darkGery : RColores.grey,thickness: 0.5,indent:5,endIndent: 60,))
       ],
     );
   }

@@ -19,11 +19,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    final dark = RHelperFunctions.isDarkMode(context);
 
     return Scaffold(
       body: SafeArea(
@@ -32,13 +30,15 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: TSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
-              TLoginHeader(dark: dark),
-              const TLoginForm(),
-              TFormDivider( dividerText: TTexts.orSignInWith.capitalize!,),
-              const SizedBox(
-                height: TSizes.defaultBtwSections,
+              RLoginHeader(dark: dark),
+              const RLoginForm(),
+              RFormDivider(
+                dividerText: RTexts.orSignInWith.capitalize!,
               ),
-              const TSocialButton()
+              const SizedBox(
+                height: RSizes.defaultBtwSections,
+              ),
+              const RSocialButton()
             ],
           ),
         )),
@@ -46,11 +46,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-
-
-
-
-
-
-

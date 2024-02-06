@@ -1,8 +1,9 @@
-class TTexts{
+class RTexts{
   //--GLOBAL Texts
 static const String submit="Submit";
 static const String appName="R-Store";
-static const String tContinue="Continue";
+static const String rContinue="Continue";
+static const String tSearch="Search in Store";
 
   // --OnBoarding Texts
   static const String onBoardingTitle1="Choose your product";

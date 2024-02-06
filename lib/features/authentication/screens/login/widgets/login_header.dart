@@ -1,11 +1,10 @@
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TLoginHeader extends StatelessWidget {
-  const TLoginHeader({
+class RLoginHeader extends StatelessWidget {
+  const RLoginHeader({
     super.key,
     required this.dark,
   });
@@ -20,16 +19,16 @@ class TLoginHeader extends StatelessWidget {
         Image(
             height: 150,
             image: AssetImage(
-                dark ? TImages.lightAppLogo : TImages.darkAppLogo)),
+                dark ? RImages.lightAppLogo : RImages.darkAppLogo)),
         Text(
-          TTexts.loginTitle,
+          RTexts.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         const SizedBox(
-          height: TSizes.sm,
+          height: RSizes.sm,
         ),
         Text(
-          TTexts.loginSubTitle,
+          RTexts.loginSubTitle,
           style: Theme.of(context).textTheme.bodyMedium,
         )
       ],

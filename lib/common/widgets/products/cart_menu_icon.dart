@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class TCardCounterIcon extends StatelessWidget {
   const TCardCounterIcon({
-    super.key, required this.iconColor, required this.onpress,
+    super.key,  this.iconColor, required this.onpress,
   });
-  final Color iconColor;
+  final Color? iconColor;
   final VoidCallback onpress;
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,11 @@ class TCardCounterIcon extends StatelessWidget {
                 .textTheme
                 .labelLarge!
                 .apply(
-                color: TColores.white, fontSizeFactor: 0.8),
+                color: RColores.white, fontSizeFactor: 0.8),
           ),
           child:  Icon(
             Icons.shopping_cart,
-            color: iconColor ?? TColores.white,
+            color: iconColor ?? RColores.white,
           ),
         ),
       ),
