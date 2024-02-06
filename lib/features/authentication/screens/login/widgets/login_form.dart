@@ -3,6 +3,7 @@ import 'package:e_mart/features/authentication/screens/signup/singup.dart';
 import 'package:e_mart/navigation_menu.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,9 +14,10 @@ class TLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller=Get.put(LoginController());
     return Form(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: TSizes.defaultBtwSections),
+          padding:  EdgeInsets.symmetric(vertical: TSizes.defaultBtwSections),
           child: Column(
             children: [
               TextFormField(
@@ -25,18 +27,27 @@ class TLoginForm extends StatelessWidget {
               const SizedBox(
                 height: TSizes.spaceBtwInputFields,
               ),
-              TextFormField(
+              Obx(
+    ()=> TextFormField(
+                  obscuringCharacter: "*",
+                  obscureText: controller.isClick.value,
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.key),
+                    labelText: TTexts.password,
+                    suffixIcon: IconButton(
+                        onPressed: (){
+                          controller.visible();
+                          if (kDebugMode) {
+                            print("Button 12");
+                          }
+                        },
+                        icon: controller.isClick.value? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
 
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.key),
-                  labelText: TTexts.password,
-                  suffixIcon: IconButton(
-                    onPressed: (){},
-                    icon: const Icon(Icons.visibility_off),
-
+                      ),
+                    ),
                   ),
-                ),
               ),
+
               const SizedBox(
                 height: TSizes.spaceBtwInputFields / 2,
               ),
@@ -76,4 +87,15 @@ class TLoginForm extends StatelessWidget {
           ),
         ));
   }
+}
+
+
+
+class LoginController extends GetxController{
+  RxBool isClick=true.obs;
+
+  visible(){
+    isClick.value=!isClick.value;
+  }
+
 }

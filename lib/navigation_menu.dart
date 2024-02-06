@@ -20,7 +20,7 @@ class NavigationMenu extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: Obx(
           () => NavigationBar(
-            animationDuration: Duration(seconds: 5,),
+            animationDuration: Duration(seconds: 1,),
             height: 60,
             elevation: 0,
             selectedIndex: controller.selectedIndex.value,

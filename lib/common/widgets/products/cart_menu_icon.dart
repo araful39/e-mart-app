@@ -12,7 +12,7 @@ class TCardCounterIcon extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
-        onTap: () {},
+        onTap: onpress,
         child: Badge(
           label: Text(
             "5",
@@ -22,9 +22,9 @@ class TCardCounterIcon extends StatelessWidget {
                 .apply(
                 color: TColores.white, fontSizeFactor: 0.8),
           ),
-          child: const Icon(
+          child:  Icon(
             Icons.shopping_cart,
-            color: TColores.white,
+            color: iconColor ?? TColores.white,
           ),
         ),
       ),
