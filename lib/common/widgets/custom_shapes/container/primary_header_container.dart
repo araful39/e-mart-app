@@ -38,7 +38,7 @@ final Widget child;
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 300
+                top: 225
               ),
               child: Container(
                 height: double.infinity,width: double.infinity,
