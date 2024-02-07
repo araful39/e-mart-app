@@ -3,9 +3,10 @@ import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
-class RProductCardVertical extends StatelessWidget {
-  const RProductCardVertical({super.key});
 
+class RProductCardVertical extends StatelessWidget {
+  const RProductCardVertical({super.key, required this.imagePath});
+final String imagePath;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,7 @@ class RProductCardVertical extends StatelessWidget {
       ),
       child: Column(
         children: [
-    RRoundedContainer(height: 180,padding: EdgeInsets.all(RSizes.sm),backgroundColor: RColores.light,)
+    RRoundedContainer(height: 180,padding: const EdgeInsets.all(RSizes.sm),child: Image(image: AssetImage(imagePath),),)
 
     ],
       ),

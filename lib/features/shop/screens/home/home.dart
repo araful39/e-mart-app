@@ -11,6 +11,8 @@ import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -43,12 +45,20 @@ class HomeScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.all(4),
-            child: RPromoSlider(
-              banners: [
-                RImages.banners1,
-                RImages.banners2,
-                RImages.banners3,
-                RImages.banners4,
+            child: Column(
+              children: [
+                RPromoSlider(
+                  banners: [
+                    RImages.banners1,
+                    RImages.banners2,
+                    RImages.banners3,
+                    RImages.banners4,
+                  ],
+                ),
+                SizedBox(
+                  height: RSizes.sm,
+                ),
+                RProductCardVertical(imagePath: RImages.banners1,)
               ],
             ),
           ),
