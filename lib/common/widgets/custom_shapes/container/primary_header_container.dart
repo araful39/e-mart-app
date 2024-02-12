@@ -16,7 +16,7 @@ final Widget child;
       color: RColores.primary,
       padding: const EdgeInsets.all(0),
       child: SizedBox(
-        height: Get.height*0.42,
+        height: 250,
         child: Stack(
           children: [
             Positioned(
@@ -30,7 +30,7 @@ final Widget child;
               ),
             ),
             Positioned(
-              bottom: 0,
+              bottom: 20,
               right: -200,
               child: RCircularContainer(
                 height: 200,
@@ -41,9 +41,10 @@ final Widget child;
             ),
             Padding(
               padding: const EdgeInsets.only(
-                top: 225
+                top: 230
               ),
               child: Container(
+
                 height: double.infinity,width: double.infinity,
                 decoration: const BoxDecoration(
                     color: RColores.white,
@@ -51,6 +52,7 @@ final Widget child;
                     topLeft: Radius.circular(50),topRight: Radius.circular(50),
                   )
                 ),
+
               ),
             ),
             child

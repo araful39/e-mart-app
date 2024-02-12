@@ -11,6 +11,7 @@ import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,11 +19,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
       child: Column(
         children: [
-          RPrimaryHeaderContainer(
+          const RPrimaryHeaderContainer(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -43,27 +44,31 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.all(4),
-            child: Column(
-              children: [
-                RPromoSlider(
-                  banners: [
-                    RImages.banners1,
-                    RImages.banners2,
-                    RImages.banners3,
-                    RImages.banners4,
-                  ],
-                ),
-                SizedBox(
-                  height: RSizes.sm,
-                ),
-                RProductCardVertical(imagePath: RImages.banners1,)
-              ],
-            ),
-          ),
+           Column(
+             children: [
+               const RPromoSlider(
+                 banners: [
+                   RImages.banners1,
+                   RImages.banners2,
+                   RImages.banners3,
+                   RImages.banners4,
+                 ],
+               ),
+               const SizedBox(
+                 height: RSizes.sm,
+               ),
+               RGridLayout(itemCount: 2, itemBuilder: (_ , index ) {
+                 return const RProductCardVertical();
+               },)
+             ],
+           ),
+
+
+
         ],
       ),
     ));
   }
 }
+
+

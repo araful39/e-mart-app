@@ -1,4 +1,4 @@
-import 'package:e_mart/utills/constants/colors.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../../utills/constants/sizes.dart';
@@ -33,8 +33,9 @@ class RRoundedContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(radius??RSizes.cardRadiusLg),
-        border: Border.all(color: borderColor ?? RColores.buttonPrimary )
+        border: Border.all(color: borderColor ?? Colors.grey.withOpacity(0.1))
       ),
+      child: child,
     );
   }
 }

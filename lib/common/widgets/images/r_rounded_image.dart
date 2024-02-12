@@ -14,7 +14,7 @@ class RRoundedImage extends StatelessWidget {
     this.backgroundColor,
     this.fit,
     this.padding,
-    required this.isNetworkImage,
+required this.isNetworkImage,
     this.onPress,
   });
   final double? width, height;

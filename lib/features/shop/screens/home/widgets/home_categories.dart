@@ -10,7 +10,7 @@ class RHomeCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 80,
+      height: 75,
       child: ListView.builder(
           shrinkWrap: true,
           itemCount: productList.length,

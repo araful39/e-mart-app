@@ -1,8 +1,11 @@
-import 'package:e_mart/features/authentication/screens/login/login.dart';
+
 import 'package:e_mart/utills/theme/theme.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'features/authentication/screens/login/login.dart';
+
 
 
 class MyApp extends StatelessWidget {

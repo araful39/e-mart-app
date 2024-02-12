@@ -18,4 +18,9 @@ class RImages {
   //--Social Logos
   static const String google = "assets/logos/google.png";
   static const String facebook = "assets/logos/facebook.png";
+
+  //--products images
+  static const String shoes = "assets/images/products/shoes.png";
+
+
 }
