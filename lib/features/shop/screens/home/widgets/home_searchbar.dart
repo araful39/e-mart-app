@@ -4,12 +4,15 @@ import 'package:e_mart/utills/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
 class RSearchContainer extends StatelessWidget {
-  const RSearchContainer({
+   const RSearchContainer({
     super.key, this.text, this.icon, this.onpress,
+    this.padding=const EdgeInsets.symmetric(horizontal: RSizes.defaultSpace),
   });
   final String? text;
   final IconData? icon;
   final VoidCallback? onpress;
+  final EdgeInsetsGeometry padding;
+
 
 
   @override
@@ -17,19 +20,19 @@ class RSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onpress,
       child: Padding(
-        padding:  const EdgeInsets.symmetric(horizontal: RSizes.defaultBtwItems),
+        padding:  padding ,
         child: Container(
             width: TDeviceUtils.getScreenWidth(context),
             padding: const EdgeInsets.all(RSizes.md),
             decoration: BoxDecoration(
-                color: RColores.white,
+                color: RColores.light,
                 borderRadius: BorderRadius.circular(RSizes.cardRadiusLg),
                 border: Border.all(color: RColores.grey)
             ),
             child:  Row(
               children: [
                 Icon(icon ?? Icons.search,color: RColores.darkGery,),
-                const SizedBox(width: RSizes.defaultBtwItems,),
+                const SizedBox(width: RSizes.xs,),
                 Text( text ??"Search in Store",style: Theme.of(context).textTheme.bodySmall,)
               ],
             )

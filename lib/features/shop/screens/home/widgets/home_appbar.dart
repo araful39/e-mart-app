@@ -13,7 +13,7 @@ class RHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TAppBar(
+    return RAppBar(
       title: Column(
         children: [
           Text(
@@ -33,7 +33,7 @@ class RHomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        TCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const LoginScreen()))
+        RCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const LoginScreen()))
       ],
     );
   }

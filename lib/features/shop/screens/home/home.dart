@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
+import '../../../../utills/constants/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: RSizes.defaultBtwItems),
                   child: Column(
                     children: [
-                      RSectionHeading(text: "Popular Categorize"),
+                      RSectionHeading(text: "Popular Categorize",buttonTitle: "view all",showActionButton: true,textColor: RColores.white,),
                       SizedBox(
                         height: RSizes.sm,
                       ),
@@ -44,23 +45,30 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-           Column(
-             children: [
-               const RPromoSlider(
-                 banners: [
-                   RImages.banners1,
-                   RImages.banners2,
-                   RImages.banners3,
-                   RImages.banners4,
-                 ],
-               ),
-               const SizedBox(
-                 height: RSizes.sm,
-               ),
-               RGridLayout(itemCount: 2, itemBuilder: (_ , index ) {
-                 return const RProductCardVertical();
-               },)
-             ],
+           Padding(
+             padding: const EdgeInsets.only(left: RSizes.defaultBtwItems,right: RSizes.defaultBtwItems),
+             child: Column(
+               children: [
+                 const RPromoSlider(
+                   banners: [
+                     RImages.banners1,
+                     RImages.banners2,
+                     RImages.banners3,
+                     RImages.banners4,
+                   ],
+                 ),
+                 const SizedBox(
+                   height: RSizes.sm,
+                 ),
+                 RSectionHeading(text: "Popular Products",buttonTitle: "view all",onpress: (){},showActionButton: true,),
+                 const SizedBox(
+                   height: RSizes.sm,
+                 ),
+                 RGridLayout(itemCount: 2, itemBuilder: (_ , index ) {
+                   return const RProductCardVertical();
+                 },)
+               ],
+             ),
            ),
 
 

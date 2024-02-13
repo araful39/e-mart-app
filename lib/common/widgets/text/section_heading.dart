@@ -1,4 +1,4 @@
-import 'package:e_mart/utills/constants/colors.dart';
+
 import 'package:flutter/material.dart';
 
 class RSectionHeading extends StatelessWidget {
@@ -8,8 +8,10 @@ class RSectionHeading extends StatelessWidget {
     this.onpress,
     this.buttonTitle,
     this.showActionButton = false,
+    this.textColor,
   });
   final String text;
+  final Color? textColor;
   final String? buttonTitle;
   final bool showActionButton;
   final VoidCallback? onpress;
@@ -23,7 +25,7 @@ class RSectionHeading extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headlineSmall!
-              .apply(color: RColores.white),
+              .apply(color: textColor ?? Colors.black),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
@@ -31,8 +33,8 @@ class RSectionHeading extends StatelessWidget {
           TextButton(
               onPressed: onpress,
               child: Text(
-                buttonTitle ?? "ButtonTitle",
-                style: Theme.of(context).textTheme.bodySmall,
+                buttonTitle ?? "view all",
+                style: Theme.of(context).textTheme.bodySmall!.apply(color: textColor ?? Colors.black),
               )),
       ],
     );

@@ -21,6 +21,7 @@ class RImages {
 
   //--products images
   static const String shoes = "assets/images/products/shoes.png";
+  static const String cloth = "assets/images/products/cloth.png";
 
 
 }

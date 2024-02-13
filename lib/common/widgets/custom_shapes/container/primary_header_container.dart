@@ -1,6 +1,5 @@
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
 
 import 'circular_container.dart';
 
@@ -16,8 +15,7 @@ final Widget child;
       color: RColores.primary,
       padding: const EdgeInsets.all(0),
       child: SizedBox(
-        height: 250,
-        child: Stack(
+        height: 278, child: Stack(
           children: [
             Positioned(
               top: -50,
@@ -41,7 +39,7 @@ final Widget child;
             ),
             Padding(
               padding: const EdgeInsets.only(
-                top: 230
+                top: 250
               ),
               child: Container(
 

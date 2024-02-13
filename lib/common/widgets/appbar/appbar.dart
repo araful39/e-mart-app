@@ -3,8 +3,8 @@ import 'package:e_mart/utills/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const TAppBar(
+class RAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const RAppBar(
       {super.key,
       this.title,
       this.showBackArrow = false,
