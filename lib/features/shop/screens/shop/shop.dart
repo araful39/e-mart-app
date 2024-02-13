@@ -1,5 +1,6 @@
 import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:e_mart/common/widgets/images/r_circular_image.dart';
 import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
 import 'package:e_mart/common/widgets/text/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
@@ -48,21 +49,13 @@ class ShopScreen extends StatelessWidget {
                   const SizedBox(
                     height: RSizes.defaultBtwItems/1.5,
                   ),
-                  RRoundedContainer(
+                  const RRoundedContainer(
                     padding: EdgeInsets.all(RSizes.sm),
                     backgroundColor: Colors.transparent,
                     child: Row(
                       children: [
-                        Container(
-                          width: 56,
-                          height: 56,
-                          padding: EdgeInsets.all(RSizes.sm),
-                          decoration: BoxDecoration(
-                            color: RColores.white,
-                            borderRadius: BorderRadius.circular(100),
-
-                          ),child: Image(image: AssetImage(RImages.cloth),),
-                        )
+                        RCircularImage(imagePath:     RImages.cloth,),
+                        RCircularImage(imagePath:     RImages.shoes,),
                       ],
                     ),
                   )
@@ -75,3 +68,5 @@ class ShopScreen extends StatelessWidget {
     );
   }
 }
+
+
