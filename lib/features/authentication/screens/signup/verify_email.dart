@@ -40,7 +40,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               Text(
                 "support@raju.com",
@@ -48,7 +48,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               Text(
                 RTexts.confirmEmailSubTitle,
@@ -70,7 +70,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               SizedBox(
                 width: double.infinity,

@@ -3,13 +3,13 @@ import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.
 import 'package:e_mart/common/widgets/icons/r_circular_icon.dart';
 import 'package:e_mart/common/widgets/images/r_rounded_image.dart';
 import 'package:e_mart/common/widgets/products/product_title_text.dart';
+import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-import '../../text/brand_title_width_verified_icon.dart';
 import '../product_price_text.dart';
 
 class RProductCardVertical extends StatelessWidget {
@@ -66,7 +66,7 @@ class RProductCardVertical extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: RSizes.defaultBtwItems / 2,
+            height: RSizes.spaceBtwItems / 2,
           ),
           Padding(
             padding: const EdgeInsets.only(left: RSizes.sm),
@@ -78,9 +78,11 @@ class RProductCardVertical extends StatelessWidget {
                   smallSize: true,
                 ),
                 const SizedBox(
-                  height: RSizes.defaultBtwItems / 2,
+                  height: RSizes.spaceBtwItems / 2,
                 ),
-                const RBrandTitleWithVerifiedIcon(title: 'Nike',),
+                 const RBrandTitleWithVerifiedIcon(
+                  title: 'Nike',
+                ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -115,5 +117,3 @@ class RProductCardVertical extends StatelessWidget {
     );
   }
 }
-
-

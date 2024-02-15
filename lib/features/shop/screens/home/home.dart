@@ -1,6 +1,6 @@
 import 'package:e_mart/common/widgets/custom_shapes/container/primary_header_container.dart';
 
-import 'package:e_mart/common/widgets/text/section_heading.dart';
+import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                 RHomeAppBar(),
                 RSearchContainer(),
                 Padding(
-                  padding: EdgeInsets.only(left: RSizes.defaultBtwItems),
+                  padding: EdgeInsets.only(left: RSizes.spaceBtwItems),
                   child: Column(
                     children: [
                       RSectionHeading(text: "Popular Categorize",buttonTitle: "view all",showActionButton: true,textColor: RColores.white,),
@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
            Padding(
-             padding: const EdgeInsets.only(left: RSizes.defaultBtwItems,right: RSizes.defaultBtwItems),
+             padding: const EdgeInsets.only(left: RSizes.spaceBtwItems,right: RSizes.spaceBtwItems),
              child: Column(
                children: [
                  const RPromoSlider(

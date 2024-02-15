@@ -27,10 +27,10 @@ class SuccessScreen extends StatelessWidget {
               ),
               Text(title,style: Theme.of(context).textTheme.headlineMedium,textAlign: TextAlign.center,),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               Text(subTile,style: Theme.of(context).textTheme.labelMedium,textAlign: TextAlign.center,),
               const SizedBox(

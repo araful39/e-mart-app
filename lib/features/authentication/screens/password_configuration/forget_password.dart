@@ -20,7 +20,7 @@ class ForgetPassword extends StatelessWidget {
             children: [
               Text(RTexts.forgetPasswordTitle,style: Theme.of(context).textTheme.headlineMedium,),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               Text(RTexts.forgetPasswordSubTitle,style: Theme.of(context).textTheme.headlineSmall,),
               const SizedBox(

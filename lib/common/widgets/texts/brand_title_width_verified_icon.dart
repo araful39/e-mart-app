@@ -1,8 +1,10 @@
+import 'package:e_mart/common/widgets/texts/r_brand_title_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utills/constants/colors.dart';
 import '../../../utills/constants/enums.dart';
 import '../../../utills/constants/sizes.dart';
+
 class RBrandTitleWithVerifiedIcon extends StatelessWidget {
   const RBrandTitleWithVerifiedIcon({
     super.key,
@@ -24,12 +26,14 @@ class RBrandTitleWithVerifiedIcon extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          title,
-          overflow: TextOverflow.ellipsis,
-          maxLines: maxLines,
-          style:
-          Theme.of(context).textTheme.labelMedium?.apply(color: textColor),
+        Flexible(
+          child: RBrandTitleText(
+            title: title,
+            maxLines: maxLines,
+            textColor: textColor,
+            textAlign: textAlign,
+            brandTextSizes: brandTextSize,
+          ),
         ),
         const SizedBox(
           width: RSizes.xs,

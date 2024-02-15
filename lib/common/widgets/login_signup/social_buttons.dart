@@ -22,7 +22,7 @@ class RSocialButton extends StatelessWidget {
                 onPressed: (){},
                 icon:
                 const Image(height: RSizes.iconMd,width: RSizes.iconMd,image: AssetImage(RImages.google)))),
-        const SizedBox(width: RSizes.defaultBtwItems,),
+        const SizedBox(width: RSizes.spaceBtwItems,),
         Container(
             decoration: BoxDecoration(
                 color: RColores.grey,borderRadius: BorderRadius.circular(100)

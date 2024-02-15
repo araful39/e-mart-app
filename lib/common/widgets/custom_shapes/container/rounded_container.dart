@@ -33,7 +33,7 @@ class RRoundedContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(radius??RSizes.cardRadiusLg),
-        border: Border.all(color: borderColor ?? Colors.grey.withOpacity(0.1))
+        border: Border.all(color: borderColor ?? Colors.grey.withOpacity(0.8))
       ),
       child: child,
     );

@@ -22,7 +22,7 @@ class RTermsAndConditionCheckBox extends StatelessWidget {
           children: [
             SizedBox(width:20,height: 5,child: Checkbox(value: true, onChanged: (value) {})),
             const SizedBox(
-              width: RSizes.defaultBtwItems,
+              width: RSizes.spaceBtwItems,
             ),
             Text.rich(
 
@@ -36,7 +36,7 @@ class RTermsAndConditionCheckBox extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: RSizes.defaultBtwItems,
+          height: RSizes.spaceBtwItems,
         ),
         Text.rich(
 

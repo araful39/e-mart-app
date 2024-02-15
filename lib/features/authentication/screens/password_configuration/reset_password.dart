@@ -38,7 +38,7 @@ class ResetPassword extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               Text(
                 RTexts.changeYourPasswordSubTitle,
@@ -56,7 +56,7 @@ class ResetPassword extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: RSizes.defaultBtwItems,
+                height: RSizes.spaceBtwItems,
               ),
               SizedBox(
                 width: double.infinity,
