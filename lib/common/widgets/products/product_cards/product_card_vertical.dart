@@ -29,18 +29,18 @@ class RProductCardVertical extends StatelessWidget {
           color: RColores.white),
       child: Column(
         children: [
-          RRoundedContainer(
+          RBrandCard(
             height: 180,
             padding: const EdgeInsets.all(RSizes.xs),
             child: Stack(
               children: [
                 RRoundedImage(
                     onPress: () {},
-                    imageUrl: RImages.shoes,
+                    imageUrl: RImages.shoes3,
                     isNetworkImage: false),
                 Positioned(
                   top: 12,
-                  child: RRoundedContainer(
+                  child: RBrandCard(
                     radius: RSizes.sm,
                     backgroundColor: RColores.secondary.withOpacity(0.8),
                     padding: const EdgeInsets.symmetric(

@@ -4,6 +4,7 @@ import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.
 import 'package:e_mart/common/widgets/images/r_circular_image.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
+import 'package:e_mart/common/widgets/products/product_cards/store_catagory_details.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
@@ -31,7 +32,7 @@ class ShopScreen extends StatelessWidget {
             RCardCounterIcon(
               onpress: () {},
               iconColor: RColores.black,
-            )
+            ),
           ],
         ),
         body: NestedScrollView(
@@ -69,14 +70,14 @@ class ShopScreen extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {},
-                              child: RRoundedContainer(
+                              child: RBrandCard(
                                 padding: const EdgeInsets.all(RSizes.xs),
                                 backgroundColor: Colors.transparent,
                                 child: Row(
                                   children: [
                                     const Flexible(
                                         child: RCircularImage(
-                                      imagePath: RImages.shoes,
+                                      imagePath: RImages.shoes3,
                                     )),
                                     // const SizedBox(width: 2,),
                                     Flexible(
@@ -107,19 +108,32 @@ class ShopScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                bottom: const RTapBar(tabs: [
-
-                  Text("Sports"),
-                  Text("Furniture"),
-                  Text("Electronics"),
-                  Text("Clothes"),
-                  Text("Cosmetics"),
-
-                ],),
+                bottom: const RTapBar(
+                  tabs: [
+                    Text("Sports"),
+                    Text("Furniture"),
+                    Text("Electronics"),
+                    Text("Clothes"),
+                    Text("Cosmetics"),
+                  ],
+                ),
               ),
             ];
           },
-          body: TabBarView(children: [],),
+          body: TabBarView(
+            children: [
+               SingleChildScrollView(
+                child: Column(
+                  children: [
+
+
+
+                  ],
+                ),
+              ),
+
+            ],
+          ),
         ),
       ),
     );

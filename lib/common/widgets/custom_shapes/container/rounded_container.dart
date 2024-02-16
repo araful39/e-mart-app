@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../utills/constants/sizes.dart';
 
-class RRoundedContainer extends StatelessWidget {
-  const RRoundedContainer(
+class RBrandCard extends StatelessWidget {
+  const RBrandCard(
       {super.key,
       this.width,
       this.height,

@@ -19,8 +19,15 @@ class RImages {
   static const String google = "assets/logos/google.png";
   static const String facebook = "assets/logos/facebook.png";
 
-  //--products images
-  static const String shoes = "assets/images/products/shoes.png";
+  //--products images shoes
+  static const String shoesName = "assets/images/products/shoes_name.png";
+  static const String shoes1 = "assets/images/products/shoes1.png";
+  static const String shoes2 = "assets/images/products/shoes2.png";
+  static const String shoes3 = "assets/images/products/shoes3.png";
+
+
+
+  //--products images cloth
   static const String cloth = "assets/images/products/cloth.png";
 
 
