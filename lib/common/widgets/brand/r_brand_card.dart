@@ -30,7 +30,7 @@ class RBrandCard extends StatelessWidget {
             const Flexible(
               flex: 1,
                 child: RCircularImage(
-                  imagePath: RImages.shoes2, isNetworkImage: false,
+                  imagePath: RImages.shoesName, isNetworkImage: false,
                 )),
             // const SizedBox(width: 2,),
             Flexible(

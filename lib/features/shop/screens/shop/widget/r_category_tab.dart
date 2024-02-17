@@ -7,29 +7,27 @@ import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 class RCategoryTap extends StatelessWidget {
   const RCategoryTap({
-    super.key,
+    super.key, required this.images, required this.gridImage,
   });
+  final List<String> images;
+  final List<String> gridImage;
 
   @override
   Widget build(BuildContext context) {
     return  SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(RSizes.defaultSpace),
+        padding:  EdgeInsets.all(RSizes.defaultSpace),
         child: Column(
           children: [
-            const RBrandShowCase(
-              images: [
-                RImages.shoes3,
-                RImages.shoes2,
-                RImages.shoes1
-              ],
+             RBrandShowCase(
+              images: images,
             ),
             RSectionHeading(text: "You might like",onpress: (){},showActionButton: true,),
             const SizedBox(
               height: RSizes.spaceBtwItems,
             ),
-            RGridLayout(itemCount: 4, itemBuilder: (_,index){
-              return const RProductCardVertical();
+            RGridLayout(itemCount: gridImage.length, itemBuilder: (_,index){
+              return  RProductCardVertical(imagePath: gridImage[index],);
             })
           ],
         ),

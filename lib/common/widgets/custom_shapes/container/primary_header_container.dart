@@ -5,9 +5,13 @@ import 'circular_container.dart';
 
 class RPrimaryHeaderContainer extends StatelessWidget {
   const RPrimaryHeaderContainer({
-    super.key, required this.child,
+    super.key, required this.child,  this.topHeight, this.headerHeight,
   });
 final Widget child;
+
+final double ? headerHeight;
+
+final double ? topHeight;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +19,7 @@ final Widget child;
       color: RColores.primary,
       padding: const EdgeInsets.all(0),
       child: SizedBox(
-        height: 278, child: Stack(
+        height: headerHeight ?? 278, child: Stack(
           children: [
             Positioned(
               top: -50,
@@ -38,8 +42,8 @@ final Widget child;
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                top: 250
+              padding:  EdgeInsets.only(
+                top: topHeight ?? 250
               ),
               child: Container(
 
@@ -47,7 +51,7 @@ final Widget child;
                 decoration: const BoxDecoration(
                     color: RColores.white,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(50),topRight: Radius.circular(50),
+                    topLeft: Radius.circular(20),topRight: Radius.circular(20),
                   )
                 ),
 

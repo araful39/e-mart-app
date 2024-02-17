@@ -7,6 +7,7 @@ import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
 import 'package:e_mart/features/shop/screens/shop/widget/r_category_tab.dart';
 import 'package:e_mart/utills/constants/colors.dart';
+import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
@@ -26,7 +27,9 @@ class ShopScreen extends StatelessWidget {
           ),
           actions: [
             RCardCounterIcon(
-              onpress: () {},
+              onpress: () {
+
+              },
               iconColor: RColores.black,
             ),
           ],
@@ -47,7 +50,7 @@ class ShopScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       const SizedBox(
-                        height:RSizes.lg,
+                        height: RSizes.lg,
                       ),
                       const RSearchContainer(
                         padding: EdgeInsets.zero,
@@ -91,11 +94,29 @@ class ShopScreen extends StatelessWidget {
           },
           body: const TabBarView(
             children: [
-              RCategoryTap(),
-              RCategoryTap(),
-              RCategoryTap(),
-              RCategoryTap(),
-              RCategoryTap(),
+              RCategoryTap(
+                images: [RImages.shoes1, RImages.shoes2, RImages.shoes3],
+                gridImage: [
+                  RImages.shoes3,  RImages.shoes2,  RImages.shoes2,
+                  RImages.shoes3,  RImages.shoes2,  RImages.shoes2,
+                ],
+              ),
+              RCategoryTap(
+                images: [],
+                gridImage: [],
+              ),
+              RCategoryTap(
+                images: [],
+                gridImage: [],
+              ),
+              RCategoryTap(
+                images: [],
+                gridImage: [],
+              ),
+              RCategoryTap(
+                images: [],
+                gridImage: [],
+              ),
             ],
           ),
         ),
@@ -103,4 +124,3 @@ class ShopScreen extends StatelessWidget {
     );
   }
 }
-

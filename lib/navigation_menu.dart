@@ -1,11 +1,12 @@
 import 'package:e_mart/features/shop/screens/home/home.dart';
-import 'package:e_mart/features/shop/screens/profile/profile.dart';
 import 'package:e_mart/features/shop/screens/shop/shop.dart';
-import 'package:e_mart/features/shop/screens/wishlist/wishlist.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'features/personalization/screens/settings/settings.dart';
+import 'features/shop/screens/Wishlist/wishlist.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -14,7 +15,7 @@ class NavigationMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
     if (kDebugMode) {
-      print("print1");
+
     }
     return Scaffold(
         bottomNavigationBar: Obx(
@@ -51,7 +52,7 @@ class NavigationController extends GetxController {
   final screen = [
    const HomeScreen(),
     const ShopScreen(),
-    const WishlistScreen(),
-    const ProfileScreen()
+    const FavouriteScreen(),
+    const SettingsScreen()
   ];
 }

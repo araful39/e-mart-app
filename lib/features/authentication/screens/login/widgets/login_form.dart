@@ -1,3 +1,4 @@
+import 'package:e_mart/features/authentication/controllers/login_controller.dart';
 import 'package:e_mart/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:e_mart/features/authentication/screens/signup/singup.dart';
 import 'package:e_mart/navigation_menu.dart';
@@ -38,7 +39,7 @@ class RLoginForm extends StatelessWidget {
                         onPressed: (){
                           controller.visible();
                           if (kDebugMode) {
-                            print("Button 12");
+                            print("visible");
                           }
                         },
                         icon: controller.isClick.value? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
@@ -91,11 +92,3 @@ class RLoginForm extends StatelessWidget {
 
 
 
-class LoginController extends GetxController{
-  RxBool isClick=true.obs;
-
-  visible(){
-    isClick.value=!isClick.value;
-  }
-
-}

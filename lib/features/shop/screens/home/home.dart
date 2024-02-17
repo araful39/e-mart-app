@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                    height: RSizes.sm,
                  ),
                  RGridLayout(itemCount: 4, itemBuilder: (_ , index ) {
-                   return const RProductCardVertical();
+                   return const RProductCardVertical(imagePath: RImages.shoes3,);
                  },)
                ],
              ),
