@@ -17,7 +17,7 @@ class RLoginHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
-            height: 150,
+            height: 80,
             image: AssetImage(
                 dark ? RImages.lightAppLogo : RImages.darkAppLogo)),
         Text(

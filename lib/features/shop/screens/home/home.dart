@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                  const SizedBox(
                    height: RSizes.sm,
                  ),
-                 RGridLayout(itemCount: 2, itemBuilder: (_ , index ) {
+                 RGridLayout(itemCount: 4, itemBuilder: (_ , index ) {
                    return const RProductCardVertical();
                  },)
                ],

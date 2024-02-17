@@ -11,7 +11,7 @@ class RCircularImage extends StatelessWidget {
    this.height=86,
     this.padding=RSizes.sm,
     this.fit=BoxFit.cover,
-    this.isNetworkImage=false,
+    required this.isNetworkImage,
     this.overlayColor,
     this.backgroundColor,
   });

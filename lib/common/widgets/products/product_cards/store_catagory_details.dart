@@ -1,4 +1,3 @@
-import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:e_mart/common/widgets/images/r_circular_image.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
 import 'package:e_mart/utills/constants/colors.dart';
@@ -28,24 +27,13 @@ class RContainerProductDetails extends StatelessWidget {
             shape: BoxShape.rectangle),
         child: Column(
           children: [
-            RBrandCard(
 
-          borderColor: RColores.darkGery,
-              backgroundColor: Colors.transparent,
-              margin: EdgeInsets.only(bottom: RSizes.spaceBtwItems),
-              child: Column(
-                children: [
-
-                ],
-              ),
-
-              ),
 
 
 
             Row(
               children: [
-                const RCircularImage(imagePath: RImages.shoes3),
+                const RCircularImage(imagePath: RImages.shoes2, isNetworkImage: false,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

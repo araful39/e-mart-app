@@ -1,15 +1,12 @@
 import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/appbar/tapbar.dart';
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:e_mart/common/widgets/images/r_circular_image.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
-import 'package:e_mart/common/widgets/products/product_cards/store_catagory_details.dart';
-import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
+import 'package:e_mart/common/widgets/products/product_cards/r_brand_card.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
 import 'package:e_mart/utills/constants/colors.dart';
-import 'package:e_mart/utills/constants/enums.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 
@@ -43,7 +40,7 @@ class ShopScreen extends StatelessWidget {
                 pinned: true,
                 floating: true,
                 backgroundColor: RColores.white,
-                expandedHeight: 380,
+                expandedHeight: 330,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(RSizes.sm),
                   child: ListView(
@@ -54,7 +51,7 @@ class ShopScreen extends StatelessWidget {
                         padding: EdgeInsets.zero,
                       ),
                       const SizedBox(
-                        height: RSizes.defaultBtwSections,
+                        height: RSizes.defaultBtwSections/3,
                       ),
                       RSectionHeading(
                         text: "Featured Brands",
@@ -66,43 +63,11 @@ class ShopScreen extends StatelessWidget {
                       ),
                       RGridLayout(
                           itemCount: 4,
-                          mainAxisExtent: 80,
+                          mainAxisExtent: 60,
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {},
-                              child: RBrandCard(
-                                padding: const EdgeInsets.all(RSizes.xs),
-                                backgroundColor: Colors.transparent,
-                                child: Row(
-                                  children: [
-                                    const Flexible(
-                                        child: RCircularImage(
-                                      imagePath: RImages.shoes3,
-                                    )),
-                                    // const SizedBox(width: 2,),
-                                    Flexible(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const RBrandTitleWithVerifiedIcon(
-                                            title: "Nike",
-                                            brandTextSize: TextSizes.large,
-                                          ),
-                                          Text(
-                                            "256 products",
-                                            overflow: TextOverflow.ellipsis,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .labelMedium,
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
+                              child: const RBrandCard(showBorder: true,),
                             );
                           })
                     ],
@@ -120,15 +85,61 @@ class ShopScreen extends StatelessWidget {
               ),
             ];
           },
-          body: TabBarView(
+          body: const TabBarView(
             children: [
                SingleChildScrollView(
-                child: Column(
-                  children: [
+                child: Padding(
+                  padding: EdgeInsets.all(RSizes.defaultSpace),
+                  child: Column(
+                    children: [
+
+                      RRoundedContainer(
+
+                        borderColor: RColores.darkGery,
+                        backgroundColor: Colors.transparent,
+
+                        margin: EdgeInsets.only(bottom: RSizes.spaceBtwItems),
+                        child: Column(
+                          children: [
+                            RBrandCard(showBorder: false),
+                            Row(
+                              children: [
+                                Flexible(
+                                  child: RRoundedContainer(
+                                    height: 100,
+                                    backgroundColor: RColores.light,
+                                    margin: EdgeInsets.only(right: RSizes.sm),
+                                    child:Image(image: AssetImage(RImages.shoes1,),fit: BoxFit.contain,),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: RRoundedContainer(
+                                    height: 100,
+                                    backgroundColor: RColores.light,
+                                    margin: EdgeInsets.only(right: RSizes.sm),
+                                    child:Image(image: AssetImage(RImages.shoes3,),fit: BoxFit.contain,),
+                                  ),
+                                ),
+
+                                Flexible(
+                                  child: RRoundedContainer(
+                                    height: 100,
+                                    backgroundColor: RColores.light,
+                                    margin: EdgeInsets.only(right: RSizes.sm),
+                                    child:Image(image: AssetImage(RImages.shoes2,),fit: BoxFit.contain,),
+                                  ),
+                                ),
 
 
+                              ],
+                            )
 
-                  ],
+                          ],
+                        ),
+
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
@@ -139,5 +150,7 @@ class ShopScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 

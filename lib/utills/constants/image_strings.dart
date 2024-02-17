@@ -22,8 +22,8 @@ class RImages {
   //--products images shoes
   static const String shoesName = "assets/images/products/shoes_name.png";
   static const String shoes1 = "assets/images/products/shoes1.png";
-  static const String shoes2 = "assets/images/products/shoes2.png";
   static const String shoes3 = "assets/images/products/shoes3.png";
+  static const String shoes2 = "assets/images/products/shoes2.png";
 
 
 
