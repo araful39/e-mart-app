@@ -11,6 +11,7 @@ final List<Widget> tabs;
   Widget build(BuildContext context) {
     return Material(
       child: TabBar(
+        indicatorWeight: 2,
         tabs: tabs,
         isScrollable: true,
         indicatorColor: RColores.primary,

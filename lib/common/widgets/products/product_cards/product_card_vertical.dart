@@ -34,10 +34,14 @@ class RProductCardVertical extends StatelessWidget {
             padding: const EdgeInsets.all(RSizes.xs),
             child: Stack(
               children: [
-                RRoundedImage(
-                    onPress: () {},
-                    imageUrl: RImages.shoes2,
-                    isNetworkImage: false),
+                Positioned(
+                  bottom: 10,
+                  child: RRoundedImage(
+                      onPress: () {},
+                      imageUrl: RImages.shoes2,
+                      height: 100,
+                      isNetworkImage: false),
+                ),
                 Positioned(
                   top: 12,
                   child: RRoundedContainer(

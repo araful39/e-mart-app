@@ -1,13 +1,12 @@
 import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/appbar/tapbar.dart';
-import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
-import 'package:e_mart/common/widgets/products/product_cards/r_brand_card.dart';
+import 'package:e_mart/common/widgets/brand/r_brand_card.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
+import 'package:e_mart/features/shop/screens/shop/widget/r_category_tab.dart';
 import 'package:e_mart/utills/constants/colors.dart';
-import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
@@ -40,18 +39,21 @@ class ShopScreen extends StatelessWidget {
                 pinned: true,
                 floating: true,
                 backgroundColor: RColores.white,
-                expandedHeight: 330,
+                expandedHeight: 340,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(RSizes.sm),
                   child: ListView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
+                      const SizedBox(
+                        height:RSizes.lg,
+                      ),
                       const RSearchContainer(
                         padding: EdgeInsets.zero,
                       ),
                       const SizedBox(
-                        height: RSizes.defaultBtwSections/3,
+                        height: RSizes.defaultBtwSections / 3,
                       ),
                       RSectionHeading(
                         text: "Featured Brands",
@@ -67,7 +69,9 @@ class ShopScreen extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {},
-                              child: const RBrandCard(showBorder: true,),
+                              child: const RBrandCard(
+                                showBorder: true,
+                              ),
                             );
                           })
                     ],
@@ -87,62 +91,11 @@ class ShopScreen extends StatelessWidget {
           },
           body: const TabBarView(
             children: [
-               SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.all(RSizes.defaultSpace),
-                  child: Column(
-                    children: [
-
-                      RRoundedContainer(
-
-                        borderColor: RColores.darkGery,
-                        backgroundColor: Colors.transparent,
-
-                        margin: EdgeInsets.only(bottom: RSizes.spaceBtwItems),
-                        child: Column(
-                          children: [
-                            RBrandCard(showBorder: false),
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: RRoundedContainer(
-                                    height: 100,
-                                    backgroundColor: RColores.light,
-                                    margin: EdgeInsets.only(right: RSizes.sm),
-                                    child:Image(image: AssetImage(RImages.shoes1,),fit: BoxFit.contain,),
-                                  ),
-                                ),
-                                Flexible(
-                                  child: RRoundedContainer(
-                                    height: 100,
-                                    backgroundColor: RColores.light,
-                                    margin: EdgeInsets.only(right: RSizes.sm),
-                                    child:Image(image: AssetImage(RImages.shoes3,),fit: BoxFit.contain,),
-                                  ),
-                                ),
-
-                                Flexible(
-                                  child: RRoundedContainer(
-                                    height: 100,
-                                    backgroundColor: RColores.light,
-                                    margin: EdgeInsets.only(right: RSizes.sm),
-                                    child:Image(image: AssetImage(RImages.shoes2,),fit: BoxFit.contain,),
-                                  ),
-                                ),
-
-
-                              ],
-                            )
-
-                          ],
-                        ),
-
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
+              RCategoryTap(),
+              RCategoryTap(),
+              RCategoryTap(),
+              RCategoryTap(),
+              RCategoryTap(),
             ],
           ),
         ),
@@ -150,7 +103,4 @@ class ShopScreen extends StatelessWidget {
     );
   }
 }
-
-
-
 

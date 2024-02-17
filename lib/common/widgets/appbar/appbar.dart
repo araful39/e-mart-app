@@ -21,8 +21,8 @@ class RAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: RSizes.md),
       child: AppBar(
-        automaticallyImplyLeading: false,
 
+        automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(), icon: const Icon(Icons.arrow_back))
