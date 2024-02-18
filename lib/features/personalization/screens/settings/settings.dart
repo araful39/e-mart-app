@@ -40,7 +40,7 @@ class SettingsScreen extends StatelessWidget {
                       subTitle: 'rajuslam39@gmail.com',
                       onPress: ()
                       {
-                        Get.to(const Profile());
+                        Get.to(()=>const Profile());
                       },
                       icon: Icons.edit,
                     )

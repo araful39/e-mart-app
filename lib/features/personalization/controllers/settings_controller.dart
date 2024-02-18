@@ -4,7 +4,7 @@ class SettingsController extends GetxController{
   RxBool isClick=false.obs;
 
   onChangeSafeMode(value){
-    isClick.value=value.obs;
+    isClick.value=value;
   }
 
 

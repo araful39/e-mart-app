@@ -1,4 +1,6 @@
+import 'package:e_mart/common/widgets/images/r_circular_image_with_clipOval.dart';
 import 'package:e_mart/utills/constants/colors.dart';
+import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 class RUserProfileTile extends StatelessWidget {
   const RUserProfileTile({
@@ -12,7 +14,9 @@ class RUserProfileTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.person,color: Colors.white,size: 60,),
+      leading: const RCircularImageWithClipOval(
+        height: 50,width: 50,
+        isNetworkImage: false, imagePath: RImages.profile,),
       title: Text(title,style: Theme.of(context).textTheme.headlineSmall?.apply(color: RColores.white),
 
       ),

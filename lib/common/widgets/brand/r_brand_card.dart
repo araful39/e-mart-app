@@ -1,5 +1,5 @@
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:e_mart/common/widgets/images/r_circular_image.dart';
+import 'package:e_mart/common/widgets/images/r_circular_image_with_container.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/enums.dart';

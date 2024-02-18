@@ -8,6 +8,9 @@ class RImages {
   static const String handshake = "assets/icons/handshake.png";
 
 
+  static const String profile = "assets/images/profile.jpg";
+
+
   //--Banners
   static const String banners1 = "assets/images/banners/banner1.jpeg";
   static const String banners2 = "assets/images/banners/banner2.jpeg";

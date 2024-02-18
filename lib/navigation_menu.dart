@@ -14,9 +14,7 @@ class NavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
-    if (kDebugMode) {
 
-    }
     return Scaffold(
         bottomNavigationBar: Obx(
           () => NavigationBar(

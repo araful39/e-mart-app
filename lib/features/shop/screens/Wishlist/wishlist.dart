@@ -19,7 +19,7 @@ class FavouriteScreen extends StatelessWidget {
       appBar: RAppBar(
         title: Text("WishList",style: Theme.of(context).textTheme.headlineMedium),
           actions: [
-            RCircularIcon(icon:CupertinoIcons.add,onPress: ()=>Get.to(const HomeScreen()),)
+            RCircularIcon(icon:CupertinoIcons.add,onPress: ()=>Get.to(()=> const HomeScreen()),)
           ],
       ),
       body:  SingleChildScrollView(
