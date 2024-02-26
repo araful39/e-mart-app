@@ -45,4 +45,5 @@ class RColores {
   static const Color softGrey = Color(0xFFF4F4F4);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color red = Color(0xFFFF0000);
 }

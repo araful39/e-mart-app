@@ -2,6 +2,7 @@ import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/images/r_circular_image_with_clipOval.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/personalization/screens/profile/widget/r_profile_menu.dart';
+import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -25,12 +26,11 @@ class Profile extends StatelessWidget {
                 child: Column(
 
                   children: [
-                    const RCircularImageWithClipOval(
+                     const RCircularImageWithClipOval(
                       height: 60,
                       width: 60,
-                      isNetworkImage: true,
-                      imagePath:
-                          "https://scontent.fdac4-1.fna.fbcdn.net/v/t39.30808-6/359379744_1670308010049866_4802363250202591408_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeF2GZ7pNyjfPcsXp88GwyQfd8lpX2KM6rp3yWlfYozqugi7_sglBYPVNk5NAFw3hz6-PurQc3XrU2na0A_pCgnv&_nc_ohc=TfRQV44wYmoAX_dVd5f&_nc_zt=23&_nc_ht=scontent.fdac4-1.fna&oh=00_AfA9TtG9YqqqBByQH70poFZRBiTLmFtgcN9JTALS4S5_hw&oe=65D7DBD2",
+                      isNetworkImage: false,
+                      imagePath:RImages.profile,
                     ),
                     TextButton(onPressed: (){}, child: const Text("Change Profile Picture"))
                   ],
