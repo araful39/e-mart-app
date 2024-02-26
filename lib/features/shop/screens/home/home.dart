@@ -8,12 +8,15 @@ import 'package:e_mart/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 
 import 'package:e_mart/utills/constants/sizes.dart';
+import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../utills/constants/colors.dart';
+import '../product_details/product_detail.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -64,8 +67,13 @@ class HomeScreen extends StatelessWidget {
                  const SizedBox(
                    height: RSizes.sm,
                  ),
-                 RGridLayout(itemCount: 4, itemBuilder: (_ , index ) {
-                   return const RProductCardVertical(imagePath: RImages.shoes3,);
+                 RGridLayout(itemCount: 5, itemBuilder: (_ , index ) {
+                   return GestureDetector(
+                       onTap: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailScreen()));
+                         print("click");
+                       },
+                       child: const RProductCardVertical(imagePath: RImages.shoes3,));
                  },)
                ],
              ),
