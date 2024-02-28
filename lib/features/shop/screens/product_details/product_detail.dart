@@ -1,3 +1,4 @@
+import 'package:e_mart/features/shop/screens/product_details/widget/product_attributes.dart';
 import 'package:e_mart/features/shop/screens/product_details/widget/product_details_images_slider.dart';
 import 'package:e_mart/features/shop/screens/product_details/widget/product_meta_data.dart';
 import 'package:e_mart/features/shop/screens/product_details/widget/product_rating_and_share.dart';
@@ -10,7 +11,7 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return   Scaffold(
       body: Column(
         children: [
           RProductImageSlider(),
@@ -23,6 +24,7 @@ class ProductDetailScreen extends StatelessWidget {
               children: [
                 RRatingAndShare(),
                 RProductMetaData(),
+                RProductAttributes()
               ],
             ),
           )
