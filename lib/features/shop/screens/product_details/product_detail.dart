@@ -12,23 +12,25 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      body: Column(
-        children: [
-          RProductImageSlider(),
-          Padding(
-            padding: EdgeInsets.only(
-                left: RSizes.defaultSpace,
-                right: RSizes.defaultSpace,
-                bottom: RSizes.defaultSpace),
-            child: Column(
-              children: [
-                RRatingAndShare(),
-                RProductMetaData(),
-                RProductAttributes()
-              ],
-            ),
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            RProductImageSlider(),
+            Padding(
+              padding: EdgeInsets.only(
+                  left: RSizes.defaultSpace,
+                  right: RSizes.defaultSpace,
+                  bottom: RSizes.defaultSpace),
+              child: Column(
+                children: [
+                  RRatingAndShare(),
+                  RProductMetaData(),
+                  RProductAttributes()
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
