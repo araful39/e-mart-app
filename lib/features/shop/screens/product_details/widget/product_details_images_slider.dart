@@ -54,7 +54,7 @@ class RProductImageSlider extends StatelessWidget {
                       return InkWell(
                         onTap: () {
                           productDetailController.changeSliderImages(index);
-                          print(index);
+
                         },
                         child: RRoundedImage(
                             backgroundColor: RColores.black,

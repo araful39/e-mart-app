@@ -9,6 +9,7 @@ class RChoiceChip extends StatelessWidget {
     required this.text,
     required this.selected,
     this.onSelected,
+
   });
 
   final String text;
@@ -17,30 +18,32 @@ class RChoiceChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isColor=RHelperFunctions.getColor(text) != null;
     return ChoiceChip(
-      label: RHelperFunctions.getColor(text) != null
-          ? const SizedBox()
-          : const Text(""),
+
+      label: isColor
+        ? const SizedBox()
+          :  Text(text),
       selected: selected,
       onSelected: onSelected,
       labelStyle: TextStyle(color: selected ? RColores.white : null),
 
 
-      avatar: RHelperFunctions.getColor(text) != null
+      avatar: isColor
           ? RCircularContainer(
               width: 50,
               height: 50,
               backgroundColor: RHelperFunctions.getColor(text)!,
             )
           : null,
-      shape:RHelperFunctions.getColor(text) != null
+      shape:isColor
           ? const CircleBorder():null,
-      labelPadding:RHelperFunctions.getColor(text) != null
+      labelPadding:isColor
           ? const EdgeInsets.all(0) :null,
-      padding:RHelperFunctions.getColor(text) != null
+      padding:isColor
           ? const EdgeInsets.all(0):null,
-      backgroundColor:RHelperFunctions.getColor(text) != null
-          ? Colors.green :null,
+      backgroundColor:isColor
+          ? Colors.green :Colors.teal,
     );
   }
 }
