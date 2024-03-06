@@ -5,7 +5,7 @@ class ProductDetailController extends GetxController {
   RxList imagesList =
       [RImages.shoes1, RImages.shoes2, RImages.shoes3, RImages.shoes4].obs;
 
-  RxInt imageIndex = 2.obs;
+  RxInt imageIndex = 0.obs;
 
   String sliderImages() {
     if (imageIndex.value == 0) {
@@ -21,5 +21,6 @@ class ProductDetailController extends GetxController {
 
   changeSliderImages(int sliderImagesIndex) {
     imageIndex = sliderImagesIndex.obs;
+    update();
   }
 }
