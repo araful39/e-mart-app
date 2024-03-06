@@ -6,6 +6,7 @@ import 'package:e_mart/features/shop/screens/product_details/widget/product_attr
 import 'package:e_mart/features/shop/screens/product_details/widget/product_details_images_slider.dart';
 import 'package:e_mart/features/shop/screens/product_details/widget/product_meta_data.dart';
 import 'package:e_mart/features/shop/screens/product_details/widget/product_rating_and_share.dart';
+import 'package:e_mart/features/shop/screens/product_review_screen/product_review_screen.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
@@ -72,7 +73,9 @@ class ProductDetailScreen extends StatelessWidget {
                   const SizedBox(
                     height: RSizes.defaultSpace,
                   ),
-                  RSectionHeading(text: "Reviews(199)",onpress: (){},showActionButton: true,buttonTitle: "view now",)
+                  RSectionHeading(text: "Reviews(199)",onpress: (){
+                    Get.to(()=> const ProductReviewScreen());
+                  },showActionButton: true,buttonTitle: "view now",)
                 ],
               ),
             ),
