@@ -74,9 +74,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
                   ),
                 ],
               ),
-              const RProductTitleText(
-                  title:
-                      "This is the Description of the Product and it can go up to max 4 lines")
+
             ],
           ),
         ),
