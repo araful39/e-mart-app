@@ -2,6 +2,7 @@ import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/products/rating/r_rating_bar_indicator.dart';
 import 'package:e_mart/features/shop/screens/product_review_and_rating/widget/over_all_ratings.dart';
 import 'package:e_mart/features/shop/screens/product_review_and_rating/widget/r_user_review_card.dart';
+import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -32,10 +33,10 @@ class ProductReviewScreen extends StatelessWidget {
                const SizedBox(
                  height: RSizes.sm,
                ),
-               const RUserReviewCard(),
-               const RUserReviewCard(),
-              const RUserReviewCard(),
-               const RUserReviewCard(),
+               const RUserReviewCard(imagePath: RImages.profile, isNetworkImage: false, name: "Raju Islam",),
+               const RUserReviewCard(imagePath: RImages.profile, isNetworkImage: false, name: "Raju Islam",),
+              const RUserReviewCard(imagePath: RImages.profile, isNetworkImage: false, name: "Raju Islam",),
+                const RUserReviewCard(imagePath: RImages.profile, isNetworkImage: false, name: "Raju Islam",),
 
 
             ],

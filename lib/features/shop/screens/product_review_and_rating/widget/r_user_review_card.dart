@@ -9,14 +9,17 @@ import 'package:readmore/readmore.dart';
 
 class RUserReviewCard extends StatelessWidget {
   const RUserReviewCard({
-    super.key,
+    super.key, required this.imagePath, required this.isNetworkImage, required this.name,
   });
+  final String name;
+  final String imagePath;
+  final bool isNetworkImage;
 
   @override
   Widget build(BuildContext context) {
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding:  const EdgeInsets.symmetric(vertical: 8),
       child: Column(
         children: [
           Row(
@@ -25,17 +28,16 @@ class RUserReviewCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const RCircularImageWithClipOval(
-                      isNetworkImage: true,
+                   RCircularImageWithClipOval(
+                      isNetworkImage: isNetworkImage,
                       height: 50,
                       width: 50,
-                      imagePath:
-                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF4t151iDo_RZ6Nut5W-B3pTxXa2vp0FftD4jX2u3WAIqluuCGRWTd6XYzWgqmqOk9xq4&usqp=CAU"),
+                      imagePath:imagePath),
                   const SizedBox(
                     width: RSizes.sm,
                   ),
                   Text(
-                    "Raju Islam",
+                    name,
                     style: Theme.of(context).textTheme.titleLarge,
                   )
                 ],
