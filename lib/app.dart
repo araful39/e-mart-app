@@ -3,7 +3,7 @@ import 'package:e_mart/utills/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'features/shop/screens/product_review_screen/product_review_screen.dart';
+import 'features/authentication/screens/login/login.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const ProductReviewScreen(),
+      home:   const LoginScreen(),
     );
   }
 }

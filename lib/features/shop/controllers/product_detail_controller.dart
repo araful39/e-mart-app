@@ -1,5 +1,4 @@
 import 'package:e_mart/utills/constants/image_strings.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 class ProductDetailController extends GetxController {
@@ -48,15 +47,13 @@ class ProductDetailController extends GetxController {
 
  void toggleExpand(){
     isExpanded.value=!isExpanded.value;
-    if (kDebugMode) {
-      print("toggleExpand not working");
-    }
+
     update();
   }
 
   RxInt productCount = 1.obs;
   void decrement() {
-    if (productCount > 0) {
+    if (productCount > 1) {
       productCount--;
     } else {}
   }

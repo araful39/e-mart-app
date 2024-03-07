@@ -37,7 +37,7 @@ class Profile extends StatelessWidget {
                 ),
               ),
               const Divider(),
-              const RSectionHeading(text: "Profile Information"),
+              const RSectionHeading(name: "Profile Information"),
               const SizedBox(
                 height: RSizes.sm,
               ),
@@ -53,7 +53,7 @@ class Profile extends StatelessWidget {
               const SizedBox(
                 height: RSizes.sm,
               ),
-              const RSectionHeading(text: "Personal Information"),
+              const RSectionHeading(name: "Personal Information"),
               const SizedBox(
                 height: RSizes.sm,
               ),

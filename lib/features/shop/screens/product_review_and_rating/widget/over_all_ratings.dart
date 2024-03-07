@@ -1,4 +1,4 @@
-import 'package:e_mart/features/shop/screens/product_review_screen/widget/r_rating_progres_indicator.dart';
+import 'package:e_mart/features/shop/screens/product_review_and_rating/widget/r_rating_progres_indicator.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 class ROverAllRatings extends StatelessWidget {
@@ -10,13 +10,11 @@ class ROverAllRatings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Flexible(
-            flex: 1,
-            child: Text("4.8",style: Theme.of(context).textTheme.displayLarge,)),
+        Text("4.8",style: Theme.of(context).textTheme.displayLarge,),
         const SizedBox(
           width: RSizes.spaceBtwItems,
         ),
-         const Flexible(
+          const Flexible(
           flex: 4,
           child: Column(
             children: [

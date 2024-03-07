@@ -22,7 +22,7 @@ class RCategoryTap extends StatelessWidget {
              RBrandShowCase(
               images: images,
             ),
-            RSectionHeading(text: "You might like",onpress: (){},showActionButton: true,),
+            RSectionHeading(name: "You might like",onpress: (){},showActionButton: true,),
             const SizedBox(
               height: RSizes.spaceBtwItems,
             ),

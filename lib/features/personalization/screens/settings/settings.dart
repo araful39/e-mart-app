@@ -50,7 +50,7 @@ class SettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(RSizes.defaultBtwSections),
               child: Column(
                 children: [
-                  const RSectionHeading(text: "Account Settings"),
+                  const RSectionHeading(name: "Account Settings"),
                   const RSettingsMenuTile(
                     title: 'My Address',
                     subTitle: 'Get shopping delivery address',
@@ -89,7 +89,7 @@ class SettingsScreen extends StatelessWidget {
                    const SizedBox(
                     height: RSizes.defaultBtwSections,
                   ),
-                   const RSectionHeading(text: "App Settings"),
+                   const RSectionHeading(name: "App Settings"),
                    const SizedBox(
                     height: RSizes.spaceBtwItems,
                   ),

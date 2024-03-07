@@ -59,7 +59,7 @@ class ShopScreen extends StatelessWidget {
                         height: RSizes.defaultBtwSections / 3,
                       ),
                       RSectionHeading(
-                        text: "Featured Brands",
+                        name: "Featured Brands",
                         showActionButton: true,
                         onpress: () {},
                       ),

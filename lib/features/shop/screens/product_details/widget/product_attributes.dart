@@ -28,7 +28,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
               Row(
                 children: [
                   const RSectionHeading(
-                    text: "Variation",
+                    name: "Variation",
                     showActionButton: false,
                   ),
                   const SizedBox(
@@ -84,7 +84,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const RSectionHeading(text: "Colors"),
+            const RSectionHeading(name: "Colors"),
             const SizedBox(
               height: RSizes.sm,
             ),
@@ -140,7 +140,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const RSectionHeading(text: "Size"),
+            const RSectionHeading(name: "Size"),
             const SizedBox(
               height: RSizes.sm,
             ),

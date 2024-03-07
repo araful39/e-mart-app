@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 class RSectionHeading extends StatelessWidget {
   const RSectionHeading({
     super.key,
-    required this.text,
+    required this.name,
     this.onpress,
-    this.buttonTitle,
+    this.subText,
     this.showActionButton = false,
     this.textColor,
   });
-  final String text;
+  final String name;
   final Color? textColor;
-  final String? buttonTitle;
+  final String? subText;
   final bool showActionButton;
   final VoidCallback? onpress;
   @override
@@ -21,7 +21,7 @@ class RSectionHeading extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          text,
+          name,
           style: Theme.of(context)
               .textTheme
               .headlineSmall!
@@ -33,7 +33,7 @@ class RSectionHeading extends StatelessWidget {
           TextButton(
               onPressed: onpress,
               child: Text(
-                buttonTitle ?? "view all",
+                subText ?? "view all",
                 style: Theme.of(context).textTheme.bodySmall!.apply(color: textColor ?? Colors.black),
               )),
       ],
