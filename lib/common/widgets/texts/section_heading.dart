@@ -8,10 +8,11 @@ class RSectionHeading extends StatelessWidget {
     this.onpress,
     this.subText,
     this.showActionButton = false,
-    this.textColor,
+    this.textColor, this.buttonColor,
   });
   final String name;
   final Color? textColor;
+  final Color? buttonColor;
   final String? subText;
   final bool showActionButton;
   final VoidCallback? onpress;
@@ -33,8 +34,8 @@ class RSectionHeading extends StatelessWidget {
           TextButton(
               onPressed: onpress,
               child: Text(
-                subText ?? "view all",
-                style: Theme.of(context).textTheme.bodySmall!.apply(color: textColor ?? Colors.black),
+                subText ?? "view ",
+                style: Theme.of(context).textTheme.bodySmall!.apply(color: buttonColor ?? Colors.black),
               )),
       ],
     );

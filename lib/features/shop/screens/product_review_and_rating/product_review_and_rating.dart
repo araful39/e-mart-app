@@ -32,7 +32,10 @@ class ProductReviewScreen extends StatelessWidget {
                const SizedBox(
                  height: RSizes.sm,
                ),
-               const RUserReviewCard()
+               const RUserReviewCard(),
+               const RUserReviewCard(),
+              const RUserReviewCard(),
+               const RUserReviewCard(),
 
 
             ],

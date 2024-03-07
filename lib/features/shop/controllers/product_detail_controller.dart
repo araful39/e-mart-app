@@ -43,13 +43,6 @@ class ProductDetailController extends GetxController {
 
   }
 
-  RxBool isExpanded=false.obs;
-
- void toggleExpand(){
-    isExpanded.value=!isExpanded.value;
-
-    update();
-  }
 
   RxInt productCount = 1.obs;
   void decrement() {
