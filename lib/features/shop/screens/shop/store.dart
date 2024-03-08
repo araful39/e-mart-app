@@ -6,14 +6,16 @@ import 'package:e_mart/common/widgets/brand/r_brand_card.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
 import 'package:e_mart/features/shop/screens/shop/widget/category_tab.dart';
+import 'package:e_mart/features/shop/screens/shop/view_brand.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class ShopScreen extends StatelessWidget {
-  const ShopScreen({super.key});
+class StoreScreen extends StatelessWidget {
+  const StoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +29,7 @@ class ShopScreen extends StatelessWidget {
           ),
           actions: [
             RCardCounterIcon(
-              onpress: () {
-
-              },
+              onpress: () {},
               iconColor: RColores.black,
             ),
           ],
@@ -61,7 +61,8 @@ class ShopScreen extends StatelessWidget {
                       RSectionHeading(
                         name: "Featured Brands",
                         showActionButton: true,
-                        onpress: () {},
+                        subText: "view all",
+                        onpress: () => Get.to(() => const AllBrand()),
                       ),
                       const SizedBox(
                         height: RSizes.spaceBtwItems / 1.5,
@@ -74,6 +75,10 @@ class ShopScreen extends StatelessWidget {
                               onTap: () {},
                               child: const RBrandCard(
                                 showBorder: true,
+                                brandImagePath: RImages.shoesName,
+                                brandName: 'Nike',
+                                productQuantity: 250,
+                                isNetworkImage: false,
                               ),
                             );
                           })
@@ -97,8 +102,12 @@ class ShopScreen extends StatelessWidget {
               RCategoryTap(
                 images: [RImages.shoes1, RImages.shoes2, RImages.shoes3],
                 gridImage: [
-                  RImages.shoes3,  RImages.shoes2,  RImages.shoes2,
-                  RImages.shoes3,  RImages.shoes2,  RImages.shoes2,
+                  RImages.shoes3,
+                  RImages.shoes2,
+                  RImages.shoes2,
+                  RImages.shoes3,
+                  RImages.shoes2,
+                  RImages.shoes2,
                 ],
               ),
               RCategoryTap(

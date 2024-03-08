@@ -1,7 +1,6 @@
 import 'package:e_mart/features/shop/screens/home/home.dart';
-import 'package:e_mart/features/shop/screens/shop/shop.dart';
+import 'package:e_mart/features/shop/screens/shop/store.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +29,7 @@ class NavigationMenu extends StatelessWidget {
 labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
             destinations: const [
               NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-              NavigationDestination(icon: Icon(Icons.shop), label: "Shop"),
+              NavigationDestination(icon: Icon(Icons.shop), label: "Store"),
               NavigationDestination(
                   icon: Icon(CupertinoIcons.heart), label: "Wishlist"),
               NavigationDestination(
@@ -49,7 +48,7 @@ class NavigationController extends GetxController {
 
   final screen = [
    const HomeScreen(),
-    const ShopScreen(),
+    const StoreScreen(),
     const FavouriteScreen(),
     const SettingsScreen()
   ];
