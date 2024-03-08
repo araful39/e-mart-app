@@ -1,6 +1,7 @@
 import 'package:e_mart/common/widgets/images/r_rounded_image.dart';
 import 'package:e_mart/common/widgets/products/product_title_text.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
+import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 class RCartItem extends StatelessWidget {
@@ -18,7 +19,9 @@ class RCartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-         RRoundedImage(imageUrl: imagePath, isNetworkImage: isNetworkImage,height: 70,width: 70,),
+         RRoundedImage(
+           backgroundColor: RColores.grey,
+           imageUrl: imagePath, isNetworkImage: isNetworkImage,height: 70,width: 70,),
          const SizedBox(
           width: RSizes.spaceBtwItems,
         ),
