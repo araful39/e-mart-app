@@ -7,10 +7,12 @@ import 'package:e_mart/features/authentication/screens/login/login.dart';
 import 'package:e_mart/features/personalization/controllers/settings_controller.dart';
 import 'package:e_mart/features/personalization/screens/address/address.dart';
 import 'package:e_mart/features/personalization/screens/profile/profile.dart';
+import 'package:e_mart/features/shop/screens/cart/cart.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -58,10 +60,11 @@ class SettingsScreen extends StatelessWidget {
                     icon: Icons.person,
                     onTap: ()=>Get.to(()=>const UserAddressScreen()),
                   ),
-                  const RSettingsMenuTile(
+                   RSettingsMenuTile(
                     title: 'My Cart',
                     subTitle: 'Add, remove products and move to checkout',
                     icon: Icons.person,
+                    onTap: ()=>Get.to(()=>const CartScreen()),
                   ),
                    const RSettingsMenuTile(
                     title: 'My Orders',

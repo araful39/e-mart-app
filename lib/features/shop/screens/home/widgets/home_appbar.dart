@@ -1,6 +1,6 @@
 import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
-import 'package:e_mart/features/authentication/screens/login/login.dart';
+import 'package:e_mart/features/shop/screens/cart/cart.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/texts.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,7 @@ class RHomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        RCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const LoginScreen()))
+        RCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const CartScreen()))
       ],
     );
   }
