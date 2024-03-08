@@ -1,4 +1,4 @@
-import 'package:e_mart/features/shop/screens/product_review_and_rating/widget/r_rating_progres_indicator.dart';
+import 'package:e_mart/features/shop/screens/product_review_and_rating/widget/rating_progres_indicator.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 class ROverAllRatings extends StatelessWidget {

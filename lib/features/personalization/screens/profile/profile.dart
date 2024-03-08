@@ -1,7 +1,7 @@
 import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/images/r_circular_image_with_clipOval.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
-import 'package:e_mart/features/personalization/screens/profile/widget/r_profile_menu.dart';
+import 'package:e_mart/features/personalization/screens/profile/widget/profile_menu.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';

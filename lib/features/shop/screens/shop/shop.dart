@@ -5,7 +5,7 @@ import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
 import 'package:e_mart/common/widgets/brand/r_brand_card.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
-import 'package:e_mart/features/shop/screens/shop/widget/r_category_tab.dart';
+import 'package:e_mart/features/shop/screens/shop/widget/category_tab.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
