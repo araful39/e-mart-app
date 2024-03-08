@@ -5,6 +5,7 @@ import 'package:e_mart/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/authentication/screens/login/login.dart';
 import 'package:e_mart/features/personalization/controllers/settings_controller.dart';
+import 'package:e_mart/features/personalization/screens/address/address.dart';
 import 'package:e_mart/features/personalization/screens/profile/profile.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
@@ -51,10 +52,11 @@ class SettingsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const RSectionHeading(name: "Account Settings"),
-                  const RSettingsMenuTile(
+                   RSettingsMenuTile(
                     title: 'My Address',
                     subTitle: 'Get shopping delivery address',
                     icon: Icons.person,
+                    onTap: ()=>Get.to(()=>const UserAddressScreen()),
                   ),
                   const RSettingsMenuTile(
                     title: 'My Cart',
