@@ -15,7 +15,7 @@ class RSingUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller=Get.put(SingUnController());
+    final controller=Get.put(SingUpController());
     return Form(
       key: controller.formKey,
       child: Column(
