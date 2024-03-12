@@ -1,4 +1,4 @@
-import 'package:e_mart/utills/constants/colors.dart';
+import 'package:e_mart/features/authentication/screens/splash/splash.dart';
 import 'package:e_mart/utills/theme/theme.dart';
 
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home:   const Scaffold(backgroundColor: RColores.primary,body: Center(child: CircularProgressIndicator(color: Colors.white,),),),
+      home:  const SplashScreen()
     );
   }
 }

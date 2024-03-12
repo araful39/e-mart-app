@@ -12,6 +12,7 @@ class SingUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
