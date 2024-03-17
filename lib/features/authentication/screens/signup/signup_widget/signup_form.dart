@@ -92,7 +92,7 @@ class RSingUpForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
-                    controller.singUp();
+                    controller.singUp(context);
 
                   },
                   child: const Text(RTexts.createAccount)))

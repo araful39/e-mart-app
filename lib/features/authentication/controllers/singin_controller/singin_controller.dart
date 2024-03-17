@@ -1,3 +1,4 @@
+import 'package:e_mart/utills/popups/full_screen_loader.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +20,9 @@ class SingUpController extends GetxController{
 final auth=FirebaseAuth.instance;
 
 
-Future<void> singUp() async{
+Future<void> singUp( BuildContext context) async{
   try{
-await auth.createUserWithEmailAndPassword(email: email.text, password: password.text);
+RFullScreenLoader.openLoaderDialog("We are processing.....", context);
 
   }
      catch (e){
