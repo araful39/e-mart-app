@@ -98,7 +98,7 @@ class _RLoginFormState extends State<RLoginForm> {
                           password: _password.text
                       ).then((value) => Get.to(()=> const NavigationMenu()));
                     } else{
-                      Get.snackbar("Enter", "Your ducoment",backgroundColor: Colors.indigo,colorText: Colors.white);
+                      Get.snackbar("Enter", "Your document",backgroundColor: Colors.indigo,colorText: Colors.white);
                     }
 
                         } on FirebaseAuthException catch (e) {
