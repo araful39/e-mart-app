@@ -4,26 +4,25 @@ import 'package:e_mart/features/authentication/screens/signup/singup.dart';
 import 'package:e_mart/navigation_menu.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RLoginForm extends StatefulWidget {
-  const RLoginForm({
+class TLoginForm extends StatefulWidget {
+  const TLoginForm({
     super.key,
   });
 
   @override
-  State<RLoginForm> createState() => _RLoginFormState();
+  State<TLoginForm> createState() => _TLoginFormState();
 }
 
-class _RLoginFormState extends State<RLoginForm> {
+class _TLoginFormState extends State<TLoginForm> {
   final TextEditingController _email=TextEditingController();
   final TextEditingController _password=TextEditingController();
   final _formkey=GlobalKey<FormState>();
 
-  final _auth=FirebaseAuth.instance;
+  // final _auth=FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     final controller=Get.put(LoginController());
@@ -92,27 +91,29 @@ class _RLoginFormState extends State<RLoginForm> {
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: () async {
-                        try {
-                    if(_email.text.isNotEmpty && _password.text.isNotEmpty)  {
-                      await _auth.signInWithEmailAndPassword(
-                          email: _email.text,
-                          password: _password.text
-                      ).then((value) => Get.to(()=> const NavigationMenu()));
-                    } else{
-                      Get.snackbar("Enter", "Your document",backgroundColor: Colors.indigo,colorText: Colors.white);
-                    }
 
-                        } on FirebaseAuthException catch (e) {
-                          if (e.code == 'user-not-found') {
-                            if (kDebugMode) {
-                              print('No user found for that email.');
-                            }
-                          } else if (e.code == 'wrong-password') {
-                            if (kDebugMode) {
-                              print('Wrong password provided for that user. please sure');
-                            }
-                          }
-                        }
+                        Get.to(()=> const NavigationMenu());
+                    //     try {
+                    // if(_email.text.isNotEmpty && _password.text.isNotEmpty)  {
+                    //   await _auth.signInWithEmailAndPassword(
+                    //       email: _email.text,
+                    //       password: _password.text
+                    //   ).then((value) => Get.to(()=> const NavigationMenu()));
+                    // } else{
+                    //   Get.snackbar("Enter", "Your document",backgroundColor: Colors.indigo,colorText: Colors.white);
+                    // }
+                    //
+                    //     } on FirebaseAuthException catch (e) {
+                    //       if (e.code == 'user-not-found') {
+                    //         if (kDebugMode) {
+                    //           print('No user found for that email.');
+                    //         }
+                    //       } else if (e.code == 'wrong-password') {
+                    //         if (kDebugMode) {
+                    //           print('Wrong password provided for that user. please sure');
+                    //         }
+                    //       }
+                    //     }
 
                       }, child: const Text(TTexts.signIn))),
               const SizedBox(

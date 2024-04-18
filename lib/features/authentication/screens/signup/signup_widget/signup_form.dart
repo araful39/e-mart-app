@@ -6,8 +6,8 @@ import 'package:e_mart/utills/validat/validat.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RSingUpForm extends StatelessWidget {
-  const RSingUpForm({
+class TSingUpForm extends StatelessWidget {
+  const TSingUpForm({
     super.key,
   });
 
@@ -84,7 +84,7 @@ class RSingUpForm extends StatelessWidget {
                 prefixIcon: Icon(Icons.key), hintText: TTexts.password),
           ),
           const SizedBox(height: TSizes.defaultBtwSections),
-          const RTermsAndConditionCheckBox(),
+          const TTermsAndConditionCheckBox(),
           const SizedBox(
             height: TSizes.defaultBtwSections,
           ),

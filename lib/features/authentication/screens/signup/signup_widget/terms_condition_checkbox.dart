@@ -4,8 +4,8 @@ import 'package:e_mart/utills/constants/texts.dart';
 import 'package:e_mart/utills/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 
-class RTermsAndConditionCheckBox extends StatelessWidget {
-  const RTermsAndConditionCheckBox({
+class TTermsAndConditionCheckBox extends StatelessWidget {
+  const TTermsAndConditionCheckBox({
     super.key,
   });
 

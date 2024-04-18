@@ -8,10 +8,8 @@ import 'package:e_mart/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 
 import 'package:e_mart/utills/constants/sizes.dart';
-import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
@@ -70,8 +68,8 @@ class HomeScreen extends StatelessWidget {
                  RGridLayout(itemCount: 5, itemBuilder: (_ , index ) {
                    return GestureDetector(
                        onTap: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailScreen()));
-                         print("click");
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetailScreen()));
+
                        },
                        child: const RProductCardVertical(imagePath: TImages.shoes3,));
                  },)

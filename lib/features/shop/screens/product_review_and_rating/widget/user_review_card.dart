@@ -1,5 +1,5 @@
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:e_mart/common/widgets/images/r_circular_image_with_clipOval.dart';
+import 'package:e_mart/common/widgets/images/t_circular_image_with_clipOval.dart';
 import 'package:e_mart/common/widgets/products/rating/r_rating_bar_indicator.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/utills/constants/colors.dart';

@@ -4,8 +4,8 @@ import 'package:e_mart/common/widgets/login_signup/social_buttons.dart';
 
 import 'package:e_mart/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:e_mart/features/authentication/screens/login/widgets/login_header.dart';
-
 import 'package:e_mart/utills/constants/sizes.dart';
+
 import 'package:e_mart/utills/constants/texts.dart';
 import 'package:e_mart/utills/helpers/helpers.dart';
 import 'package:flutter/material.dart';
@@ -30,15 +30,15 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: TSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
-              RLoginHeader(dark: dark),
-              const RLoginForm(),
-              RFormDivider(
+              TLoginHeader(dark: dark),
+              const TLoginForm(),
+              TFormDivider(
                 dividerText: TTexts.orSignInWith.capitalize!,
               ),
               const SizedBox(
                 height: TSizes.defaultBtwSections,
               ),
-              const RSocialButton()
+              const TSocialButton()
             ],
           ),
         )),

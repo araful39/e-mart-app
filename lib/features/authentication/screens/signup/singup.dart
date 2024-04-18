@@ -29,15 +29,15 @@ class SingUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
-                const RSingUpForm(),
+                const TSingUpForm(),
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
-                RFormDivider(dividerText: TTexts.onSignUpWith.capitalize!),
+                TFormDivider(dividerText: TTexts.onSignUpWith.capitalize!),
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
-                const RSocialButton(),
+                const TSocialButton(),
               ],
             ),
           ),

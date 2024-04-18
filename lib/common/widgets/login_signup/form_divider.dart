@@ -3,8 +3,8 @@ import 'package:e_mart/utills/helpers/helpers.dart';
 
 import 'package:flutter/material.dart';
 
-class RFormDivider extends StatelessWidget {
-  const RFormDivider({
+class TFormDivider extends StatelessWidget {
+  const TFormDivider({
     super.key,
    required this.dividerText,
   });

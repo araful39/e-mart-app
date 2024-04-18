@@ -3,8 +3,8 @@ import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class RSocialButton extends StatelessWidget {
-  const RSocialButton({
+class TSocialButton extends StatelessWidget {
+  const TSocialButton({
     super.key,
   });
 

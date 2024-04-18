@@ -1,4 +1,4 @@
-import 'package:e_mart/common/widgets/images/r_rounded_image.dart';
+import 'package:e_mart/common/widgets/images/t_rounded_image.dart';
 import 'package:e_mart/features/authentication/screens/login/login.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:flutter/material.dart';

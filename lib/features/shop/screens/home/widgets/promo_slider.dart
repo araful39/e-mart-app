@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_mart/common/widgets/custom_shapes/container/circular_container.dart';
-import 'package:e_mart/common/widgets/images/r_rounded_image.dart';
+import 'package:e_mart/common/widgets/images/t_rounded_image.dart';
 import 'package:e_mart/features/shop/controllers/home_controller.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';

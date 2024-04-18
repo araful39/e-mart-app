@@ -1,5 +1,5 @@
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:e_mart/common/widgets/images/r_circular_image_with_container.dart';
+import 'package:e_mart/common/widgets/images/t_circular_image_with_container.dart';
 import 'package:e_mart/common/widgets/products/product_price_text.dart';
 import 'package:e_mart/common/widgets/products/product_title_text.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';

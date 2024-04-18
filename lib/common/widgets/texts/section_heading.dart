@@ -26,7 +26,7 @@ class RSectionHeading extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headlineSmall!
-              .apply(color: textColor ?? Colors.black),
+              .apply(color: textColor ?? Colors.grey),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),

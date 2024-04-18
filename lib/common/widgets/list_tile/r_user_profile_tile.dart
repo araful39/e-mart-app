@@ -1,4 +1,4 @@
-import 'package:e_mart/common/widgets/images/r_circular_image_with_clipOval.dart';
+import 'package:e_mart/common/widgets/images/t_circular_image_with_clipOval.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:flutter/material.dart';

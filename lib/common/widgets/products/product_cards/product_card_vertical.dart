@@ -1,7 +1,7 @@
 import 'package:e_mart/common/styles/shadow_styles.dart';
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:e_mart/common/widgets/icons/r_circular_icon.dart';
-import 'package:e_mart/common/widgets/images/r_rounded_image.dart';
+import 'package:e_mart/common/widgets/icons/t_circular_icon.dart';
+import 'package:e_mart/common/widgets/images/t_rounded_image.dart';
 import 'package:e_mart/common/widgets/products/product_title_text.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
 import 'package:e_mart/utills/constants/colors.dart';

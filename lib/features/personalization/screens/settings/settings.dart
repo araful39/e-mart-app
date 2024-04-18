@@ -25,7 +25,7 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
           children: [
             TPrimaryHeaderContainer(
-                headerHeight: 150,
+                headerHeight: 200,
                 topHeight: 140,
                 child: Column(
                   children: [

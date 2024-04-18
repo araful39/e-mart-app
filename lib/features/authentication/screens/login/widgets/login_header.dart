@@ -3,8 +3,8 @@ import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
 import 'package:flutter/material.dart';
 
-class RLoginHeader extends StatelessWidget {
-  const RLoginHeader({
+class TLoginHeader extends StatelessWidget {
+  const TLoginHeader({
     super.key,
     required this.dark,
   });

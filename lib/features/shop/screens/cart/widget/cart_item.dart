@@ -1,4 +1,4 @@
-import 'package:e_mart/common/widgets/images/r_rounded_image.dart';
+import 'package:e_mart/common/widgets/images/t_rounded_image.dart';
 import 'package:e_mart/common/widgets/products/product_title_text.dart';
 import 'package:e_mart/common/widgets/texts/brand_title_width_verified_icon.dart';
 import 'package:e_mart/utills/constants/colors.dart';
