@@ -15,7 +15,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const RAppBar(
+      appBar: const TAppBar(
         showBackArrow: true,
         title: Text("Cart"),
       ),
@@ -25,13 +25,13 @@ class CartScreen extends StatelessWidget {
             itemBuilder: (context, _) => Column(
                   children: [
                     const RCartItem(
-                      imagePath: RImages.shoes5,
+                      imagePath: TImages.shoes5,
                       isNetworkImage: false,
                       brandTitle: "Nike",
                       productTitle: "Black Sports Shoe",
                     ),
                     const SizedBox(
-                      height: RSizes.sm,
+                      height: TSizes.sm,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +54,7 @@ class CartScreen extends StatelessWidget {
                   ],
                 ),
             separatorBuilder: (_, __) => const SizedBox(
-                  height: RSizes.sm,
+                  height: TSizes.sm,
                 ),
             itemCount: 10
         ),

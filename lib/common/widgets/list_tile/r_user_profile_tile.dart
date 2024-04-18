@@ -16,14 +16,14 @@ class RUserProfileTile extends StatelessWidget {
     return ListTile(
       leading: const RCircularImageWithClipOval(
         height: 50,width: 50,
-        isNetworkImage: false, imagePath: RImages.profile,),
-      title: Text(title,style: Theme.of(context).textTheme.headlineSmall?.apply(color: RColores.white),
+        isNetworkImage: false, imagePath: TImages.profile,),
+      title: Text(title,style: Theme.of(context).textTheme.headlineSmall?.apply(color: TColores.white),
 
       ),
-      subtitle:  Text(subTitle,style: Theme.of(context).textTheme.bodyMedium?.apply(color: RColores.white),
+      subtitle:  Text(subTitle,style: Theme.of(context).textTheme.bodyMedium?.apply(color: TColores.white),
 
       ),
-      trailing: IconButton(onPressed: onPress, icon:  Icon(icon,color: RColores.white,size: 30,),),
+      trailing: IconButton(onPressed: onPress, icon:  Icon(icon,color: TColores.white,size: 30,),),
 
 
     );

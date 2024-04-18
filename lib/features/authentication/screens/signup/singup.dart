@@ -18,24 +18,24 @@ class SingUpScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(RSizes.defaultSpace),
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  RTexts.signupTitle,
+                  TTexts.signupTitle,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(
-                  height: RSizes.defaultBtwSections,
+                  height: TSizes.defaultBtwSections,
                 ),
                 const RSingUpForm(),
                 const SizedBox(
-                  height: RSizes.defaultBtwSections,
+                  height: TSizes.defaultBtwSections,
                 ),
-                RFormDivider(dividerText: RTexts.onSignUpWith.capitalize!),
+                RFormDivider(dividerText: TTexts.onSignUpWith.capitalize!),
                 const SizedBox(
-                  height: RSizes.defaultBtwSections,
+                  height: TSizes.defaultBtwSections,
                 ),
                 const RSocialButton(),
               ],

@@ -3,8 +3,8 @@ import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 
-class RChoiceChip extends StatelessWidget {
-  const RChoiceChip({
+class TChoiceChip extends StatelessWidget {
+  const TChoiceChip({
     super.key,
     required this.text,
     required this.selected,
@@ -18,7 +18,7 @@ class RChoiceChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isColor=RHelperFunctions.getColor(text) != null;
+    final isColor=THelperFunctions.getColor(text) != null;
     return ChoiceChip(
 
       label: isColor
@@ -26,14 +26,14 @@ class RChoiceChip extends StatelessWidget {
           :  Text(text),
       selected: selected,
       onSelected: onSelected,
-      labelStyle: TextStyle(color: selected ? RColores.white : null),
+      labelStyle: TextStyle(color: selected ? TColores.white : null),
 
 
       avatar: isColor
-          ? RCircularContainer(
+          ? TCircularContainer(
               width: 50,
               height: 50,
-              backgroundColor: RHelperFunctions.getColor(text)!,
+              backgroundColor: THelperFunctions.getColor(text)!,
             )
           : null,
       shape:isColor

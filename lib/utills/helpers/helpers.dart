@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RHelperFunctions{
+class THelperFunctions{
 
 
   static Color? getColor(String value){

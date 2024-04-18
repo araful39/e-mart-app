@@ -15,23 +15,23 @@ class RSocialButton extends StatelessWidget {
       children: [
         Container(
             decoration: BoxDecoration(
-                color: RColores.grey,borderRadius: BorderRadius.circular(100)
+                color: TColores.grey,borderRadius: BorderRadius.circular(100)
             ),
             child:
             IconButton(
                 onPressed: (){},
                 icon:
-                const Image(height: RSizes.iconMd,width: RSizes.iconMd,image: AssetImage(RImages.google)))),
-        const SizedBox(width: RSizes.spaceBtwItems,),
+                const Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.google)))),
+        const SizedBox(width: TSizes.spaceBtwItems,),
         Container(
             decoration: BoxDecoration(
-                color: RColores.grey,borderRadius: BorderRadius.circular(100)
+                color: TColores.grey,borderRadius: BorderRadius.circular(100)
             ),
             child:
             IconButton(
                 onPressed: (){},
                 icon:
-                const Image(height: RSizes.iconMd,width: RSizes.iconMd,image: AssetImage(RImages.facebook)))),
+                const Image(height: TSizes.iconMd,width: TSizes.iconMd,image: AssetImage(TImages.facebook)))),
       ],
     );
   }

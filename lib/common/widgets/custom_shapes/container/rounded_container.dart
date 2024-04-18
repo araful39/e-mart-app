@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../utills/constants/sizes.dart';
 
-class RRoundedContainer extends StatelessWidget {
-  const RRoundedContainer(
+class TRoundedContainer extends StatelessWidget {
+  const TRoundedContainer(
       {super.key,
       this.width,
       this.height,
@@ -32,7 +32,7 @@ class RRoundedContainer extends StatelessWidget {
       margin: margin,
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(radius??RSizes.cardRadiusLg),
+        borderRadius: BorderRadius.circular(radius??TSizes.cardRadiusLg),
         border: Border.all(color: borderColor ?? Colors.grey.withOpacity(0.1))
       ),
       child: child,

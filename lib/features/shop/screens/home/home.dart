@@ -27,19 +27,19 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          const RPrimaryHeaderContainer(
+          const TPrimaryHeaderContainer(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 RHomeAppBar(),
                 RSearchContainer(),
                 Padding(
-                  padding: EdgeInsets.only(left: RSizes.spaceBtwItems),
+                  padding: EdgeInsets.only(left: TSizes.spaceBtwItems),
                   child: Column(
                     children: [
-                      RSectionHeading(name: "Popular Categorize",subText: "view all",showActionButton: true,textColor: RColores.white,),
+                      RSectionHeading(name: "Popular Categorize",subText: "view all",showActionButton: true,textColor: TColores.white,),
                       SizedBox(
-                        height: RSizes.sm,
+                        height: TSizes.sm,
                       ),
                       RHomeCategories(),
                     ],
@@ -49,23 +49,23 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
            Padding(
-             padding: const EdgeInsets.only(left: RSizes.spaceBtwItems,right: RSizes.spaceBtwItems),
+             padding: const EdgeInsets.only(left: TSizes.spaceBtwItems,right: TSizes.spaceBtwItems),
              child: Column(
                children: [
                  const RPromoSlider(
                    banners: [
-                     RImages.banners1,
-                     RImages.banners2,
-                     RImages.banners3,
-                     RImages.banners4,
+                     TImages.banners1,
+                     TImages.banners2,
+                     TImages.banners3,
+                     TImages.banners4,
                    ],
                  ),
                  const SizedBox(
-                   height: RSizes.sm,
+                   height: TSizes.sm,
                  ),
                  RSectionHeading(name: "Popular Products",subText: "view all",onpress: (){},showActionButton: true,),
                  const SizedBox(
-                   height: RSizes.sm,
+                   height: TSizes.sm,
                  ),
                  RGridLayout(itemCount: 5, itemBuilder: (_ , index ) {
                    return GestureDetector(
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailScreen()));
                          print("click");
                        },
-                       child: const RProductCardVertical(imagePath: RImages.shoes3,));
+                       child: const RProductCardVertical(imagePath: TImages.shoes3,));
                  },)
                ],
              ),

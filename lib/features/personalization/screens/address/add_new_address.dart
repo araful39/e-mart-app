@@ -10,7 +10,7 @@ class RAddNewAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      appBar: const RAppBar(
+      appBar: const TAppBar(
         showBackArrow: true,
         title: Text('Add new Address'),
       ),
@@ -63,7 +63,7 @@ class RAddNewAddress extends StatelessWidget {
               ],
             ),
             const RTextFormField(labelName: "Country",iconData: Icons.blur_circular,),
-            RElevatedButton(name: "Save", onPressed: ()=> Get.back())
+            TElevatedButton(name: "Save", onPressed: ()=> Get.back())
 
           ],
         ),

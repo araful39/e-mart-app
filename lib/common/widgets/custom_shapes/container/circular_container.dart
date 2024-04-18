@@ -1,8 +1,8 @@
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 
-class RCircularContainer extends StatelessWidget {
-  const RCircularContainer({
+class TCircularContainer extends StatelessWidget {
+  const TCircularContainer({
     super.key,
     this.width,
     this.height,
@@ -27,7 +27,7 @@ class RCircularContainer extends StatelessWidget {
       padding: EdgeInsets.all(padding ?? 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius ?? 300),
-        color: backgroundColor ?? RColores.textWhite,
+        color: backgroundColor ?? TColores.textWhite,
       ),
       child: child,
     );

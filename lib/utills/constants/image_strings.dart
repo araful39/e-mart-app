@@ -1,4 +1,4 @@
-class RImages {
+class TImages {
   //--App logos
   static const String darkAppLogo = "assets/logos/r_logo.png";
   static const String lightAppLogo = "assets/logos/r_logo.png";

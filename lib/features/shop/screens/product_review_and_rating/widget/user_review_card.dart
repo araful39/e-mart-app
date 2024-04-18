@@ -34,7 +34,7 @@ class RUserReviewCard extends StatelessWidget {
                       width: 50,
                       imagePath:imagePath),
                   const SizedBox(
-                    width: RSizes.sm,
+                    width: TSizes.sm,
                   ),
                   Text(
                     name,
@@ -52,7 +52,7 @@ class RUserReviewCard extends StatelessWidget {
             date: "7-March-2024",
           ),
           const SizedBox(
-            height: RSizes.sm,
+            height: TSizes.sm,
           ),
            const ReadMoreText("This guide to review excellence will outline 12 examples of how brands successfully upped their review-game, making sure that positive, accurate feedback is the most visible. quickly touch on what great product review management can impact your brands success, then move on to our examples. Click through to the section you find most relevant. ",
 
@@ -64,13 +64,13 @@ class RUserReviewCard extends StatelessWidget {
              lessStyle: TextStyle(color: Colors.indigo),
           )
       ,   const SizedBox(
-            height: RSizes.sm,
+            height: TSizes.sm,
           ),
 
 
-       const RRoundedContainer(
+       const TRoundedContainer(
 
-             backgroundColor: RColores.grey,
+             backgroundColor: TColores.grey,
              child:  Padding(
                padding: EdgeInsets.all(8.0),
                child: Column(

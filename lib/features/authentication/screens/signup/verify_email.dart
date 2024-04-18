@@ -25,22 +25,22 @@ class VerifyEmailScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(RSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               Image(
-                  width: RHelperFunctions.screenWidth() * 0.6,
-                  image: const AssetImage(RImages.verifyImage)),
+                  width: THelperFunctions.screenWidth() * 0.6,
+                  image: const AssetImage(TImages.verifyImage)),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               Text(
-                RTexts.confirmEmail,
+                TTexts.confirmEmail,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.spaceBtwItems,
+                height: TSizes.spaceBtwItems,
               ),
               Text(
                 "support@raju.com",
@@ -48,35 +48,35 @@ class VerifyEmailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.spaceBtwItems,
+                height: TSizes.spaceBtwItems,
               ),
               Text(
-                RTexts.confirmEmailSubTitle,
+                TTexts.confirmEmailSubTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => Get.to(() => SuccessScreen(
-                      images: RImages.handshake,
-                      title: RTexts.yourAccountCreatedTitle,
-                      subTile: RTexts.yourAccountCreatedSubTitle,
+                      images: TImages.handshake,
+                      title: TTexts.yourAccountCreatedTitle,
+                      subTile: TTexts.yourAccountCreatedSubTitle,
                       onPress: () => Get.to(() => const LoginScreen()))),
-                  child: const Text(RTexts.rContinue),
+                  child: const Text(TTexts.rContinue),
                 ),
               ),
               const SizedBox(
-                height: RSizes.spaceBtwItems,
+                height: TSizes.spaceBtwItems,
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text(RTexts.resentEmail),
+                  child: const Text(TTexts.resentEmail),
                 ),
               ),
             ],

@@ -16,9 +16,9 @@ class RUserAdresses extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: RRoundedContainer(
+      child: TRoundedContainer(
         padding:  const EdgeInsets.all(15),
-        borderColor: RColores.black,
+        borderColor: TColores.black,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

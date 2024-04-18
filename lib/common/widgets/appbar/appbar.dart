@@ -3,8 +3,8 @@ import 'package:e_mart/utills/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const RAppBar(
+class TAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const TAppBar(
       {super.key,
       this.title,
       this.showBackArrow = false,
@@ -19,7 +19,7 @@ class RAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: RSizes.md),
+      padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
       child: AppBar(
 
         automaticallyImplyLeading: false,

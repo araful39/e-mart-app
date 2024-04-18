@@ -16,15 +16,15 @@ class RCategoryTap extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SingleChildScrollView(
       child: Padding(
-        padding:  EdgeInsets.all(RSizes.defaultSpace),
+        padding:  EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
           children: [
-             RBrandShowCase(
+             TBrandShowCase(
               images: images,
             ),
             RSectionHeading(name: "You might like",onpress: (){},showActionButton: true,),
             const SizedBox(
-              height: RSizes.spaceBtwItems,
+              height: TSizes.spaceBtwItems,
             ),
             RGridLayout(itemCount: gridImage.length, itemBuilder: (_,index){
               return  RProductCardVertical(imagePath: gridImage[index],);

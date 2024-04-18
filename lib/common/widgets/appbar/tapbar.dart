@@ -1,7 +1,7 @@
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/material.dart';
-class RTapBar extends StatelessWidget implements PreferredSizeWidget {
-  const RTapBar({super.key, required this.tabs});
+class TTapBar extends StatelessWidget implements PreferredSizeWidget {
+  const TTapBar({super.key, required this.tabs});
 final List<Widget> tabs;
 
   @override
@@ -14,9 +14,9 @@ final List<Widget> tabs;
         indicatorWeight: 2,
         tabs: tabs,
         isScrollable: true,
-        indicatorColor: RColores.primary,
-        labelColor: RColores.primary,
-        unselectedLabelColor: RColores.darkGery,
+        indicatorColor: TColores.primary,
+        labelColor: TColores.primary,
+        unselectedLabelColor: TColores.darkGery,
       ),
     ); // Your custom widget implementation.
   }

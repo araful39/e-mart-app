@@ -17,7 +17,7 @@ class RRatingAndShare extends StatelessWidget {
               color: Colors.orangeAccent,
             ),
             SizedBox(
-              width: RSizes.sm,
+              width: TSizes.sm,
             ),
             Text("5.0"),
             Text("(199)")

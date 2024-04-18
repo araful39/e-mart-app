@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class RElevatedButton extends StatelessWidget {
-  const RElevatedButton({
+class TElevatedButton extends StatelessWidget {
+  const TElevatedButton({
     super.key, required this.name, required this.onPressed, this.width, this.height, this.backgroundColor,
   });
 

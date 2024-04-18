@@ -24,18 +24,18 @@ class SettingsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            RPrimaryHeaderContainer(
+            TPrimaryHeaderContainer(
                 headerHeight: 150,
                 topHeight: 140,
                 child: Column(
                   children: [
-                    RAppBar(
+                    TAppBar(
                       title: Text(
                         "Account",
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium
-                            ?.apply(color: RColores.white),
+                            ?.apply(color: TColores.white),
                       ),
                     ),
                     RUserProfileTile(
@@ -50,7 +50,7 @@ class SettingsScreen extends StatelessWidget {
                   ],
                 )),
             Padding(
-              padding: const EdgeInsets.all(RSizes.defaultBtwSections),
+              padding: const EdgeInsets.all(TSizes.defaultBtwSections),
               child: Column(
                 children: [
                   const RSectionHeading(name: "Account Settings"),
@@ -92,11 +92,11 @@ class SettingsScreen extends StatelessWidget {
                     icon: Icons.person,
                   ),
                    const SizedBox(
-                    height: RSizes.defaultBtwSections,
+                    height: TSizes.defaultBtwSections,
                   ),
                    const RSectionHeading(name: "App Settings"),
                    const SizedBox(
-                    height: RSizes.spaceBtwItems,
+                    height: TSizes.spaceBtwItems,
                   ),
                    const RSettingsMenuTile(
                     title: 'Load Data',
@@ -132,7 +132,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Icons.image,
                   ),
                    const SizedBox(
-                    height: RSizes.defaultBtwSections,
+                    height: TSizes.defaultBtwSections,
                   ),
                   SizedBox(
                     width: double.infinity,

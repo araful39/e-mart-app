@@ -1,4 +1,4 @@
-class RTexts{
+class TTexts{
   //--GLOBAL Texts
 static const String submit="Submit";
 static const String appName="R-Store";

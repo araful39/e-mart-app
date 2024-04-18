@@ -1,12 +1,12 @@
 import 'package:e_mart/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:e_mart/common/widgets/brand/r_brand_card.dart';
+import 'package:e_mart/common/widgets/brand/t_brand_card.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class RBrandShowCase extends StatelessWidget {
-  const RBrandShowCase({
+class TBrandShowCase extends StatelessWidget {
+  const TBrandShowCase({
     super.key,
     required this.images,
   });
@@ -15,16 +15,16 @@ class RBrandShowCase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RRoundedContainer(
-      borderColor: RColores.darkGery,
+    return TRoundedContainer(
+      borderColor: TColores.darkGery,
       backgroundColor: Colors.transparent,
-      padding: const EdgeInsets.all(RSizes.sm),
-      margin: const EdgeInsets.only(bottom: RSizes.spaceBtwItems),
+      padding: const EdgeInsets.all(TSizes.sm),
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Column(
         children: [
-          const RBrandCard(
+          const TBrandCard(
             showBorder: false,
-            brandImagePath: RImages.shoesName,
+            brandImagePath: TImages.shoesName,
             brandName: 'Panda',
             productQuantity: 100,
             isNetworkImage: false,
@@ -42,11 +42,11 @@ class RBrandShowCase extends StatelessWidget {
 
 Widget brandTopProductImagesWidget(String image) {
   return Expanded(
-      child: RRoundedContainer(
+      child: TRoundedContainer(
     height: 70,
-    backgroundColor: RColores.light,
-    padding: const EdgeInsets.all(RSizes.sm),
-    margin: const EdgeInsets.only(right: RSizes.sm),
+    backgroundColor: TColores.light,
+    padding: const EdgeInsets.all(TSizes.sm),
+    margin: const EdgeInsets.only(right: TSizes.sm),
     child: Image(
       image: AssetImage(image),
       fit: BoxFit.contain,

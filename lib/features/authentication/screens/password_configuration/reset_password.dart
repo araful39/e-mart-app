@@ -23,46 +23,46 @@ class ResetPassword extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(RSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               Image(
-                  width: RHelperFunctions.screenWidth() * 0.6,
-                  image: const AssetImage(RImages.deliveryEmail)),
+                  width: THelperFunctions.screenWidth() * 0.6,
+                  image: const AssetImage(TImages.deliveryEmail)),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               Text(
-                RTexts.changeYourPasswordTitle,
+                TTexts.changeYourPasswordTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.spaceBtwItems,
+                height: TSizes.spaceBtwItems,
               ),
               Text(
-                RTexts.changeYourPasswordSubTitle,
+                TTexts.changeYourPasswordSubTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => Get.to(() => const LoginScreen()),
-                  child: const Text(RTexts.done),
+                  child: const Text(TTexts.done),
                 ),
               ),
               const SizedBox(
-                height: RSizes.spaceBtwItems,
+                height: TSizes.spaceBtwItems,
               ),
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
                   onPressed: () {},
-                  child: const Text(RTexts.resentEmail),
+                  child: const Text(TTexts.resentEmail),
                 ),
               ),
             ],

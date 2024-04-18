@@ -30,7 +30,7 @@ class _RLoginFormState extends State<RLoginForm> {
     return Form(
       key: _formkey,
         child: Padding(
-          padding:  const EdgeInsets.symmetric(vertical: RSizes.defaultBtwSections),
+          padding:  const EdgeInsets.symmetric(vertical: TSizes.defaultBtwSections),
           child: Column(
             children: [
               TextFormField(
@@ -39,10 +39,10 @@ class _RLoginFormState extends State<RLoginForm> {
                 },
                 controller: _email,
                 decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.email), labelText: RTexts.email),
+                    prefixIcon: Icon(Icons.email), labelText: TTexts.email),
               ),
               const SizedBox(
-                height: RSizes.spaceBtwInputFields,
+                height: TSizes.spaceBtwInputFields,
               ),
               Obx(
     ()=> TextFormField(
@@ -54,7 +54,8 @@ class _RLoginFormState extends State<RLoginForm> {
                   obscureText: controller.isClick.value,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.key),
-                    labelText: RTexts.password,
+                    labelText: TTexts.password,
+
                     suffixIcon: IconButton(
                         onPressed: (){
                           controller.visible();
@@ -68,7 +69,7 @@ class _RLoginFormState extends State<RLoginForm> {
               ),
 
               const SizedBox(
-                height: RSizes.spaceBtwInputFields / 2,
+                height: TSizes.spaceBtwInputFields / 2,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,16 +77,16 @@ class _RLoginFormState extends State<RLoginForm> {
                   Row(
                     children: [
                       Checkbox(value: true, onChanged: (value) {}),
-                      const Text(RTexts.remember)
+                      const Text(TTexts.remember)
                     ],
                   ),
                   TextButton(
                       onPressed: () =>Get.to(()=>const ForgetPassword()),
-                      child: const Text(RTexts.forgetPassword))
+                      child: const Text(TTexts.forgetPassword))
                 ],
               ),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               SizedBox(
                   width: double.infinity,
@@ -113,9 +114,9 @@ class _RLoginFormState extends State<RLoginForm> {
                           }
                         }
 
-                      }, child: const Text(RTexts.signIn))),
+                      }, child: const Text(TTexts.signIn))),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               SizedBox(
                   width: double.infinity,
@@ -123,7 +124,7 @@ class _RLoginFormState extends State<RLoginForm> {
                       onPressed: () {
                         Get.to(()=>const SingUpScreen());
                       },
-                      child: const Text(RTexts.createAccount))),
+                      child: const Text(TTexts.createAccount))),
 
             ],
           ),

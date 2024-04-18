@@ -2,7 +2,7 @@ import 'package:e_mart/common/widgets/appbar/appbar.dart';
 import 'package:e_mart/common/widgets/appbar/tapbar.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/cart_menu_icon.dart';
-import 'package:e_mart/common/widgets/brand/r_brand_card.dart';
+import 'package:e_mart/common/widgets/brand/t_brand_card.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
 import 'package:e_mart/features/shop/screens/shop/widget/category_tab.dart';
@@ -22,7 +22,7 @@ class StoreScreen extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
-        appBar: RAppBar(
+        appBar: TAppBar(
           title: Text(
             "Store",
             style: Theme.of(context).textTheme.headlineMedium,
@@ -30,7 +30,7 @@ class StoreScreen extends StatelessWidget {
           actions: [
             RCardCounterIcon(
               onpress: () {},
-              iconColor: RColores.black,
+              iconColor: TColores.black,
             ),
           ],
         ),
@@ -41,22 +41,22 @@ class StoreScreen extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                backgroundColor: RColores.white,
+                backgroundColor: TColores.white,
                 expandedHeight: 340,
                 flexibleSpace: Padding(
-                  padding: const EdgeInsets.all(RSizes.sm),
+                  padding: const EdgeInsets.all(TSizes.sm),
                   child: ListView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       const SizedBox(
-                        height: RSizes.lg,
+                        height: TSizes.lg,
                       ),
                       const RSearchContainer(
                         padding: EdgeInsets.zero,
                       ),
                       const SizedBox(
-                        height: RSizes.defaultBtwSections / 3,
+                        height: TSizes.defaultBtwSections / 3,
                       ),
                       RSectionHeading(
                         name: "Featured Brands",
@@ -65,7 +65,7 @@ class StoreScreen extends StatelessWidget {
                         onpress: () => Get.to(() => const AllBrand()),
                       ),
                       const SizedBox(
-                        height: RSizes.spaceBtwItems / 1.5,
+                        height: TSizes.spaceBtwItems / 1.5,
                       ),
                       RGridLayout(
                           itemCount: 4,
@@ -73,9 +73,9 @@ class StoreScreen extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {},
-                              child: const RBrandCard(
+                              child: const TBrandCard(
                                 showBorder: true,
-                                brandImagePath: RImages.shoesName,
+                                brandImagePath: TImages.shoesName,
                                 brandName: 'Nike',
                                 productQuantity: 250,
                                 isNetworkImage: false,
@@ -85,7 +85,7 @@ class StoreScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                bottom: const RTapBar(
+                bottom: const TTapBar(
                   tabs: [
                     Text("Sports"),
                     Text("Furniture"),
@@ -100,14 +100,14 @@ class StoreScreen extends StatelessWidget {
           body: const TabBarView(
             children: [
               RCategoryTap(
-                images: [RImages.shoes1, RImages.shoes2, RImages.shoes3],
+                images: [TImages.shoes1, TImages.shoes2, TImages.shoes3],
                 gridImage: [
-                  RImages.shoes3,
-                  RImages.shoes2,
-                  RImages.shoes2,
-                  RImages.shoes3,
-                  RImages.shoes2,
-                  RImages.shoes2,
+                  TImages.shoes3,
+                  TImages.shoes2,
+                  TImages.shoes2,
+                  TImages.shoes3,
+                  TImages.shoes2,
+                  TImages.shoes2,
                 ],
               ),
               RCategoryTap(

@@ -16,15 +16,15 @@ class RProductQuantityAddRemove extends StatelessWidget {
       children: [
         InkWell(
           onTap: onTapRemove,
-          child: const RRoundedContainer(
+          child: const TRoundedContainer(
             height: 35,
             width: 35,
-            backgroundColor: RColores.buttonPrimary,
+            backgroundColor: TColores.buttonPrimary,
             child: Icon(Icons.remove,color: Colors.white,),
           ),
         ),
         const SizedBox(
-          width: RSizes.md,
+          width: TSizes.md,
         ),
         SizedBox(
           width: 20,
@@ -33,14 +33,14 @@ class RProductQuantityAddRemove extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineLarge,
           ),
         ),const SizedBox(
-          width: RSizes.md,
+          width: TSizes.md,
         ),
         InkWell(
           onTap: onTapAdd,
-          child: const RRoundedContainer(
+          child: const TRoundedContainer(
             height: 35,
             width: 35,
-            backgroundColor: RColores.buttonPrimary,
+            backgroundColor: TColores.buttonPrimary,
             child: Icon(Icons.add,color: Colors.white,),
           ),
         )

@@ -19,21 +19,21 @@ class RProductMetaData extends StatelessWidget {
       children: [
         Row(
           children: [
-            RRoundedContainer(
-              backgroundColor: RColores.secondary.withOpacity(0.8),
-              radius: RSizes.sm,
+            TRoundedContainer(
+              backgroundColor: TColores.secondary.withOpacity(0.8),
+              radius: TSizes.sm,
               padding: const EdgeInsets.symmetric(
-                  horizontal: RSizes.sm, vertical: RSizes.xs),
+                  horizontal: TSizes.sm, vertical: TSizes.xs),
               child: Text(
                 "25%",
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge
-                    ?.apply(color: RColores.black),
+                    ?.apply(color: TColores.black),
               ),
             ),
             const SizedBox(
-              width: RSizes.spaceBtwItems,
+              width: TSizes.spaceBtwItems,
             ),
             Text(
               "\$250",
@@ -43,34 +43,34 @@ class RProductMetaData extends StatelessWidget {
                   ?.apply(decoration: TextDecoration.lineThrough),
             ),
             const SizedBox(
-              width: RSizes.spaceBtwItems,
+              width: TSizes.spaceBtwItems,
             ),
             const RProductPriceText(price: "150",isLarge: true,)
           ],
         ),
         const SizedBox(
-          height: RSizes.sm,
+          height: TSizes.sm,
         ),
         const RProductTitleText(title: "Green Nike Sports Shoes"),
         const SizedBox(
-          height: RSizes.sm,
+          height: TSizes.sm,
         ),
         const Row(
           children: [
             RProductTitleText(title: "Status"),
             SizedBox(
-              width: RSizes.sm,
+              width: TSizes.sm,
             ),
             Text("in Stack"),
 
           ],
         ),
         const SizedBox(
-          height: RSizes.sm,
+          height: TSizes.sm,
         ),
         const Row(
           children: [
-            RCircularImage(imagePath: RImages.shoesName, isNetworkImage: false,width: 40,height: 40,),
+            RCircularImage(imagePath: TImages.shoesName, isNetworkImage: false,width: 40,height: 40,),
             RBrandTitleWithVerifiedIcon(title: "Nike",brandTextSize: TextSizes.medium,),
           ],
         )

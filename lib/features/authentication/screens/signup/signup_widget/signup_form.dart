@@ -24,69 +24,69 @@ class RSingUpForm extends StatelessWidget {
             children: [
               Flexible(
                 child: TextFormField(
-                  validator: (value)=>RValidator.validateEmptyText("First Name", value),
+                  validator: (value)=>TValidator.validateEmptyText("First Name", value),
                   controller: controller.firstName,
                   expands: false,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person),
-                      hintText: RTexts.firstName),
+                      hintText: TTexts.firstName),
                 ),
               ),
               const SizedBox(
-                width: RSizes.spaceBtwInputFields,
+                width: TSizes.spaceBtwInputFields,
               ),
               Flexible(
                 child: TextFormField(
-                  validator: (value)=>RValidator.validateEmptyText("Last Name", value),
+                  validator: (value)=>TValidator.validateEmptyText("Last Name", value),
                   controller: controller.lastName,
                   expands: false,
                   decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.person),
-                      hintText: RTexts.lastName),
+                      hintText: TTexts.lastName),
                 ),
               ),
             ],
           ),
           const SizedBox(
-            height: RSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
-            validator: (value)=>RValidator.validateEmptyText("User Name", value),
+            validator: (value)=>TValidator.validateEmptyText("User Name", value),
             controller: controller.userName,
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.person), hintText: RTexts.userName),
+                prefixIcon: Icon(Icons.person), hintText: TTexts.userName),
           ),
           const SizedBox(
-            height: RSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
-            validator: (value)=>RValidator.validateEmail(value),
+            validator: (value)=>TValidator.validateEmail(value),
             controller: controller.email,
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.email), hintText: RTexts.email),
+                prefixIcon: Icon(Icons.email), hintText: TTexts.email),
           ),
           const SizedBox(
-            height: RSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
-            validator: (value) => RValidator.validateEmptyText("Phone Number", value),
+            validator: (value) => TValidator.validateEmptyText("Phone Number", value),
             controller: controller.phoneNumber,
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.phone), hintText: RTexts.phoneNo),
+                prefixIcon: Icon(Icons.phone), hintText: TTexts.phoneNo),
           ),
           const SizedBox(
-            height: RSizes.spaceBtwInputFields,
+            height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
-            validator: (value)=>RValidator.validatePassword(value),
+            validator: (value)=>TValidator.validatePassword(value),
             controller: controller.password,
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.key), hintText: RTexts.password),
+                prefixIcon: Icon(Icons.key), hintText: TTexts.password),
           ),
-          const SizedBox(height: RSizes.defaultBtwSections),
+          const SizedBox(height: TSizes.defaultBtwSections),
           const RTermsAndConditionCheckBox(),
           const SizedBox(
-            height: RSizes.defaultBtwSections,
+            height: TSizes.defaultBtwSections,
           ),
           SizedBox(
               width: double.infinity,
@@ -95,7 +95,7 @@ class RSingUpForm extends StatelessWidget {
                     controller.singUp(context);
 
                   },
-                  child: const Text(RTexts.createAccount)))
+                  child: const Text(TTexts.createAccount)))
         ],
       ),
     );

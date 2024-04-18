@@ -10,7 +10,7 @@ final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return  ListTile(
-leading: Icon(icon,size: 20,color: RColores.primary,),
+leading: Icon(icon,size: 20,color: TColores.primary,),
       title: Text(title,style: Theme.of(context).textTheme.titleMedium,),
       subtitle: Text(subTitle,style: Theme.of(context).textTheme.labelMedium,),
       trailing: trailing,

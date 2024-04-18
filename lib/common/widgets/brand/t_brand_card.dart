@@ -6,8 +6,8 @@ import 'package:e_mart/utills/constants/enums.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class RBrandCard extends StatelessWidget {
-  const RBrandCard({
+class TBrandCard extends StatelessWidget {
+  const TBrandCard({
     super.key,
     required this.showBorder,
     this.onTap,
@@ -30,11 +30,11 @@ class RBrandCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: RRoundedContainer(
+      child: TRoundedContainer(
         height: height ?? 90,
-        borderColor: showBorder ? RColores.dark : Colors.white,
+        borderColor: showBorder ? TColores.dark : Colors.white,
         backgroundColor: Colors.transparent,
-        padding: const EdgeInsets.all(RSizes.sm),
+        padding: const EdgeInsets.all(TSizes.sm),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

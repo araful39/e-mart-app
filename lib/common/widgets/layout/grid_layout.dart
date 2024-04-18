@@ -17,8 +17,8 @@ final Widget? Function(BuildContext, int) itemBuilder;
         itemCount: itemCount,
         gridDelegate:   SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            mainAxisSpacing: RSizes.gridViewSpacing,
-            crossAxisSpacing:  RSizes.gridViewSpacing,mainAxisExtent:mainAxisExtent ?? 288),
+            mainAxisSpacing: TSizes.gridViewSpacing,
+            crossAxisSpacing:  TSizes.gridViewSpacing,mainAxisExtent:mainAxisExtent ?? 288),
 
         itemBuilder: itemBuilder);
   }

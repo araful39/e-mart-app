@@ -13,27 +13,27 @@ class RHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RAppBar(
+    return TAppBar(
       title: Column(
         children: [
           Text(
-            RTexts.homeAppbarTitle,
+            TTexts.homeAppbarTitle,
             style: Theme.of(context)
                 .textTheme
                 .labelMedium
-                ?.apply(color: RColores.grey),
+                ?.apply(color: TColores.grey),
           ),
           Text(
-            RTexts.homeAppbarSubTitle,
+            TTexts.homeAppbarSubTitle,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall
-                ?.apply(color: RColores.grey),
+                ?.apply(color: TColores.grey),
           ),
         ],
       ),
       actions: [
-        RCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const CartScreen()))
+        RCardCounterIcon(iconColor: TColores.white, onpress: ()=>Get.to(()=>const CartScreen()))
       ],
     );
   }

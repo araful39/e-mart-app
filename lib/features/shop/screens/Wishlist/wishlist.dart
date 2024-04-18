@@ -16,18 +16,18 @@ class FavouriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      appBar: RAppBar(
+      appBar: TAppBar(
         title: Text("WishList",style: Theme.of(context).textTheme.headlineMedium),
           actions: [
-            RCircularIcon(icon:CupertinoIcons.add,onPress: ()=>Get.to(()=> const HomeScreen()),)
+            TCircularIcon(icon:CupertinoIcons.add,onPress: ()=>Get.to(()=> const HomeScreen()),)
           ],
       ),
       body:  SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(RSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              RGridLayout(itemCount: 6, itemBuilder: (_,index)=>const RProductCardVertical(imagePath: RImages.shoes3))
+              RGridLayout(itemCount: 6, itemBuilder: (_,index)=>const RProductCardVertical(imagePath: TImages.shoes3))
             ],
           ),
         ),

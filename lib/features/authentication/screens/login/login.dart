@@ -21,7 +21,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    final dark = RHelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
       body: SafeArea(
@@ -33,10 +33,10 @@ class _LoginScreenState extends State<LoginScreen> {
               RLoginHeader(dark: dark),
               const RLoginForm(),
               RFormDivider(
-                dividerText: RTexts.orSignInWith.capitalize!,
+                dividerText: TTexts.orSignInWith.capitalize!,
               ),
               const SizedBox(
-                height: RSizes.defaultBtwSections,
+                height: TSizes.defaultBtwSections,
               ),
               const RSocialButton()
             ],

@@ -1,4 +1,4 @@
-class RSizes{
+class TSizes{
 
   //Padding and margin sizes
 

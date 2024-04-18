@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3),()=>Get.off(()=>const LoginScreen()));
     return const Scaffold(
       body: Center(
-        child: RRoundedImage(imageUrl: RImages.handshake, isNetworkImage: false),
+        child: RRoundedImage(imageUrl: TImages.handshake, isNetworkImage: false),
       ),
     );
   }

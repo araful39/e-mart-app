@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class RSearchContainer extends StatelessWidget {
    const RSearchContainer({
     super.key, this.text, this.icon, this.onpress,
-    this.padding=const EdgeInsets.symmetric(horizontal: RSizes.defaultSpace),
+    this.padding=const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
   final String? text;
   final IconData? icon;
@@ -23,16 +23,16 @@ class RSearchContainer extends StatelessWidget {
         padding:  padding ,
         child: Container(
             width: TDeviceUtils.getScreenWidth(context),
-            padding: const EdgeInsets.all(RSizes.md),
+            padding: const EdgeInsets.all(TSizes.md),
             decoration: BoxDecoration(
-                color: RColores.light,
-                borderRadius: BorderRadius.circular(RSizes.cardRadiusLg),
-                border: Border.all(color: RColores.grey)
+                color: TColores.light,
+                borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
+                border: Border.all(color: TColores.grey)
             ),
             child:  Row(
               children: [
-                Icon(icon ?? Icons.search,color: RColores.darkGery,),
-                const SizedBox(width: RSizes.xs,),
+                Icon(icon ?? Icons.search,color: TColores.darkGery,),
+                const SizedBox(width: TSizes.xs,),
                 Text( text ??"Search in Store",style: Theme.of(context).textTheme.bodySmall,)
               ],
             )

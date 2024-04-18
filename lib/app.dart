@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'e-Mart ',
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       home:  const SplashScreen()
     );
   }

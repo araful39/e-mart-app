@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 
 class TSpacingStyle{
   static const EdgeInsetsGeometry paddingWithAppBarHeight=  EdgeInsets.only(
-      top: RSizes.appBarHeight,
-      left: RSizes.defaultSpace,
-      bottom: RSizes.defaultSpace,
-      right: RSizes.defaultSpace
+      top: TSizes.appBarHeight,
+      left: TSizes.defaultSpace,
+      bottom: TSizes.defaultSpace,
+      right: TSizes.defaultSpace
   );
 }

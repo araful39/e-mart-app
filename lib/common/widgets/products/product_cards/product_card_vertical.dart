@@ -28,14 +28,14 @@ class RProductCardVertical extends StatelessWidget {
 
       padding: const EdgeInsets.all(1),
       decoration: BoxDecoration(
-          boxShadow: [RShadowStyle.verticalProductShadow],
-          borderRadius: BorderRadius.circular(RSizes.productImageRadius),
-          color: RColores.white),
+          boxShadow: [TShadowStyle.verticalProductShadow],
+          borderRadius: BorderRadius.circular(TSizes.productImageRadius),
+          color: TColores.white),
       child: Column(
         children: [
-          RRoundedContainer(
+          TRoundedContainer(
             height: 180,
-            padding: const EdgeInsets.all(RSizes.xs),
+            padding: const EdgeInsets.all(TSizes.xs),
             child: Stack(
               children: [
                 Positioned(
@@ -48,36 +48,36 @@ class RProductCardVertical extends StatelessWidget {
                 ),
                 Positioned(
                   top: 12,
-                  child: RRoundedContainer(
-                    radius: RSizes.sm,
-                    backgroundColor: RColores.secondary.withOpacity(0.8),
+                  child: TRoundedContainer(
+                    radius: TSizes.sm,
+                    backgroundColor: TColores.secondary.withOpacity(0.8),
                     padding: const EdgeInsets.symmetric(
-                        horizontal: RSizes.sm, vertical: RSizes.xs),
+                        horizontal: TSizes.sm, vertical: TSizes.xs),
                     child: Text(
                       "%25",
                       style: Theme.of(context)
                           .textTheme
                           .labelLarge
-                          ?.apply(color: RColores.black),
+                          ?.apply(color: TColores.black),
                     ),
                   ),
                 ),
                 Positioned(
                     right: 0,
                     top: 0,
-                    child: RCircularIcon(
+                    child: TCircularIcon(
                       onPress: () {},
                       icon: Icons.favorite,
-                      color: RColores.error,
+                      color: TColores.error,
                     ))
               ],
             ),
           ),
           const SizedBox(
-            height: RSizes.spaceBtwItems / 2,
+            height: TSizes.spaceBtwItems / 2,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: RSizes.sm),
+            padding: const EdgeInsets.only(left: TSizes.sm),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -86,7 +86,7 @@ class RProductCardVertical extends StatelessWidget {
                   smallSize: true,
                 ),
                 const SizedBox(
-                  height: RSizes.spaceBtwItems / 2,
+                  height: TSizes.spaceBtwItems / 2,
                 ),
                  const RBrandTitleWithVerifiedIcon(
                   title: 'Nike',
@@ -103,7 +103,7 @@ class RProductCardVertical extends StatelessWidget {
                               transitionDuration: Duration(seconds: 1),
                               barrierDismissible: false,
                             Dialog(
-                              backgroundColor: RColores.white,
+                              backgroundColor: TColores.white,
                               child: SizedBox(
                                 height: 150,
                                 child: Padding(
@@ -113,7 +113,7 @@ class RProductCardVertical extends StatelessWidget {
                                     children: [
                                       const Text("Product Add",style: TextStyle(fontSize: 30),textAlign: TextAlign.center,),
                                       SizedBox(
-                                        height: RSizes.defaultSpace,
+                                        height: TSizes.defaultSpace,
                                       ),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -133,18 +133,18 @@ class RProductCardVertical extends StatelessWidget {
                         },
                         child: Container(
                           decoration: const BoxDecoration(
-                              color: RColores.dark,
+                              color: TColores.dark,
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(RSizes.cardRadiusMd),
+                                  topLeft: Radius.circular(TSizes.cardRadiusMd),
                                   bottomRight: Radius.circular(
-                                      RSizes.productImageRadius))),
+                                      TSizes.productImageRadius))),
                           child: const SizedBox(
-                              height: RSizes.iconLg * 1.2,
-                              width: RSizes.iconLg * 1.2,
+                              height: TSizes.iconLg * 1.2,
+                              width: TSizes.iconLg * 1.2,
                               child: Center(
                                   child: Icon(
                                 Icons.add,
-                                color: RColores.white,
+                                color: TColores.white,
                               ))),
                         ),
                       )

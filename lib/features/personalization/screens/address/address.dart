@@ -11,7 +11,7 @@ class UserAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const RAppBar(
+      appBar: const TAppBar(
         showBackArrow: true,
         title: Text("Addresses"),
       ),

@@ -33,8 +33,8 @@ class RRatingsProgresIndicator extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               value: value,
 
-              valueColor: AlwaysStoppedAnimation(color ?? RColores.success),
-              backgroundColor: RColores.grey,
+              valueColor: AlwaysStoppedAnimation(color ?? TColores.success),
+              backgroundColor: TColores.grey,
             ),
           ),
         ),

@@ -1,5 +1,5 @@
 import 'package:e_mart/common/widgets/appbar/appbar.dart';
-import 'package:e_mart/common/widgets/brand/r_brand_card.dart';
+import 'package:e_mart/common/widgets/brand/t_brand_card.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
@@ -12,7 +12,7 @@ class AllBrand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const RAppBar(
+      appBar: const TAppBar(
         showBackArrow: true,
         title: Text("Brand"),
       ),
@@ -23,15 +23,15 @@ class AllBrand extends StatelessWidget {
             children: [
               const RSectionHeading(name: "Brands"),
               const SizedBox(
-                height: RSizes.md,
+                height: TSizes.md,
               ),
               RGridLayout(
                   mainAxisExtent: 70,
                   itemCount: 50,
                   itemBuilder: (_, __) {
-                    return const RBrandCard(
+                    return const TBrandCard(
                         showBorder: true,
-                        brandImagePath: RImages.shoesName,
+                        brandImagePath: TImages.shoesName,
                         brandName: "Nike",
                         productQuantity: 300,
                         isNetworkImage: false);

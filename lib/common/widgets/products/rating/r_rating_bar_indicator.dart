@@ -27,7 +27,7 @@ class RRatingBarIndicator extends StatelessWidget {
               return  Icon(icon ?? Icons.star,color: iconColor?? Colors.amber,);
             }),
         const SizedBox(
-          width: RSizes.sm ,
+          width: TSizes.sm ,
         ),
          Text(date ?? "")
       ],    );

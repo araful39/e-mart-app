@@ -11,7 +11,7 @@ class RTermsAndConditionCheckBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = RHelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,13 +22,13 @@ class RTermsAndConditionCheckBox extends StatelessWidget {
           children: [
             SizedBox(width:20,height: 5,child: Checkbox(value: true, onChanged: (value) {})),
             const SizedBox(
-              width: RSizes.spaceBtwItems,
+              width: TSizes.spaceBtwItems,
             ),
             Text.rich(
 
                 TextSpan(children: [
               TextSpan(
-                  text: '${RTexts.iAgreeTo} ',
+                  text: '${TTexts.iAgreeTo} ',
                   style: Theme.of(context).textTheme.bodySmall),
 
             ])),
@@ -36,30 +36,30 @@ class RTermsAndConditionCheckBox extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: RSizes.spaceBtwItems,
+          height: TSizes.spaceBtwItems,
         ),
         Text.rich(
 
             TextSpan(children: [
 
               TextSpan(
-                  text: '${RTexts.privacyPolicy} ',
+                  text: '${TTexts.privacyPolicy} ',
                   style: Theme.of(context).textTheme.bodySmall!.apply(
-                    color: dark ? RColores.white : RColores.primary,
+                    color: dark ? TColores.white : TColores.primary,
                     decoration: TextDecoration.underline,
                     decorationColor:
-                    dark ? RColores.white : RColores.primary,
+                    dark ? TColores.white : TColores.primary,
                   )),
               TextSpan(
-                  text: '${RTexts.and} ',
+                  text: '${TTexts.and} ',
                   style: Theme.of(context).textTheme.bodySmall),
               TextSpan(
-                  text: RTexts.termsOfUse,
+                  text: TTexts.termsOfUse,
                   style: Theme.of(context).textTheme.bodySmall!.apply(
-                      color: dark ? RColores.white : RColores.primary,
+                      color: dark ? TColores.white : TColores.primary,
                       decoration: TextDecoration.underline,
                       decorationColor:
-                      dark ? RColores.white : RColores.primary)),
+                      dark ? TColores.white : TColores.primary)),
             ])),
       ],
     );

@@ -37,13 +37,13 @@ required this.isNetworkImage,
         padding: padding,
         decoration: BoxDecoration(
           border: border,
-          color: backgroundColor ?? RColores.white,
+          color: backgroundColor ?? TColores.white,
           borderRadius:
-          BorderRadius.circular(RSizes.xs)
+          BorderRadius.circular(TSizes.xs)
           ,
         ),
         child: ClipRRect(
-            borderRadius: BorderRadius.circular(imageRadius ?? RSizes.md),
+            borderRadius: BorderRadius.circular(imageRadius ?? TSizes.md),
             child: Image(
               image: isNetworkImage
                   ? NetworkImage(imageUrl)

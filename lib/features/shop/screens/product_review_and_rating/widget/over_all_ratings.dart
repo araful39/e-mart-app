@@ -12,7 +12,7 @@ class ROverAllRatings extends StatelessWidget {
       children: [
         Text("4.8",style: Theme.of(context).textTheme.displayLarge,),
         const SizedBox(
-          width: RSizes.spaceBtwItems,
+          width: TSizes.spaceBtwItems,
         ),
           const Flexible(
           flex: 4,

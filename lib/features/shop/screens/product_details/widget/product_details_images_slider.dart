@@ -18,9 +18,9 @@ class RProductImageSlider extends StatelessWidget {
     ProductDetailController productDetailController =
         Get.put(ProductDetailController());
     return Obx(
-      () => RPrimaryHeaderContainer(
+      () => TPrimaryHeaderContainer(
           isCircular: false,
-          color: RColores.black.withOpacity(0.5),
+          color: TColores.black.withOpacity(0.5),
           child: Column(
             children: [
               Stack(
@@ -35,11 +35,11 @@ class RProductImageSlider extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const RAppBar(
+                  const TAppBar(
                     actions: [
-                      RCircularIcon(
+                      TCircularIcon(
                         icon: Icons.favorite,
-                        color: RColores.red,
+                        color: TColores.red,
                       )
                     ],
                     showBackArrow: true,
@@ -57,8 +57,8 @@ class RProductImageSlider extends StatelessWidget {
 
                         },
                         child: RRoundedImage(
-                            backgroundColor: RColores.black,
-                            border: Border.all(color: RColores.white),
+                            backgroundColor: TColores.black,
+                            border: Border.all(color: TColores.white),
                             height: 50,
                             imageUrl: productDetailController.imagesList[index]
                                 .toString(),
@@ -67,7 +67,7 @@ class RProductImageSlider extends StatelessWidget {
                     },
                     separatorBuilder: (_, __) {
                       return const SizedBox(
-                        width: RSizes.spaceBtwItems,
+                        width: TSizes.spaceBtwItems,
                       );
                     },
                     itemCount: productDetailController.imagesList.length),

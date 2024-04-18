@@ -1,8 +1,8 @@
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class RCircularIcon extends StatelessWidget {
-  const RCircularIcon({
+class TCircularIcon extends StatelessWidget {
+  const TCircularIcon({
     super.key,
     this.onPress,
     this.height,
@@ -27,7 +27,7 @@ class RCircularIcon extends StatelessWidget {
 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: backgroundColor ?? RColores.white.withOpacity(0.9),
+        color: backgroundColor ?? TColores.white.withOpacity(0.9),
       ),
       child: IconButton(
         onPressed: onPress,

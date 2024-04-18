@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class ProductDetailController extends GetxController {
   RxList imagesList =
-      [RImages.shoes1, RImages.shoes2, RImages.shoes3, RImages.shoes4,RImages.shoes5, RImages.shoes6,RImages.shoes7
+      [TImages.shoes1, TImages.shoes2, TImages.shoes3, TImages.shoes4,TImages.shoes5, TImages.shoes6,TImages.shoes7
 
       ].obs;
 

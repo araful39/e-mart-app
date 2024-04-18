@@ -15,13 +15,13 @@ class RBottomAddToCart extends StatelessWidget {
     return Container(
       height: 100,
       padding: const EdgeInsets.symmetric(
-        horizontal: RSizes.sm,
-         vertical: RSizes.defaultSpace / 2),
+        horizontal: TSizes.sm,
+         vertical: TSizes.defaultSpace / 2),
       decoration: const BoxDecoration(
-          color: RColores.light,
+          color: TColores.light,
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(RSizes.cardRadiusLg),
-              topRight: Radius.circular(RSizes.cardRadiusLg))),
+              topLeft: Radius.circular(TSizes.cardRadiusLg),
+              topRight: Radius.circular(TSizes.cardRadiusLg))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -31,7 +31,7 @@ class RBottomAddToCart extends StatelessWidget {
           ),
           Flexible(
               flex: 4,
-              child: RElevatedButton(name: "Add To Card", onPressed: (){},backgroundColor: RColores.darkGery,))
+              child: TElevatedButton(name: "Add To Card", onPressed: (){},backgroundColor: TColores.darkGery,))
         ],
       ),
     );

@@ -20,9 +20,9 @@ class _RProductAttributesState extends State<RProductAttributes> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        RRoundedContainer(
-          padding: const EdgeInsets.all(RSizes.md),
-          backgroundColor: RColores.grey,
+        TRoundedContainer(
+          padding: const EdgeInsets.all(TSizes.md),
+          backgroundColor: TColores.grey,
           child: Column(
             children: [
               Row(
@@ -32,7 +32,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
                     showActionButton: false,
                   ),
                   const SizedBox(
-                    width: RSizes.md,
+                    width: TSizes.md,
                   ),
                   Column(
                     children: [
@@ -50,7 +50,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
                                 .apply(decoration: TextDecoration.lineThrough),
                           ),
                           const SizedBox(
-                            width: RSizes.spaceBtwItems,
+                            width: TSizes.spaceBtwItems,
                           ),
                           Text(
                             "\$20",
@@ -79,54 +79,54 @@ class _RProductAttributesState extends State<RProductAttributes> {
           ),
         ),
         const SizedBox(
-          height: RSizes.spaceBtwItems,
+          height: TSizes.spaceBtwItems,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const RSectionHeading(name: "Colors"),
             const SizedBox(
-              height: RSizes.sm,
+              height: TSizes.sm,
             ),
             Wrap(
               spacing: 15,
               children: [
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Green',
                 selected: false,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Yellow',
                 selected: true,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Red',
                 selected: false,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Blue',
                 selected: false,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Pink',
                 selected: false,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Purple',
                 selected: false,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Red',
                 selected: false,
                 onSelected: (value) {},
               ),
-              RChoiceChip(
+              TChoiceChip(
                 text: 'Blue',
                 selected: false,
                 onSelected: (value) {},
@@ -135,19 +135,19 @@ class _RProductAttributesState extends State<RProductAttributes> {
           ],
         ),
         const SizedBox(
-          height: RSizes.spaceBtwItems,
+          height: TSizes.spaceBtwItems,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const RSectionHeading(name: "Size"),
             const SizedBox(
-              height: RSizes.sm,
+              height: TSizes.sm,
             ),
        Wrap(
          spacing: 8,
          children: [
-           RChoiceChip(
+           TChoiceChip(
              text: 'EU 34',
              selected: isClick,
              onSelected: (value) {
@@ -155,7 +155,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
              },
            ),
 
-           RChoiceChip(
+           TChoiceChip(
              text: 'EU 35',
              selected: isClick,
              onSelected: (value) {
@@ -163,7 +163,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
              },
            ),
 
-           RChoiceChip(
+           TChoiceChip(
              text: 'EU 36',
              selected: isClick,
              onSelected: (value) {
@@ -171,7 +171,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
              },
            ),
 
-           RChoiceChip(
+           TChoiceChip(
              text: 'EU 37',
              selected: isClick,
              onSelected: (value) {

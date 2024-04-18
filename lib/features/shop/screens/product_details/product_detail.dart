@@ -27,23 +27,23 @@ class ProductDetailScreen extends StatelessWidget {
             const RProductImageSlider(),
             Padding(
               padding: const EdgeInsets.only(
-                  left: RSizes.defaultSpace,
-                  right: RSizes.defaultSpace,
-                  bottom: RSizes.defaultSpace),
+                  left: TSizes.defaultSpace,
+                  right: TSizes.defaultSpace,
+                  bottom: TSizes.defaultSpace),
               child: Column(
                 children: [
                   const RRatingAndShare(),
                   const RProductMetaData(),
                   const RProductAttributes(),
                   const SizedBox(
-                    height: RSizes.sm,
+                    height: TSizes.sm,
                   ),
-                  RElevatedButton(
+                  TElevatedButton(
                     name: 'Cheat Out',
                     onPressed: () {},
                   ),
                   const SizedBox(
-                    height: RSizes.sm,
+                    height: TSizes.sm,
                   ),
                   const RSectionHeading(name: "Description"),
                   const ReadMoreText(
@@ -59,11 +59,11 @@ class ProductDetailScreen extends StatelessWidget {
 
 
                   const SizedBox(
-                    height: RSizes.sm,
+                    height: TSizes.sm,
                   ),
                   const Divider(),
                   const SizedBox(
-                    height: RSizes.defaultSpace,
+                    height: TSizes.defaultSpace,
                   ),
                   RSectionHeading(name: "Reviews(199)",onpress: (){
                     Get.to(()=>  const ProductReviewScreen());
