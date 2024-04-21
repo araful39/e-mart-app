@@ -1,6 +1,6 @@
 
 import 'package:e_mart/features/authentication/controllers/network_controller.dart';
-import 'package:e_mart/features/shop/screens/home/home.dart';
+import 'package:e_mart/navigation_menu.dart';
 import 'package:e_mart/utills/popups/full_screen_loader.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
@@ -25,8 +25,8 @@ final auth=FirebaseAuth.instance;
 
 Future<void> singUp( BuildContext context) async{
   try{
-// RFullScreenLoader.openLoaderDialog("We are processing.....", context);
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+TFullScreenLoader.openLoaderDialog("We are processing.....", context);
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const NavigationMenu()));
 
 final isConnected=await NetworkManager.instance.isConnected();
 

@@ -27,7 +27,7 @@ class TCurvedEdgeWidget extends StatelessWidget {
         color: color ?? TColores.primary,
         padding: const EdgeInsets.all(0),
         child: SizedBox(
-          height: headerHeight ?? 278,
+          height: headerHeight ?? 288,
           child: Stack(
             children: [
               isCircular

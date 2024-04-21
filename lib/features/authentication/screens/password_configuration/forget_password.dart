@@ -1,6 +1,8 @@
 import 'package:e_mart/features/authentication/screens/password_configuration/reset_password.dart';
+import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
+import 'package:e_mart/utills/helpers/helpers.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,8 +29,9 @@ class ForgetPassword extends StatelessWidget {
                 height: TSizes.defaultBtwSections*2,
               ),
               TextFormField(
-                decoration: const InputDecoration(
-                  labelText: TTexts.email,prefixIcon: Icon(Icons.email)
+                decoration:  InputDecoration(
+                  labelText: TTexts.email,prefixIcon: const Icon(Icons.email),
+                  labelStyle: TextStyle(color: THelperFunctions.isDarkMode(context) ? TColores.textWhite : TColores.black),
                 ),
               ),
               const SizedBox(

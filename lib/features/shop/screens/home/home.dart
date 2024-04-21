@@ -1,20 +1,19 @@
 import 'package:e_mart/common/widgets/custom_shapes/container/primary_header_container.dart';
-
+import 'package:e_mart/common/widgets/layout/grid_layout.dart';
+import 'package:e_mart/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:e_mart/features/shop/screens/product_details/product_detail.dart';
+import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 
 import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../../../common/widgets/layout/grid_layout.dart';
-import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
-import '../../../../utills/constants/colors.dart';
-import '../product_details/product_detail.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,13 +24,16 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          const TPrimaryHeaderContainer(
+           TPrimaryHeaderContainer(
+             headerHeight: 300,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                RHomeAppBar(),
-                RSearchContainer(),
-                Padding(
+                const RHomeAppBar(),
+                RSearchContainer(onpress: (){
+
+                },),
+                const Padding(
                   padding: EdgeInsets.only(left: TSizes.spaceBtwItems),
                   child: Column(
                     children: [

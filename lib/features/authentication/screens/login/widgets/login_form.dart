@@ -2,8 +2,10 @@ import 'package:e_mart/features/authentication/controllers/login/login_controlle
 import 'package:e_mart/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:e_mart/features/authentication/screens/signup/singup.dart';
 import 'package:e_mart/navigation_menu.dart';
+import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
+import 'package:e_mart/utills/helpers/helpers.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,8 +39,8 @@ class _TLoginFormState extends State<TLoginForm> {
                   return "Enter valid email";
                 },
                 controller: _email,
-                decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.email), labelText: TTexts.email),
+                decoration:  InputDecoration(
+                    prefixIcon: const Icon(Icons.email), labelText: TTexts.email,labelStyle: TextStyle(color: THelperFunctions.isDarkMode(context) ? TColores.textWhite : TColores.black)),
               ),
               const SizedBox(
                 height: TSizes.spaceBtwInputFields,
@@ -52,9 +54,11 @@ class _TLoginFormState extends State<TLoginForm> {
                   obscuringCharacter: "*",
                   obscureText: controller.isClick.value,
                   decoration: InputDecoration(
+                    helperStyle: TextStyle(color: THelperFunctions.isDarkMode(context) ? TColores.textWhite : TColores.black),
                     prefixIcon: const Icon(Icons.key),
-                    labelText: TTexts.password,
 
+                    labelText: TTexts.password,
+                      labelStyle: TextStyle(color: THelperFunctions.isDarkMode(context) ? TColores.textWhite : TColores.black),
                     suffixIcon: IconButton(
                         onPressed: (){
                           controller.visible();
