@@ -37,7 +37,7 @@ required this.isNetworkImage,
         padding: padding,
         decoration: BoxDecoration(
           border: border,
-          color: backgroundColor ?? TColores.white,
+          color: backgroundColor ?? RColores.white,
           borderRadius:
           BorderRadius.circular(TSizes.xs)
           ,

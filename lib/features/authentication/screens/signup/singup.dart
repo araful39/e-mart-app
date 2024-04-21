@@ -29,7 +29,7 @@ class SingUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),
-                const TSingUpForm(),
+                const RSingUpForm(),
                 const SizedBox(
                   height: TSizes.defaultBtwSections,
                 ),

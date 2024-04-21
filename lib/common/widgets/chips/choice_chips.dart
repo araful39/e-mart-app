@@ -26,7 +26,7 @@ class TChoiceChip extends StatelessWidget {
           :  Text(text),
       selected: selected,
       onSelected: onSelected,
-      labelStyle: TextStyle(color: selected ? TColores.white : null),
+      labelStyle: TextStyle(color: selected ? RColores.white : null),
 
 
       avatar: isColor

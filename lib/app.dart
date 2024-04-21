@@ -1,3 +1,4 @@
+import 'package:e_mart/bindings/genaral_bindings.dart';
 import 'package:e_mart/features/authentication/screens/splash/splash.dart';
 import 'package:e_mart/utills/theme/theme.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.dark,
+      initialBinding: GeneralBindings(),
       home:  const SplashScreen()
     );
   }

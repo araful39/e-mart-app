@@ -19,7 +19,7 @@ class RProductQuantityAddRemove extends StatelessWidget {
           child: const TRoundedContainer(
             height: 35,
             width: 35,
-            backgroundColor: TColores.buttonPrimary,
+            backgroundColor: RColores.buttonPrimary,
             child: Icon(Icons.remove,color: Colors.white,),
           ),
         ),
@@ -40,7 +40,7 @@ class RProductQuantityAddRemove extends StatelessWidget {
           child: const TRoundedContainer(
             height: 35,
             width: 35,
-            backgroundColor: TColores.buttonPrimary,
+            backgroundColor: RColores.buttonPrimary,
             child: Icon(Icons.add,color: Colors.white,),
           ),
         )

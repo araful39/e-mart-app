@@ -21,19 +21,19 @@ class RHomeAppBar extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .labelMedium
-                ?.apply(color: TColores.grey),
+                ?.apply(color: RColores.grey),
           ),
           Text(
             TTexts.homeAppbarSubTitle,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall
-                ?.apply(color: TColores.grey),
+                ?.apply(color: RColores.grey),
           ),
         ],
       ),
       actions: [
-        RCardCounterIcon(iconColor: TColores.white, onpress: ()=>Get.to(()=>const CartScreen()))
+        RCardCounterIcon(iconColor: RColores.white, onpress: ()=>Get.to(()=>const CartScreen()))
       ],
     );
   }

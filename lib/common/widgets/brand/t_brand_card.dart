@@ -32,7 +32,7 @@ class TBrandCard extends StatelessWidget {
       onTap: onTap,
       child: TRoundedContainer(
         height: height ?? 90,
-        borderColor: showBorder ? TColores.dark : Colors.white,
+        borderColor: showBorder ? RColores.dark : Colors.white,
         backgroundColor: Colors.transparent,
         padding: const EdgeInsets.all(TSizes.sm),
         child: Row(

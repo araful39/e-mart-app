@@ -1,4 +1,5 @@
-import 'package:e_mart/features/authentication/controllers/singin_controller/singin_controller.dart';
+
+import 'package:e_mart/features/authentication/controllers/singUp_controller/singUp_controller.dart';
 import 'package:e_mart/features/authentication/screens/signup/signup_widget/terms_condition_checkbox.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
@@ -8,8 +9,8 @@ import 'package:e_mart/utills/validat/validat.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TSingUpForm extends StatelessWidget {
-  const TSingUpForm({
+class RSingUpForm extends StatelessWidget {
+  const RSingUpForm({
     super.key,
   });
 
@@ -17,7 +18,7 @@ class TSingUpForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(SingUpController());
     return Form(
-      key: controller.formKey,
+      key: controller.singupFormKey,
       child: Column(
         children: [
           Row(
@@ -32,8 +33,8 @@ class TSingUpForm extends StatelessWidget {
                       prefixIcon: const Icon(Icons.person),
                       hintStyle: TextStyle(
                           color: THelperFunctions.isDarkMode(context)
-                              ? TColores.textWhite
-                              : TColores.black),
+                              ? RColores.textWhite
+                              : RColores.black),
                       hintText: TTexts.firstName),
                 ),
               ),
@@ -50,8 +51,8 @@ class TSingUpForm extends StatelessWidget {
                       prefixIcon: const Icon(Icons.person),
                       hintStyle: TextStyle(
                           color: THelperFunctions.isDarkMode(context)
-                              ? TColores.textWhite
-                              : TColores.black),
+                              ? RColores.textWhite
+                              : RColores.black),
                       hintText: TTexts.lastName),
                 ),
               ),
@@ -69,8 +70,8 @@ class TSingUpForm extends StatelessWidget {
               hintText: TTexts.userName,
               hintStyle: TextStyle(
                   color: THelperFunctions.isDarkMode(context)
-                      ? TColores.textWhite
-                      : TColores.black),
+                      ? RColores.textWhite
+                      : RColores.black),
             ),
           ),
           const SizedBox(
@@ -84,8 +85,8 @@ class TSingUpForm extends StatelessWidget {
               hintText: TTexts.email,
               hintStyle: TextStyle(
                   color: THelperFunctions.isDarkMode(context)
-                      ? TColores.textWhite
-                      : TColores.black),
+                      ? RColores.textWhite
+                      : RColores.black),
             ),
           ),
           const SizedBox(
@@ -100,25 +101,34 @@ class TSingUpForm extends StatelessWidget {
               hintText: TTexts.phoneNo,
               hintStyle: TextStyle(
                   color: THelperFunctions.isDarkMode(context)
-                      ? TColores.textWhite
-                      : TColores.black),
+                      ? RColores.textWhite
+                      : RColores.black),
             ),
           ),
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),
-          TextFormField(
-            validator: (value) => TValidator.validatePassword(value),
-            controller: controller.password,
-            decoration: InputDecoration(
-              prefixIcon: const Icon(Icons.key),
-              hintText: TTexts.password,
-              hintStyle: TextStyle(
-                  color: THelperFunctions.isDarkMode(context)
-                      ? TColores.textWhite
-                      : TColores.black),
-            ),
-          ),
+         Obx(() =>  TextFormField(
+           validator: (value) => TValidator.validatePassword(value),
+           controller: controller.password,
+           obscureText: controller.hidePassword.value,
+           decoration: InputDecoration(
+             prefixIcon: const Icon(Icons.key),
+             hintText: TTexts.password,
+             suffixIcon: IconButton(
+               onPressed: (){
+                 controller.hidePassword.value =! controller.hidePassword.value;
+               },
+               icon: Icon(controller.hidePassword.value
+                   ? Icons.visibility
+                   : Icons.visibility_off),
+             ),
+             hintStyle: TextStyle(
+                 color: THelperFunctions.isDarkMode(context)
+                     ? RColores.textWhite
+                     : RColores.black),
+           ),
+         )),
           const SizedBox(height: TSizes.defaultBtwSections),
           const TTermsAndConditionCheckBox(),
           const SizedBox(

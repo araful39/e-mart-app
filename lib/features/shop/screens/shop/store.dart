@@ -30,7 +30,7 @@ class StoreScreen extends StatelessWidget {
           actions: [
             RCardCounterIcon(
               onpress: () {},
-              iconColor: TColores.black,
+              iconColor: RColores.black,
             ),
           ],
         ),
@@ -41,7 +41,7 @@ class StoreScreen extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                backgroundColor: TColores.white,
+                backgroundColor: RColores.white,
                 expandedHeight: 340,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(TSizes.sm),

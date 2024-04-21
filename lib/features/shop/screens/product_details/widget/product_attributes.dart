@@ -22,7 +22,7 @@ class _RProductAttributesState extends State<RProductAttributes> {
       children: [
         TRoundedContainer(
           padding: const EdgeInsets.all(TSizes.md),
-          backgroundColor: TColores.grey,
+          backgroundColor: RColores.grey,
           child: Column(
             children: [
               Row(

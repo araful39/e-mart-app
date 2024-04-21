@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: TSizes.spaceBtwItems),
                   child: Column(
                     children: [
-                      RSectionHeading(name: "Popular Categorize",subText: "view all",showActionButton: true,textColor: TColores.white,),
+                      RSectionHeading(name: "Popular Categorize",subText: "view all",showActionButton: true,textColor: RColores.white,),
                       SizedBox(
                         height: TSizes.sm,
                       ),

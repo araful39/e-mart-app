@@ -1,9 +1,8 @@
 
 import 'package:get/get.dart';
 class LoginController extends GetxController {
-  RxBool isClick = true.obs;
+  RxBool hidePassword = true.obs;
+  RxBool rememBer = true.obs;
 
-  visible() {
-    isClick.value = !isClick.value;
-  }
+
 }

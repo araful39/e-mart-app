@@ -9,7 +9,7 @@ class TFullScreenLoader{
     showDialog(context: Get.overlayContext!,
         barrierDismissible: false,
         builder: (_)=> PopScope(child: Container(
-          color: TColores.white,
+          color: RColores.white,
           width: double.infinity,
           height: double.infinity,
           child:  Column(

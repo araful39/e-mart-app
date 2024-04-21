@@ -45,7 +45,7 @@ final List<String> banners;
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               for(var i=0; i<banners.length; i++)  TCircularContainer(
-                backgroundColor: controller.carousalCurrentIndex.value==i ? TColores.primary: TColores.grey,
+                backgroundColor: controller.carousalCurrentIndex.value==i ? RColores.primary: RColores.grey,
                 height: 15,
                 width: 15,
                 margin: const EdgeInsets.only(right: 10),

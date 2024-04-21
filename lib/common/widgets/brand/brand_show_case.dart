@@ -16,7 +16,7 @@ class TBrandShowCase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TRoundedContainer(
-      borderColor: TColores.darkGery,
+      borderColor: RColores.darkGery,
       backgroundColor: Colors.transparent,
       padding: const EdgeInsets.all(TSizes.sm),
       margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
@@ -44,7 +44,7 @@ Widget brandTopProductImagesWidget(String image) {
   return Expanded(
       child: TRoundedContainer(
     height: 70,
-    backgroundColor: TColores.light,
+    backgroundColor: RColores.light,
     padding: const EdgeInsets.all(TSizes.sm),
     margin: const EdgeInsets.only(right: TSizes.sm),
     child: Image(

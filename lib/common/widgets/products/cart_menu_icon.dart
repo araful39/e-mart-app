@@ -20,11 +20,11 @@ class RCardCounterIcon extends StatelessWidget {
                 .textTheme
                 .labelLarge!
                 .apply(
-                color: TColores.white, fontSizeFactor: 0.8),
+                color: RColores.white, fontSizeFactor: 0.8),
           ),
           child:  Icon(
             Icons.shopping_cart,
-            color: iconColor ?? TColores.white,
+            color: iconColor ?? RColores.white,
           ),
         ),
       ),

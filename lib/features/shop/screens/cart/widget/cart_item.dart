@@ -20,7 +20,7 @@ class RCartItem extends StatelessWidget {
     return Row(
       children: [
          RRoundedImage(
-           backgroundColor: TColores.grey,
+           backgroundColor: RColores.grey,
            imageUrl: imagePath, isNetworkImage: isNetworkImage,height: 70,width: 70,),
          const SizedBox(
           width: TSizes.spaceBtwItems,

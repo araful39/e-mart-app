@@ -14,9 +14,9 @@ final List<Widget> tabs;
         indicatorWeight: 2,
         tabs: tabs,
         isScrollable: true,
-        indicatorColor: TColores.primary,
-        labelColor: TColores.primary,
-        unselectedLabelColor: TColores.darkGery,
+        indicatorColor: RColores.primary,
+        labelColor: RColores.primary,
+        unselectedLabelColor: RColores.darkGery,
       ),
     ); // Your custom widget implementation.
   }

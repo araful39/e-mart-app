@@ -20,7 +20,7 @@ class RProductImageSlider extends StatelessWidget {
     return Obx(
       () => TPrimaryHeaderContainer(
           isCircular: false,
-          color: TColores.black.withOpacity(0.5),
+          color: RColores.black.withOpacity(0.5),
           child: Column(
             children: [
               Stack(
@@ -39,7 +39,7 @@ class RProductImageSlider extends StatelessWidget {
                     actions: [
                       TCircularIcon(
                         icon: Icons.favorite,
-                        color: TColores.red,
+                        color: RColores.red,
                       )
                     ],
                     showBackArrow: true,
@@ -57,8 +57,8 @@ class RProductImageSlider extends StatelessWidget {
 
                         },
                         child: RRoundedImage(
-                            backgroundColor: TColores.black,
-                            border: Border.all(color: TColores.white),
+                            backgroundColor: RColores.black,
+                            border: Border.all(color: RColores.white),
                             height: 50,
                             imageUrl: productDetailController.imagesList[index]
                                 .toString(),

@@ -25,13 +25,13 @@ class RSearchContainer extends StatelessWidget {
             width: TDeviceUtils.getScreenWidth(context),
             padding: const EdgeInsets.all(TSizes.md),
             decoration: BoxDecoration(
-                color: TColores.light,
+                color: RColores.light,
                 borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
-                border: Border.all(color: TColores.grey)
+                border: Border.all(color: RColores.grey)
             ),
             child:  Row(
               children: [
-                Icon(icon ?? Icons.search,color: TColores.darkGery,),
+                Icon(icon ?? Icons.search,color: RColores.darkGery,),
                 const SizedBox(width: TSizes.xs,),
                 Text( text ??"Search in Store",style: Theme.of(context).textTheme.bodySmall,)
               ],

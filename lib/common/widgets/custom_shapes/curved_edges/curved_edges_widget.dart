@@ -24,7 +24,7 @@ class TCurvedEdgeWidget extends StatelessWidget {
       clipper: TCustomCurvedEdges(),
       child: Container(
         width: double.infinity,
-        color: color ?? TColores.primary,
+        color: color ?? RColores.primary,
         padding: const EdgeInsets.all(0),
         child: SizedBox(
           height: headerHeight ?? 288,
@@ -37,7 +37,7 @@ class TCurvedEdgeWidget extends StatelessWidget {
                 child: TCircularContainer(
                   height: 220,
                   radius: 200,
-                  backgroundColor: TColores.white.withOpacity(0.2),
+                  backgroundColor: RColores.white.withOpacity(0.2),
                   padding: 0,
                 ),
               )
@@ -49,7 +49,7 @@ class TCurvedEdgeWidget extends StatelessWidget {
                 child: TCircularContainer(
                   height: 220,
                   radius: 200,
-                  backgroundColor: TColores.white.withOpacity(0.2),
+                  backgroundColor: RColores.white.withOpacity(0.2),
                   padding: 0,
                 ),
               )

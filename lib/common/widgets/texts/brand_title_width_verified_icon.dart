@@ -11,7 +11,7 @@ class RBrandTitleWithVerifiedIcon extends StatelessWidget {
     required this.title,
     this.maxLines = 1,
     this.textColor,
-    this.iconColor = TColores.primary,
+    this.iconColor = RColores.primary,
     this.textAlign = TextAlign.center,
     this.brandTextSize = TextSizes.small,
   });
@@ -40,7 +40,7 @@ class RBrandTitleWithVerifiedIcon extends StatelessWidget {
         ),
         const Icon(
           Icons.verified,
-          color: TColores.primary,
+          color: RColores.primary,
           size: TSizes.iconXs,
         )
       ],

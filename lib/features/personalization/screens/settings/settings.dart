@@ -35,7 +35,7 @@ class SettingsScreen extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium
-                            ?.apply(color: TColores.white),
+                            ?.apply(color: RColores.white),
                       ),
                     ),
                     RUserProfileTile(

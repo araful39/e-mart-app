@@ -18,7 +18,7 @@ class RBottomAddToCart extends StatelessWidget {
         horizontal: TSizes.sm,
          vertical: TSizes.defaultSpace / 2),
       decoration: const BoxDecoration(
-          color: TColores.light,
+          color: RColores.light,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(TSizes.cardRadiusLg),
               topRight: Radius.circular(TSizes.cardRadiusLg))),
@@ -31,7 +31,7 @@ class RBottomAddToCart extends StatelessWidget {
           ),
           Flexible(
               flex: 4,
-              child: TElevatedButton(name: "Add To Card", onPressed: (){},backgroundColor: TColores.darkGery,))
+              child: TElevatedButton(name: "Add To Card", onPressed: (){},backgroundColor: RColores.darkGery,))
         ],
       ),
     );

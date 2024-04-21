@@ -30,7 +30,7 @@ class RProductCardVertical extends StatelessWidget {
       decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(TSizes.productImageRadius),
-          color: TColores.white),
+          color: RColores.white),
       child: Column(
         children: [
           TRoundedContainer(
@@ -50,7 +50,7 @@ class RProductCardVertical extends StatelessWidget {
                   top: 12,
                   child: TRoundedContainer(
                     radius: TSizes.sm,
-                    backgroundColor: TColores.secondary.withOpacity(0.8),
+                    backgroundColor: RColores.secondary.withOpacity(0.8),
                     padding: const EdgeInsets.symmetric(
                         horizontal: TSizes.sm, vertical: TSizes.xs),
                     child: Text(
@@ -58,7 +58,7 @@ class RProductCardVertical extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .labelLarge
-                          ?.apply(color: TColores.black),
+                          ?.apply(color: RColores.black),
                     ),
                   ),
                 ),
@@ -68,7 +68,7 @@ class RProductCardVertical extends StatelessWidget {
                     child: TCircularIcon(
                       onPress: () {},
                       icon: Icons.favorite,
-                      color: TColores.error,
+                      color: RColores.error,
                     ))
               ],
             ),
@@ -103,7 +103,7 @@ class RProductCardVertical extends StatelessWidget {
                               transitionDuration: Duration(seconds: 1),
                               barrierDismissible: false,
                             Dialog(
-                              backgroundColor: TColores.white,
+                              backgroundColor: RColores.white,
                               child: SizedBox(
                                 height: 150,
                                 child: Padding(
@@ -133,7 +133,7 @@ class RProductCardVertical extends StatelessWidget {
                         },
                         child: Container(
                           decoration: const BoxDecoration(
-                              color: TColores.dark,
+                              color: RColores.dark,
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(TSizes.cardRadiusMd),
                                   bottomRight: Radius.circular(
@@ -144,7 +144,7 @@ class RProductCardVertical extends StatelessWidget {
                               child: Center(
                                   child: Icon(
                                 Icons.add,
-                                color: TColores.white,
+                                color: RColores.white,
                               ))),
                         ),
                       )

@@ -20,7 +20,7 @@ class RProductMetaData extends StatelessWidget {
         Row(
           children: [
             TRoundedContainer(
-              backgroundColor: TColores.secondary.withOpacity(0.8),
+              backgroundColor: RColores.secondary.withOpacity(0.8),
               radius: TSizes.sm,
               padding: const EdgeInsets.symmetric(
                   horizontal: TSizes.sm, vertical: TSizes.xs),
@@ -29,7 +29,7 @@ class RProductMetaData extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge
-                    ?.apply(color: TColores.black),
+                    ?.apply(color: RColores.black),
               ),
             ),
             const SizedBox(

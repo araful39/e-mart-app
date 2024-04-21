@@ -30,7 +30,7 @@ class RVerticalImageText extends StatelessWidget {
               width: 60,
               padding: const EdgeInsets.all(TSizes.sm),
               decoration: BoxDecoration(
-                  color: backgroundColor ?? TColores.white,
+                  color: backgroundColor ?? RColores.white,
                   borderRadius: BorderRadius.circular(100)),
               child: Center(
                 child: Image(
@@ -46,7 +46,7 @@ class RVerticalImageText extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge!
-                      .apply(color:textColor?? TColores.white),
+                      .apply(color:textColor?? RColores.white),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ))

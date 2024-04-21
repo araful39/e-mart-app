@@ -70,7 +70,7 @@ class RUserReviewCard extends StatelessWidget {
 
        const TRoundedContainer(
 
-             backgroundColor: TColores.grey,
+             backgroundColor: RColores.grey,
              child:  Padding(
                padding: EdgeInsets.all(8.0),
                child: Column(
