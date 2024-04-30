@@ -1,7 +1,7 @@
 import 'package:e_mart/features/authentication/controllers/login/login_controller.dart';
 import 'package:e_mart/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:e_mart/features/authentication/screens/signup/singup.dart';
-import 'package:e_mart/navigation_menu.dart';
+
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:e_mart/utills/constants/texts.dart';
@@ -91,9 +91,9 @@ class _TLoginFormState extends State<TLoginForm> {
                   Row(
                     children: [
                       Obx(() => Checkbox(
-                          value: controller.rememBer.value,
+                          value: controller.privacyPolicy.value,
                           onChanged: (value) {
-                            controller.rememBer.value=value!;
+                            controller.privacyPolicy.value=value!;
                           })),
                       const Text(TTexts.remember)
                     ],
@@ -109,30 +109,7 @@ class _TLoginFormState extends State<TLoginForm> {
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () async {
-                        Get.to(() => const NavigationMenu());
-                        //     try {
-                        // if(_email.text.isNotEmpty && _password.text.isNotEmpty)  {
-                        //   await _auth.signInWithEmailAndPassword(
-                        //       email: _email.text,
-                        //       password: _password.text
-                        //   ).then((value) => Get.to(()=> const NavigationMenu()));
-                        // } else{
-                        //   Get.snackbar("Enter", "Your document",backgroundColor: Colors.indigo,colorText: Colors.white);
-                        // }
-                        //
-                        //     } on FirebaseAuthException catch (e) {
-                        //       if (e.code == 'user-not-found') {
-                        //         if (kDebugMode) {
-                        //           print('No user found for that email.');
-                        //         }
-                        //       } else if (e.code == 'wrong-password') {
-                        //         if (kDebugMode) {
-                        //           print('Wrong password provided for that user. please sure');
-                        //         }
-                        //       }
-                        //     }
-                      },
+                      onPressed: ()=>controller.signIn(context),
                       child: const Text(TTexts.signIn))),
               const SizedBox(
                 height: TSizes.defaultBtwSections,
