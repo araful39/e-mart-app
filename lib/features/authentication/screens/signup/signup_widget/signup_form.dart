@@ -96,6 +96,7 @@ class RSingUpForm extends StatelessWidget {
             validator: (value) =>
                 TValidator.validateEmptyText("Phone Number", value),
             controller: controller.phoneNumber,
+            keyboardType: TextInputType.number,
             decoration: InputDecoration(
               prefixIcon: const Icon(Icons.phone),
               hintText: TTexts.phoneNo,

@@ -43,6 +43,25 @@ final _auth =FirebaseAuth.instance;
 
   /// [EmailVerification] - MAIL VERIFICATION
 
+Future<void> sendEmailVerification()async{
+    try{
+      
+
+
+
+    }
+        catch(e){
+      throw "Something went wrong. Please try again";
+        }
+
+
+
+
+}
+
+
+
+
   /// [ResAuthentication] - ReAuthentication User
 
   /// [EmailAuthentication] - FORGET PASSWORD

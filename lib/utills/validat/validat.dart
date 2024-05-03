@@ -15,11 +15,11 @@ class TValidator{
     if(value==null || value.isEmpty){
       return "Email is required";
     }
-    final emailRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-    if(emailRegExp.hasMatch(value)){
-    return "Invalid email address";
-
-    }
+    // final emailRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+    // if(emailRegExp.hasMatch(value)){
+    // return "Invalid email address";
+    //
+    // }
 
     return null;
   }
@@ -35,14 +35,14 @@ class TValidator{
 
     }
     
-    if(value.contains(RegExp(r'[A-Z]'))){
-      return "Password must contains at least one uppercase letter";
-
-    }
-    if(value.contains(RegExp(r'[0-9]'))){
-      return "Password must contains at least one spacial characters.";
-
-    }
+    // if(value.contains(RegExp(r'[A-Z]'))){
+    //   return "Password must contains at least one uppercase letter";
+    //
+    // }
+    // if(value.contains(RegExp(r'[0-9]'))){
+    //   return "Password must contains at least one spacial characters.";
+    //
+    // }
     return null;
   }
 
