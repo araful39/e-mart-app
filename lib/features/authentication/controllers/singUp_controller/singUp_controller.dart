@@ -1,85 +1,84 @@
-
 import 'package:e_mart/data/repositories.authentication/authentication_repositories.dart';
+import 'package:e_mart/data/repositories.authentication/user/user_model.dart';
+import 'package:e_mart/data/repositories.authentication/user/user_repository.dart';
 import 'package:e_mart/features/authentication/controllers/network_controller.dart';
+import 'package:e_mart/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_mart/utills/popups/full_screen_loader.dart';
 import 'package:e_mart/utills/popups/loaders.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SingUpController extends GetxController{
-  static SingUpController get instance=> Get.find();
+class SingUpController extends GetxController {
+  static SingUpController get instance => Get.find();
 
 //// variables
-  final hidePassword =true.obs;
-  final privacyPolicy =false.obs;
-  final TextEditingController firstName=TextEditingController();
-  final TextEditingController lastName=TextEditingController();
-  final TextEditingController userName=TextEditingController();
-  final TextEditingController email=TextEditingController();
-  final TextEditingController phoneNumber=TextEditingController();
-  final TextEditingController password=TextEditingController();
-  final GlobalKey<FormState> singupFormKey=GlobalKey<FormState>();
-
-
-
+  final hidePassword = true.obs;
+  final privacyPolicy = false.obs;
+  final TextEditingController firstName = TextEditingController();
+  final TextEditingController lastName = TextEditingController();
+  final TextEditingController userName = TextEditingController();
+  final TextEditingController email = TextEditingController();
+  final TextEditingController phoneNumber = TextEditingController();
+  final TextEditingController password = TextEditingController();
+  final GlobalKey<FormState> singupFormKey = GlobalKey<FormState>();
 
   //// --SIGNUP
-final auth=FirebaseAuth.instance;
+  final auth = FirebaseAuth.instance;
 
-void singUp( BuildContext context) async{
-  try{
-    // Start Loading
-TFullScreenLoader.openLoaderDialog("We are processing.....", context);
-
+  void singUp(BuildContext context) async {
+    try {
+      // Start Loading
+      TFullScreenLoader.openLoaderDialog("We are processing.....", context);
 
 // Check Internet Connectivity
-final isConnected=await NetworkManager.instance.isConnected();
-if(!isConnected)return;
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) return;
 
 // Form validation
 
-  if(singupFormKey.currentState!.validate()) return;
+      if (singupFormKey.currentState!.validate()) return;
 
 // Privacy Policy Check
 
-  if(!privacyPolicy.value){
-    TLoader.warningSnackBar(title: "Accept Privacy Policy",
-      message: "In order to create account, you must have to read and accept the Privacy Policy & Terms of Use"
-    );
-    return;
+      if (!privacyPolicy.value) {
+        TLoader.warningSnackBar(
+            title: "Accept Privacy Policy",
+            message:
+                "In order to create account, you must have to read and accept the Privacy Policy & Terms of Use");
+        return;
+      }
+      // Register user in the Firebase Authentication & Save user data in the Firebase
+
+      final userCredential = await AuthenticationRepository.instance
+          .registerWithEmailAndPassword(
+              email.text.trim(), password.text.trim());
+
+      // Save Authentication user data in the Firebase Firestore
+
+      final newUser = UserModel(
+          id: userCredential.user!.uid,
+          firstName: firstName.text.trim(),
+          lastName: lastName.text.trim(),
+          username: userName.text.trim(),
+          email: email.text.trim(),
+          phoneNumber: phoneNumber.text.trim(),
+          profilePicture: " ");
+
+
+final userRepository =Get.put(UserRepository());
+
+ await userRepository.saveUserRecord(newUser);
+
+TLoader.successSnackBar(title: "Congratulations",message: "Your account has been created! Verify email to continue.");
+
+//Move to Verify Email Screen
+Get.to(()=> const VerifyEmailScreen());
+
+    } catch (e) {
+      TLoader.errorSnackBar(title: 'On Snap', message: e.toString());
+    } finally {
+      TFullScreenLoader.stopLoading();
+    }
   }
-  // Register user in the Firebase Authentication & Save user data in the Firebase
-
-
-final user= await AuthenticationRepository.instance.registerWithEmailAndPassword(email.text.trim(), password.text.trim());
-
-  // Save Authentication user data in the Firebase Firestore
-
-    // final newUser=UserModel(
-    //
-    // );
-
-
-
-
-
-
-
-
-
-  }
-     catch (e){
-  TLoader.errorSnackBar(title: 'On Snap',message: e.toString());
-
-      }finally{
-TFullScreenLoader.stopLoading();
-  }
-
-
-
-
 }
-
-}
-
