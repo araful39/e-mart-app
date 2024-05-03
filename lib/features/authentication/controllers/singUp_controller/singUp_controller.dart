@@ -1,10 +1,9 @@
 
+import 'package:e_mart/data/repositories.authentication/authentication_repositories.dart';
 import 'package:e_mart/features/authentication/controllers/network_controller.dart';
-import 'package:e_mart/navigation_menu.dart';
 import 'package:e_mart/utills/popups/full_screen_loader.dart';
 import 'package:e_mart/utills/popups/loaders.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,8 +27,7 @@ class SingUpController extends GetxController{
   //// --SIGNUP
 final auth=FirebaseAuth.instance;
 
-
-Future<void> singUp( BuildContext context) async{
+void singUp( BuildContext context) async{
   try{
     // Start Loading
 TFullScreenLoader.openLoaderDialog("We are processing.....", context);
@@ -40,22 +38,33 @@ final isConnected=await NetworkManager.instance.isConnected();
 if(!isConnected)return;
 
 // Form validation
-    if (kDebugMode) {
-      print(" validate");
-    }
+
   if(singupFormKey.currentState!.validate()) return;
 
 // Privacy Policy Check
-    if (kDebugMode) {
-      print(" Accept Privacy Policy");
-    }
+
   if(!privacyPolicy.value){
     TLoader.warningSnackBar(title: "Accept Privacy Policy",
       message: "In order to create account, you must have to read and accept the Privacy Policy & Terms of Use"
     );
     return;
   }
-    await Get.to(const NavigationMenu());
+  // Register user in the Firebase Authentication & Save user data in the Firebase
+
+
+final user= await AuthenticationRepository.instance.registerWithEmailAndPassword(email.text.trim(), password.text.trim());
+
+  // Save Authentication user data in the Firebase Firestore
+
+    // final newUser=UserModel(
+    //
+    // );
+
+
+
+
+
+
 
 
 

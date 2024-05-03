@@ -47,6 +47,8 @@ dependencies:
   readmore: ^2.2.0
   firebase_core:
   firebase_auth:
+  cloud_firestore: ^4.17.2
+
 
 dev_dependencies:
   flutter_test:
