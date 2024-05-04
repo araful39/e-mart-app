@@ -1,6 +1,4 @@
-import 'package:e_mart/data/repositories.authentication/authentication_repositories.dart';
-import 'package:e_mart/features/authentication/controllers/network_controller.dart';
-import 'package:e_mart/features/authentication/screens/signup/verify_email.dart';
+
 import 'package:e_mart/navigation_menu.dart';
 import 'package:e_mart/utills/popups/full_screen_loader.dart';
 import 'package:e_mart/utills/popups/loaders.dart';
@@ -25,54 +23,31 @@ class SingUpController extends GetxController {
   //// --SIGNUP
   final auth = FirebaseAuth.instance;
 
-  void singUp(BuildContext context) async {
+ singUp(BuildContext context) async {
     try {
       // Start Loading
       // TFullScreenLoader.openLoaderDialog("We are processing.....", context);
-
-// Check Internet Connectivity
-//       final isConnected = await NetworkManager.instance.isConnected();
-//       if (!isConnected) return;
-
 // Form validation
-
-      // if (singupFormKey.currentState!.validate()) return;
+      // if (singupFormKey.currentState!.validate()) {
+      //   return ;
+      // }
 
 // Privacy Policy Check
-
-      // if (!privacyPolicy.value) {
-      //   TLoader.warningSnackBar(
-      //       title: "Accept Privacy Policy",
-      //       message:
-      //           "In order to create account, you must have to read and accept the Privacy Policy & Terms of Use");
-      //   return;
-      // }
-      // // Register user in the Firebase Authentication & Save user data in the Firebase
-      //
-      // final userCredential = await AuthenticationRepository.instance
-      //     .registerWithEmailAndPassword(
-      //         email.text.trim(), password.text.trim());
-
-      // Save Authentication user data in the Firebase Firestore
-//
-//       final newUser = UserModel(
-//           id: userCredential.user!.uid,
-//           firstName: firstName.text.trim(),
-//           lastName: lastName.text.trim(),
-//           username: userName.text.trim(),
-//           email: email.text.trim(),
-//           phoneNumber: phoneNumber.text.trim(),
-//           profilePicture: " ");
-//
-//
-// final userRepository =Get.put(UserRepository());
-//
-//  await userRepository.saveUserRecord(newUser);
+      if (!privacyPolicy.value) {
+        TLoader.warningSnackBar(
+            title: "Accept Privacy Policy",
+            message:
+                "In order to create account, you must have to read and accept the Privacy Policy & Terms of Use");
+        return ;
+      }
 
 // TLoader.successSnackBar(title: "Congratulations",message: "Your account has been created! Verify email to continue.");
 
 //Move to Verify Email Screen
-Get.to(()=> const  NavigationMenu());
+await Get.to(()=> const  NavigationMenu());
+
+
+
 
     } catch (e) {
       TLoader.errorSnackBar(title: 'On Snap', message: e.toString());

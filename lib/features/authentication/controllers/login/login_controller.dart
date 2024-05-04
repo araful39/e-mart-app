@@ -9,7 +9,7 @@ class LoginController extends GetxController {
 
   final privacyPolicy =false.obs;
 
-  Future<void> signIn( BuildContext context) async{
+ signIn( BuildContext context) async{
     try{
 
 // Privacy Policy Check
@@ -18,10 +18,10 @@ class LoginController extends GetxController {
         TLoader.warningSnackBar(title: "Accept Privacy Policy",
             message: "In order to create account, you must have to read and accept the Privacy Policy & Terms of Use"
         );
-        return;
+return null;
       }
-    await Get.to(const NavigationMenu());
-print("Button ok");
+   await  Get.to(const NavigationMenu());
+
 
     }
     catch (e){
