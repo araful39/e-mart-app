@@ -16,13 +16,19 @@ class LoginController extends GetxController {
 
   final FirebaseAuth _auth =FirebaseAuth.instance;
 
-Future<void> signIn( BuildContext context) async{
+
+
+ signIn( BuildContext context) async{
+
     try{
-      
+
       await _auth.signInWithEmailAndPassword(
             email: email.text.trim(),
             password: password.text.trim()
-        ).then((value) => const NavigationMenu());
+        ).then((value) {
+        // saveUserLoginInfo(email.text.trim(), password.text.trim());
+         Get.offAll(()=> const NavigationMenu());
+      });
 
     }
     catch (e){
@@ -34,4 +40,19 @@ Future<void> signIn( BuildContext context) async{
 
 
   }
+  //
+  // void saveUserLoginInfo(String email, String password) async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   await prefs.setString('email', email);
+  //   await prefs.setString('password', password);
+  // }
+  // void getUserLoginInfo() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   String savedEmail = prefs.getString('email') ?? '';
+  //   String savedPassword = prefs.getString('password') ?? '';
+  //
+  //   // Fill in the email and password fields with the saved user login information
+  //   email.text = savedEmail;
+  //   password.text = savedPassword;
+  // }
 }

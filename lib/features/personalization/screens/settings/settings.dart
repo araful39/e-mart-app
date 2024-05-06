@@ -10,6 +10,7 @@ import 'package:e_mart/features/personalization/screens/profile/profile.dart';
 import 'package:e_mart/features/shop/screens/cart/cart.dart';
 import 'package:e_mart/utills/constants/colors.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -136,7 +137,10 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: (){
+                    child: OutlinedButton(onPressed: ()async{
+                      FirebaseAuth auth=FirebaseAuth.instance;
+                      await auth.signOut();
+                      print(" FirebaseAuth.instance.signOut");
                       Get.offAll(const LoginScreen());
                     }, child: const Text("LogOut")),
                   )
