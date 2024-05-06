@@ -135,13 +135,19 @@ class RSingUpForm extends StatelessWidget {
           const SizedBox(
             height: TSizes.defaultBtwSections,
           ),
-          SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                  onPressed: () {
-                    controller.singUp(context);
-                  },
-                  child: const Text(TTexts.createAccount)))
+          Obx(
+            ()=> SizedBox(
+                width: double.infinity,
+                child: controller.privacyPolicy.value ?ElevatedButton(onPressed: () {controller.singUp(context);
+                    },
+                    child:  controller.progress.value ?  const Text(TTexts.createAccount):const CircularProgressIndicator(
+                      value: 50,color: Colors.white,
+                    )):ElevatedButton(style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey) ),
+                    onPressed: () {
+
+                    },
+                    child:  const Text(TTexts.createAccount)) ),
+          )
         ],
       ),
     );

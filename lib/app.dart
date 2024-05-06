@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.light,
       initialBinding: GeneralBindings(),
+        initialRoute: '/',
       home:  const SplashScreen()
     );
   }

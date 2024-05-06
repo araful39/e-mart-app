@@ -13,11 +13,6 @@ class NetworkManager  extends GetxController{
   final Rx<ConnectivityResult> _connectionStatus = ConnectivityResult.none.obs;
 
 
-  @override
-  void onInit() {
-    super.onInit();
-    // _connectivitySubscription = _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
-  }
 
   void _updateConnectionStatus(ConnectivityResult result) {
     _connectionStatus.value = result;

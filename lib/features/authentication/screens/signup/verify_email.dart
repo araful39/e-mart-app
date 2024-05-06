@@ -1,4 +1,4 @@
-import 'package:e_mart/common/widgets/success_screen/success_screen.dart';
+import 'package:e_mart/features/authentication/controllers/singUp_controller/verify_controller.dart';
 import 'package:e_mart/features/authentication/screens/login/login.dart';
 import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
@@ -13,6 +13,8 @@ class VerifyEmailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final VerificationController controller=Get.put(VerificationController());
     return Scaffold(
 
       appBar: AppBar(
@@ -61,11 +63,7 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => SuccessScreen(
-                      images: TImages.handshake,
-                      title: TTexts.yourAccountCreatedTitle,
-                      subTile: TTexts.yourAccountCreatedSubTitle,
-                      onPress: () => Get.to(() => const LoginScreen()))),
+                  onPressed: () => controller.sendVerificationEmail(),
                   child: const Text(TTexts.rContinue),
                 ),
               ),

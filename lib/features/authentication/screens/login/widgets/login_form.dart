@@ -20,16 +20,14 @@ class TLoginForm extends StatefulWidget {
 }
 
 class _TLoginFormState extends State<TLoginForm> {
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
-  final _formkey = GlobalKey<FormState>();
 
-  // final _auth=FirebaseAuth.instance;
+
+
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
     return Form(
-        key: _formkey,
+        key: controller.formkey,
         child: Padding(
           padding:
               const EdgeInsets.symmetric(vertical: TSizes.defaultBtwSections),
@@ -39,7 +37,7 @@ class _TLoginFormState extends State<TLoginForm> {
                 validator: (value) {
                   return "Enter valid email";
                 },
-                controller: _email,
+                controller: controller.email,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.email),
                     labelText: TTexts.email,
@@ -56,7 +54,7 @@ class _TLoginFormState extends State<TLoginForm> {
                   validator: (value) {
                     return "Enter valid password";
                   },
-                  controller: _password,
+                  controller: controller.password,
                   obscuringCharacter: "*",
                   obscureText: controller.hidePassword.value,
                   decoration: InputDecoration(
@@ -106,11 +104,19 @@ class _TLoginFormState extends State<TLoginForm> {
               const SizedBox(
                 height: TSizes.defaultBtwSections,
               ),
-              SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      onPressed: ()=>controller.signIn(context),
-                      child: const Text(TTexts.signIn))),
+              Obx(
+                    ()=> SizedBox(
+                    width: double.infinity,
+                    child: controller.privacyPolicy.value ? ElevatedButton(
+                        onPressed: () {
+                          controller.signIn(context);
+                        },
+                        child:  const Text(TTexts.signIn)):ElevatedButton(
+                        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey) ),
+                        onPressed: () {
+                        },
+                        child:  const Text(TTexts.signIn)) ),
+              ),
               const SizedBox(
                 height: TSizes.defaultBtwSections,
               ),
