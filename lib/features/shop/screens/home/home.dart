@@ -2,6 +2,7 @@ import 'package:e_mart/common/widgets/custom_shapes/container/primary_header_con
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
+import 'package:e_mart/features/shop/controllers/home_controller.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_mart/features/shop/screens/home/widgets/home_searchbar.dart';
@@ -13,6 +14,7 @@ import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -20,6 +22,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final controller= Get.put(HomeController());
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
@@ -52,13 +56,8 @@ class HomeScreen extends StatelessWidget {
              padding: const EdgeInsets.only(left: TSizes.spaceBtwItems,right: TSizes.spaceBtwItems),
              child: Column(
                children: [
-                 const RPromoSlider(
-                   banners: [
-                     TImages.banners1,
-                     TImages.banners2,
-                     TImages.banners3,
-                     TImages.banners4,
-                   ],
+                  const RPromoSlider(
+
                  ),
                  const SizedBox(
                    height: TSizes.sm,
@@ -70,6 +69,7 @@ class HomeScreen extends StatelessWidget {
                  RGridLayout(itemCount: 5, itemBuilder: (_ , index ) {
                    return GestureDetector(
                        onTap: (){
+
                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetailScreen()));
 
                        },
