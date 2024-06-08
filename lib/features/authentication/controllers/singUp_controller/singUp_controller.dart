@@ -50,7 +50,7 @@ class SingUpController extends GetxController {
       // Navigate to the home page after successful sign up
       Get.offAll(() => const VerifyEmailScreen());
     } catch (e) {
-      TLoader.warningSnackBar(title: 'Something went wrong.', message: "$e");
+      RLoader.warningSnackBar(title: 'Something went wrong.', message: "$e");
     }
   }
 }

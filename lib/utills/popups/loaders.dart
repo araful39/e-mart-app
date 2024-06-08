@@ -2,7 +2,7 @@ import 'package:e_mart/utills/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TLoader {
+class RLoader {
 
 
 static successSnackBar({required title, message ='', duration =3}){

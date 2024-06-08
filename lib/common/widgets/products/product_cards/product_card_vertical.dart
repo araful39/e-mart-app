@@ -100,7 +100,7 @@ class RProductCardVertical extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           Get.dialog(
-                              transitionDuration: Duration(seconds: 1),
+                              transitionDuration: const Duration(seconds: 1),
                               barrierDismissible: false,
                             Dialog(
                               backgroundColor: RColores.white,
@@ -112,14 +112,14 @@ class RProductCardVertical extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       const Text("Product Add",style: TextStyle(fontSize: 30),textAlign: TextAlign.center,),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: TSizes.defaultSpace,
                                       ),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children: [
-                                          ElevatedButton(onPressed: ()=>Get.back(), child: Text("Yess ")),
-                                          ElevatedButton(onPressed:  ()=>Get.back(), child: Text("No ")),
+                                          ElevatedButton(onPressed: ()=>Get.back(), child: const Text("Yess ")),
+                                          ElevatedButton(onPressed:  ()=>Get.back(), child: const Text("No ")),
                                         ],
                                       )
                                     ],

@@ -22,17 +22,18 @@ class LoginController extends GetxController {
 
     try{
 
-      // await _auth.signInWithEmailAndPassword(
-      //       email: email.text.trim(),
-      //       password: password.text.trim()
-      //   ).then((value) {
-      //   // saveUserLoginInfo(email.text.trim(), password.text.trim());
-      //   //  Get.offAll(()=> const NavigationMenu());
-      // });
-      Get.offAll(()=> const NavigationMenu());
+      await _auth.signInWithEmailAndPassword(
+            email: email.text.trim(),
+            password: password.text.trim()
+        ).then((value){
+          RLoader.successSnackBar(title: "Successfully login");
+        Get.offAll(()=> const NavigationMenu());
+      });
+
     }
     catch (e){
-      TLoader.errorSnackBar(title: 'On Snap',message: e.toString());
+      RLoader.errorSnackBar(title: 'Something Wrong',message: "Please correct information");
+
 
     }
 

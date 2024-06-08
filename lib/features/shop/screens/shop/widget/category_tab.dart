@@ -2,7 +2,6 @@ import 'package:e_mart/common/widgets/brand/brand_show_case.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_mart/common/widgets/texts/section_heading.dart';
-import 'package:e_mart/utills/constants/image_strings.dart';
 import 'package:e_mart/utills/constants/sizes.dart';
 import 'package:flutter/material.dart';
 class RCategoryTap extends StatelessWidget {
@@ -16,7 +15,7 @@ class RCategoryTap extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SingleChildScrollView(
       child: Padding(
-        padding:  EdgeInsets.all(TSizes.defaultSpace),
+        padding:  const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
           children: [
              TBrandShowCase(

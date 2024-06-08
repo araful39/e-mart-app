@@ -22,11 +22,11 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
    checkCurrentUserAndNavigate();
   }
-FirebaseAuth auth =FirebaseAuth.instance;
+FirebaseAuth user =FirebaseAuth.instance;
   void checkCurrentUserAndNavigate() async {
     await Future.delayed(const Duration(seconds: 5));
 
-    if (auth.currentUser == null) {
+    if (user.currentUser == null) {
       Get.offAll(const LoginScreen());
     } else {
       Get.offAll(const NavigationMenu());
