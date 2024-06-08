@@ -30,7 +30,7 @@ class TChoiceChip extends StatelessWidget {
 
 
       avatar: isColor
-          ? TCircularContainer(
+          ? RCircularContainer(
               width: 50,
               height: 50,
               backgroundColor: THelperFunctions.getColor(text)!,

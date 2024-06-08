@@ -25,7 +25,7 @@ class RPromoSlider extends StatelessWidget {
               return CarouselSlider.builder(itemCount: controller.carouselSlides.length,
                 itemBuilder: (context, index, __) {
                   return RRoundedImage(
-                      imageUrl: controller.carouselSlides[index], isNetworkImage: false);
+                      imageUrl: controller.carouselSlides[index]['banner'], isNetworkImage: true);
                 },
                 options: CarouselOptions(
                     onPageChanged: (index, _) =>
@@ -55,7 +55,7 @@ class RPromoSlider extends StatelessWidget {
     ()=> Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              for(var i=0; i<controller.carouselSlides.length; i++)  TCircularContainer(
+              for(var i=0; i<controller.carouselSlides.length; i++)  RCircularContainer(
                 backgroundColor: controller.carousalCurrentIndex.value==i ? RColores.primary: RColores.grey,
                 height: 15,
                 width: 15,

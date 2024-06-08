@@ -34,7 +34,7 @@ class TCurvedEdgeWidget extends StatelessWidget {
                   ? Positioned(
                 top: -100,
                 right: -200,
-                child: TCircularContainer(
+                child: RCircularContainer(
                   height: 220,
                   radius: 200,
                   backgroundColor: RColores.white.withOpacity(0.2),
@@ -46,7 +46,7 @@ class TCurvedEdgeWidget extends StatelessWidget {
                   ? Positioned(
                 bottom: 10,
                 right: -200,
-                child: TCircularContainer(
+                child: RCircularContainer(
                   height: 220,
                   radius: 200,
                   backgroundColor: RColores.white.withOpacity(0.2),
