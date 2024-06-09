@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:e_mart/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:e_mart/common/widgets/layout/grid_layout.dart';
 import 'package:e_mart/common/widgets/products/product_cards/product_card_vertical.dart';
@@ -17,9 +19,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
 
@@ -28,7 +35,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-           TPrimaryHeaderContainer(
+           TPrimaryHeaderContainer (
              headerHeight: 300,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                 RSearchContainer(onpress: (){
 
                 },),
-                const Padding(
+                 Padding(
                   padding: EdgeInsets.only(left: TSizes.spaceBtwItems),
                   child: Column(
                     children: [
@@ -45,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(
                         height: TSizes.sm,
                       ),
-                      RHomeCategories(),
+                      RHomeCategories(list: controller.data.value,),
                     ],
                   ),
                 ),

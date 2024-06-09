@@ -1,10 +1,10 @@
 import 'package:e_mart/common/widgets/vertical_images_text/vertical_image_text.dart';
-import 'package:e_mart/data/catergori_list.dart';
 import 'package:flutter/cupertino.dart';
 
 class RHomeCategories extends StatelessWidget {
+  final List<dynamic> list;
   const RHomeCategories({
-    super.key,
+    super.key, required this.list,
   });
 
   @override
@@ -13,12 +13,12 @@ class RHomeCategories extends StatelessWidget {
       height: 75,
       child: ListView.builder(
           shrinkWrap: true,
-          itemCount: productList.length,
+          itemCount: list.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             return RVerticalImageText(
-              text: productList[index]["name"],
-              netImagePath: productList[index]["image"],
+              text: list[index]["name"],
+              netImagePath: list[index]["image"],
 
             );
           }),
