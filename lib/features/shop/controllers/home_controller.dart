@@ -14,7 +14,7 @@ class HomeController extends GetxController {
 
 
   
-  // carousalSlider
+
   
   void updatePageIndicator(index){
     carousalCurrentIndex.value=index;
