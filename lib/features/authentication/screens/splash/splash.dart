@@ -27,7 +27,7 @@ FirebaseAuth user =FirebaseAuth.instance;
     await Future.delayed(const Duration(seconds: 5));
 
     if (user.currentUser == null) {
-      Get.offAll(const LoginScreen());
+      Get.offAll(const NavigationMenu());
     } else {
       Get.offAll(const NavigationMenu());
     }
