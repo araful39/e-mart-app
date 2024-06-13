@@ -1,6 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_mart/common/widgets/vertical_images_text/vertical_image_text.dart';
+import 'package:e_mart/features/shop/controllers/category_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class RHomeCategories extends StatelessWidget {
 
@@ -9,31 +10,31 @@ class RHomeCategories extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 75,
-      child: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("categories").snapshots(),
-        builder: (_,  snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(
-                child: CircularProgressIndicator(),);
-          } else {
-            return ListView.builder(
-            shrinkWrap: true,
-            itemCount: snapshot.data?.docs.length,
-            scrollDirection: Axis.horizontal,
-                itemBuilder: (_, index) {
-                  final category=snapshot.data?.docs[index];
-              return RVerticalImageText(
-                text:  category?['name'],
-                netImagePath: category?['image'],
-              );
-            });
-          }
 
-        },
-      ),
+  Widget build(BuildContext context) {
+    final categoryController =Get.put(CategoryController());
+    return Obx(
+      (){
+        if(categoryController.featuredCategories.isEmpty){
+          return const Center(child: Text('No Data Found'),);
+        }
+        return SizedBox(
+          height: 75,
+          child: ListView.builder(
+              shrinkWrap: true,
+              itemCount:categoryController.featuredCategories.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (_, index) {
+final category =categoryController.featuredCategories[index];
+
+                return RVerticalImageText(
+                  text:  category.name,
+                  netImagePath: category.image,
+
+                );
+              }),
+        );
+      },
     );
   }
 }
