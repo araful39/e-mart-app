@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     children: [
                       RSectionHeading(
-                        name: "Popular Categorize",
+                        name: "Popular Categorizes",
                         subText: "view all",
                         showActionButton: true,
                         textColor: RColores.white,
