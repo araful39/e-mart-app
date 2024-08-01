@@ -48,7 +48,7 @@ class SingUpController extends GetxController {
       });
       progress.value = false;
       // Navigate to the home page after successful sign up
-      Get.offAll(() => const VerifyEmailScreen());
+      Get.offAll( const VerifyEmailScreen());
     } catch (e) {
       RLoader.warningSnackBar(title: 'Something went wrong.', message: "$e");
     }
